@@ -1,0 +1,37 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- 2x2 Grid (4 Boxes) -->
+    <!-- Top Left Box -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,24 L52,24 L52,52 L24,52 Z" />
+    <!-- Top Right Box -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M56,24 L84,24 L84,52 L56,52 Z" />
+    <!-- Bottom Left Box -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,56 L52,56 L52,84 L24,84 Z" />
+    <!-- Bottom Right Box (Selected) -->
+    <path
+        android:fillColor="#A5D6A7"
+        android:pathData="M56,56 L84,56 L84,84 L56,84 Z" />
+        
+    <!-- Grid Borders (Green) -->
+    <path
+        android:strokeWidth="2"
+        android:strokeColor="#1D6F42"
+        android:pathData="M24,24 L84,24 L84,84 L24,84 Z M54,24 L54,84 M24,54 L84,54" />
+        
+    <!-- Mouse Cursor (Arrow) pointing to Bottom Right Box -->
+    <path
+        android:fillColor="#000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1"
+        android:pathData="M65,65 L75,75 L70,75 L73,82 L70,83 L67,76 L62,78 Z" />
+</vector>

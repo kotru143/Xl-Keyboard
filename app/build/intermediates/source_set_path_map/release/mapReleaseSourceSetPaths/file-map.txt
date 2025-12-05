@@ -1,0 +1,9 @@
+com.example.xlkeyboard.app-pngs-0 C:\Users\kotru\.gemini\antigravity\scratch\AndroidNumberPad\app\build\generated\res\pngs\release
+com.example.xlkeyboard.app-resValues-1 C:\Users\kotru\.gemini\antigravity\scratch\AndroidNumberPad\app\build\generated\res\resValues\release
+com.example.xlkeyboard.app-updated_navigation_xml-2 C:\Users\kotru\.gemini\antigravity\scratch\AndroidNumberPad\app\build\generated\updated_navigation_xml\release
+com.example.xlkeyboard.app-packageReleaseResources-3 C:\Users\kotru\.gemini\antigravity\scratch\AndroidNumberPad\app\build\intermediates\incremental\release\packageReleaseResources\merged.dir
+com.example.xlkeyboard.app-packageReleaseResources-4 C:\Users\kotru\.gemini\antigravity\scratch\AndroidNumberPad\app\build\intermediates\incremental\release\packageReleaseResources\stripped.dir
+com.example.xlkeyboard.app-merged-not-compiled-resources-5 C:\Users\kotru\.gemini\antigravity\scratch\AndroidNumberPad\app\build\intermediates\merged-not-compiled-resources\release
+com.example.xlkeyboard.app-release-6 C:\Users\kotru\.gemini\antigravity\scratch\AndroidNumberPad\app\build\intermediates\merged_res\release\mergeReleaseResources
+com.example.xlkeyboard.app-main-7 C:\Users\kotru\.gemini\antigravity\scratch\AndroidNumberPad\app\src\main\res
+com.example.xlkeyboard.app-release-8 C:\Users\kotru\.gemini\antigravity\scratch\AndroidNumberPad\app\src\release\res

@@ -1,0 +1,2 @@
+-keep class com.example.xlkeyboard.MainActivity { <init>(); }
+-keep class com.example.xlkeyboard.NumberPadService { <init>(); }

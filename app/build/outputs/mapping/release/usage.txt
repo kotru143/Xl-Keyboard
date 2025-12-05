@@ -1,0 +1,74 @@
+com.example.xlkeyboard.NumberPadService:
+    private static final java.lang.String KEY_TAB_MODE
+    private static final java.lang.String PREFS_NAME
+    private static final long REPEAT_DELAY
+com.example.xlkeyboard.R$color:
+    public static int black
+    public static int purple_200
+    public static int purple_500
+    public static int purple_700
+    public static int teal_200
+    public static int teal_700
+    public static int white
+    private void <init>()
+com.example.xlkeyboard.R$drawable
+com.example.xlkeyboard.R$id:
+    public static int btnsym
+    private void <init>()
+com.example.xlkeyboard.R$layout:
+    private void <init>()
+com.example.xlkeyboard.R$mipmap
+com.example.xlkeyboard.R$string:
+    public static int _1_enable_keyboard
+    public static int _2_select_keyboard
+    public static int app_name
+    public static int created_by_kotru143_gmail_com
+    public static int down
+    public static int eight
+    public static int five
+    public static int four
+    public static int key_0
+    public static int key_1
+    public static int key_123
+    public static int key_2
+    public static int key_3
+    public static int key_4
+    public static int key_5
+    public static int key_6
+    public static int key_7
+    public static int key_8
+    public static int key_9
+    public static int key_abc
+    public static int key_backspace
+    public static int key_comma
+    public static int key_dot
+    public static int key_down
+    public static int key_enter
+    public static int key_left
+    public static int key_right
+    public static int key_space
+    public static int key_sym
+    public static int key_up
+    public static int left
+    public static int nine
+    public static int one
+    public static int right
+    public static int seven
+    public static int six
+    public static int three
+    public static int two
+    public static int up
+    public static int xl_keyboard_setup
+    public static int zero
+    private void <init>()
+com.example.xlkeyboard.R$style
+com.example.xlkeyboard.R$xml
+com.example.xlkeyboard.R
+com.example.xlkeyboard.NumberPadService:
+    public final void setupArrowButton(android.view.View,int,boolean)
+    public final void setupBackspaceButton(android.view.View,int)
+    public final void setupTextButton(android.view.View,int,java.lang.String)
+com.example.xlkeyboard.R$color
+com.example.xlkeyboard.R$id
+com.example.xlkeyboard.R$layout
+com.example.xlkeyboard.R$string
