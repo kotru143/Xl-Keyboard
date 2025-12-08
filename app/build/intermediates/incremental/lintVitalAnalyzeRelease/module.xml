@@ -1,6 +1,6 @@
 <lint-module
     format="1"
-    dir="C:\Users\kotru\.gemini\antigravity\scratch\AndroidNumberPad\app"
+    dir="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app"
     name=":app"
     type="APP"
     maven="NumberPadApp:app:unspecified"

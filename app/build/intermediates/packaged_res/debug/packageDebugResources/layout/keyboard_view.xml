@@ -23,22 +23,32 @@
             android:backgroundTint="@color/toggle_inactive"
             android:text="@string/key_toggle_arrow"
             android:textSize="18sp" />
+
+
+        <View
+            android:layout_width="145dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:backgroundTint="@color/toggle_inactive" />
+
+        <Button
+            android:id="@+id/btnsym"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/toggle_inactive"
+            android:text="@string/key_sym"
+            android:textSize="18sp" />
+
         <Button
             android:id="@+id/btnABC"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:backgroundTint="@color/toggle_inactive"
             android:text="@string/key_abc"
-            android:textSize="18sp"
-            android:backgroundTint="@color/toggle_inactive" />
-        <Button
-            android:id="@+id/btnsyn"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/key_sym"
-            android:textSize="18sp"
-            android:backgroundTint="@color/toggle_inactive" />
+            android:textSize="18sp" />
+
     </LinearLayout>
 
     <LinearLayout

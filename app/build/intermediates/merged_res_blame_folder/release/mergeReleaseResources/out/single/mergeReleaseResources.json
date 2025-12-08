@@ -1,9 +1,5 @@
 [
     {
-        "merged": "com.example.xlkeyboard.app-release-5:/layout_keyboard_view.xml.flat",
-        "source": "com.example.xlkeyboard.app-main-6:/layout/keyboard_view.xml"
-    },
-    {
         "merged": "C:\\Users\\kotru\\.gradle\\daemon\\9.0-milestone-1\\com.example.xlkeyboard.app-release-5:\\xml_method.xml.flat",
         "source": "C:\\Users\\kotru\\.gradle\\daemon\\9.0-milestone-1\\com.example.xlkeyboard.app-main-6:\\xml\\method.xml"
     },
@@ -38,6 +34,10 @@
     {
         "merged": "C:\\Users\\kotru\\.gradle\\daemon\\9.0-milestone-1\\com.example.xlkeyboard.app-release-5:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\kotru\\.gradle\\daemon\\9.0-milestone-1\\com.example.xlkeyboard.app-main-6:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.xlkeyboard.app-release-5:/layout_symbol_keyboard_view.xml.flat",
+        "source": "com.example.xlkeyboard.app-main-6:/layout/symbol_keyboard_view.xml"
     },
     {
         "merged": "C:\\Users\\kotru\\.gradle\\daemon\\9.0-milestone-1\\com.example.xlkeyboard.app-release-5:\\drawable_ic_launcher_background.xml.flat",

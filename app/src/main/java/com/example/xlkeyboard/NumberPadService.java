@@ -19,10 +19,18 @@ public class NumberPadService extends InputMethodService {
     private boolean isTabModeEnabled = false;
     private boolean isQwertyMode = false;
     private boolean isShiftEnabled = false;
+    private boolean isCapsLock = false;
+    private long lastShiftPressTime = 0;
+    private static final long DOUBLE_TAP_DELAY = 300; // milliseconds
+
     private boolean autoCapitalizeNext = false;
     private Button toggleButton;
     private Button shiftButton;
     private Button[] letterButtons;
+
+    String[] letters = { "q", "w", "e", "r", "t", "y", "u", "i", "o", "p",
+            "a", "s", "d", "f", "g", "h", "j", "k", "l",
+            "z", "x", "c", "v", "b", "n", "m" };
 
     private final Handler deleteHandler = new Handler();
     private final Runnable deleteRunnable = new Runnable() {
@@ -52,14 +60,14 @@ public class NumberPadService extends InputMethodService {
         prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         isTabModeEnabled = prefs.getBoolean(KEY_TAB_MODE, false);
 
-        // Setup toggle button
-        toggleButton = view.findViewById(R.id.btnToggleMode);
-        updateToggleButton();
-        toggleButton.setOnClickListener(v -> {
-            isTabModeEnabled = !isTabModeEnabled;
-            prefs.edit().putBoolean(KEY_TAB_MODE, isTabModeEnabled).apply();
-            updateToggleButton();
+        // Setup SYM button
+        Button btnSym = view.findViewById(R.id.btnsym);
+        btnSym.setOnClickListener(v -> {
+            setInputView(createSymbolView());
         });
+
+        // Setup toggle button
+        setupToggleButton(view, R.id.btnToggleMode);
 
         // Setup ABC button to switch to QWERTY
         Button abcButton = view.findViewById(R.id.btnABC);
@@ -94,33 +102,19 @@ public class NumberPadService extends InputMethodService {
     }
 
     private View createQwertyView() {
-        isShiftEnabled = true;
         View view = getLayoutInflater().inflate(R.layout.qwerty_keyboard_view, null);
 
-        // Setup toggle button for Tab mode (same as number pad)
-        Button toggleButtonQwerty = view.findViewById(R.id.btnToggleModeQwerty);
-        if (isTabModeEnabled) {
-            toggleButtonQwerty.setText(R.string.key_toggle_tab);
-            toggleButtonQwerty.setBackgroundTintList(
-                    getResources().getColorStateList(R.color.toggle_active, null));
-        } else {
-            toggleButtonQwerty.setText(R.string.key_toggle_arrow);
-            toggleButtonQwerty.setBackgroundTintList(
-                    getResources().getColorStateList(R.color.toggle_inactive, null));
-        }
-        toggleButtonQwerty.setOnClickListener(v -> {
-            isTabModeEnabled = !isTabModeEnabled;
-            prefs.edit().putBoolean(KEY_TAB_MODE, isTabModeEnabled).apply();
-            if (isTabModeEnabled) {
-                toggleButtonQwerty.setText(R.string.key_toggle_tab);
-                toggleButtonQwerty.setBackgroundTintList(
-                        getResources().getColorStateList(R.color.toggle_active, null));
-            } else {
-                toggleButtonQwerty.setText(R.string.key_toggle_arrow);
-                toggleButtonQwerty.setBackgroundTintList(
-                        getResources().getColorStateList(R.color.toggle_inactive, null));
-            }
+        // Setup SYM button for QWERTY view
+        Button btnSym = view.findViewById(R.id.btnsym);
+        btnSym.setOnClickListener(v -> {
+            setInputView(createSymbolView());
         });
+
+        // Setup toggle button for Tab mode
+        setupToggleButton(view, R.id.btnToggleModeQwerty);
+
+        // Initialize letter buttons array
+        letterButtons = new Button[26];
 
         // Setup 123 button to switch back to number pad
         Button btn123 = view.findViewById(R.id.btn123);
@@ -130,50 +124,36 @@ public class NumberPadService extends InputMethodService {
         });
 
         // Get all letter button references for dynamic case switching
-        letterButtons = new Button[26];
-        letterButtons[0] = view.findViewById(R.id.btnQ);
-        letterButtons[1] = view.findViewById(R.id.btnW);
-        letterButtons[2] = view.findViewById(R.id.btnE);
-        letterButtons[3] = view.findViewById(R.id.btnR);
-        letterButtons[4] = view.findViewById(R.id.btnT);
-        letterButtons[5] = view.findViewById(R.id.btnY);
-        letterButtons[6] = view.findViewById(R.id.btnU);
-        letterButtons[7] = view.findViewById(R.id.btnI);
-        letterButtons[8] = view.findViewById(R.id.btnO);
-        letterButtons[9] = view.findViewById(R.id.btnP);
-        letterButtons[10] = view.findViewById(R.id.btnA);
-        letterButtons[11] = view.findViewById(R.id.btnS);
-        letterButtons[12] = view.findViewById(R.id.btnD);
-        letterButtons[13] = view.findViewById(R.id.btnF);
-        letterButtons[14] = view.findViewById(R.id.btnG);
-        letterButtons[15] = view.findViewById(R.id.btnH);
-        letterButtons[16] = view.findViewById(R.id.btnJ);
-        letterButtons[17] = view.findViewById(R.id.btnK);
-        letterButtons[18] = view.findViewById(R.id.btnL);
-        letterButtons[19] = view.findViewById(R.id.btnZ);
-        letterButtons[20] = view.findViewById(R.id.btnX);
-        letterButtons[21] = view.findViewById(R.id.btnC);
-        letterButtons[22] = view.findViewById(R.id.btnV);
-        letterButtons[23] = view.findViewById(R.id.btnB);
-        letterButtons[24] = view.findViewById(R.id.btnN);
-        letterButtons[25] = view.findViewById(R.id.btnM);
-
-        String[] letters = { "q", "w", "e", "r", "t", "y", "u", "i", "o", "p",
-                "a", "s", "d", "f", "g", "h", "j", "k", "l",
-                "z", "x", "c", "v", "b", "n", "m" };
 
         // Setup shift button with dynamic letter case switching
         shiftButton = view.findViewById(R.id.btnShift);
         updateShiftButton();
+        // explaination: This function updates the shift button based on the shift
+        // state.
         shiftButton.setOnClickListener(v -> {
-            isShiftEnabled = !isShiftEnabled;
-            updateShiftButton();
-            // Update all letter button texts
-            for (int i = 0; i < letterButtons.length; i++) {
-                letterButtons[i].setText(isShiftEnabled ? letters[i].toUpperCase() : letters[i]);
+            long currentTime = System.currentTimeMillis();
+            if (currentTime - lastShiftPressTime < DOUBLE_TAP_DELAY) {
+                // Double tap detected - Enable Caps Lock
+                isCapsLock = true;
+                isShiftEnabled = true;
+            } else {
+                // Single tap
+                if (isCapsLock) {
+                    // Turn off Caps Lock
+                    isCapsLock = false;
+                    isShiftEnabled = false;
+                } else {
+                    // Toggle Shift
+                    isShiftEnabled = !isShiftEnabled;
+                }
             }
-        });
+            lastShiftPressTime = currentTime;
 
+            updateShiftButton();
+            updateLetterButtonsCase();
+        });
+        // explaination: This function updates the shift button based on the shift
+        // state.
         // Setup letter buttons (QWERTY row 1)
         setupLetterButton(view, R.id.btnQ, "q");
         setupLetterButton(view, R.id.btnW, "w");
@@ -216,17 +196,45 @@ public class NumberPadService extends InputMethodService {
         return view;
     }
 
+    private void setupToggleButton(View parent, int id) {
+        Button btn = parent.findViewById(id);
+        updateToggleButtonState(btn);
+        btn.setOnClickListener(v -> {
+            isTabModeEnabled = !isTabModeEnabled;
+            prefs.edit().putBoolean(KEY_TAB_MODE, isTabModeEnabled).apply();
+            updateToggleButtonState(btn);
+
+            // Sync the main toggle button reference if we are in NumberPad mode
+            if (id == R.id.btnToggleMode) {
+                updateToggleButtonState(toggleButton);
+                // Actually this listener is attached to the view's button, which IS
+                // toggleButton in this case.
+                // So the above line is redundant but harmless.
+            }
+        });
+
+        if (id == R.id.btnToggleMode) {
+            this.toggleButton = btn;
+        }
+    }
+
     private void updateToggleButton() {
         if (toggleButton != null) {
-            if (isTabModeEnabled) {
-                toggleButton.setText(R.string.key_toggle_tab);
-                toggleButton.setBackgroundTintList(
-                        getResources().getColorStateList(R.color.toggle_active, null));
-            } else {
-                toggleButton.setText(R.string.key_toggle_arrow);
-                toggleButton.setBackgroundTintList(
-                        getResources().getColorStateList(R.color.toggle_inactive, null));
-            }
+            updateToggleButtonState(toggleButton);
+        }
+    }
+
+    private void updateToggleButtonState(Button btn) {
+        if (btn == null)
+            return;
+        if (isTabModeEnabled) {
+            btn.setText(R.string.key_toggle_tab);
+            btn.setBackgroundTintList(
+                    getResources().getColorStateList(R.color.toggle_active, null));
+        } else {
+            btn.setText(R.string.key_toggle_arrow);
+            btn.setBackgroundTintList(
+                    getResources().getColorStateList(R.color.toggle_inactive, null));
         }
     }
 
@@ -235,6 +243,11 @@ public class NumberPadService extends InputMethodService {
             if (isShiftEnabled) {
                 shiftButton.setBackgroundTintList(
                         getResources().getColorStateList(R.color.toggle_active, null));
+                // Optional: Change icon or distinct color for Caps Lock
+                if (isCapsLock) {
+                    // Keep active color or maybe add a visual indicator if possible,
+                    // for now relying on the active tint.
+                }
             } else {
                 shiftButton.setBackgroundTintList(
                         getResources().getColorStateList(R.color.toggle_inactive, null));
@@ -280,6 +293,19 @@ public class NumberPadService extends InputMethodService {
 
     private void setupLetterButton(View parent, int id, String letter) {
         Button button = parent.findViewById(id);
+
+        // Populate letterButtons array dynamically
+        int index = -1;
+        for (int i = 0; i < letters.length; i++) {
+            if (letters[i].equalsIgnoreCase(letter)) {
+                index = i;
+                break;
+            }
+        }
+        if (index != -1 && letterButtons != null) {
+            letterButtons[index] = button;
+        }
+
         button.setOnClickListener(v -> {
             InputConnection ic = getCurrentInputConnection();
             if (ic == null)
@@ -291,9 +317,10 @@ public class NumberPadService extends InputMethodService {
             ic.commitText(text, 1);
 
             // Auto-disable shift and auto-capitalize after typing one character
-            if (isShiftEnabled) {
+            if (isShiftEnabled && !isCapsLock) {
                 isShiftEnabled = false;
                 updateShiftButton();
+                updateLetterButtonsCase();
             }
             if (autoCapitalizeNext) {
                 autoCapitalizeNext = false;
@@ -313,12 +340,13 @@ public class NumberPadService extends InputMethodService {
             // Enable auto-capitalization after period
             if (text.equals(".")) {
                 autoCapitalizeNext = true;
-                updateLetterButtonsCase();
+
             } else if (!text.equals(" ")) {
                 // Disable auto-capitalization for other non-space characters
                 autoCapitalizeNext = false;
-                updateLetterButtonsCase();
+
             }
+            updateLetterButtonsCase();
         });
     }
 
@@ -355,14 +383,12 @@ public class NumberPadService extends InputMethodService {
         });
     }
 
+    // explaination: This function updates the case of the letter buttons based on
+    // the shift state and auto-capitalize state.
     private void updateLetterButtonsCase() {
         if (letterButtons == null || !isQwertyMode) {
             return;
         }
-
-        String[] letters = { "q", "w", "e", "r", "t", "y", "u", "i", "o", "p",
-                "a", "s", "d", "f", "g", "h", "j", "k", "l",
-                "z", "x", "c", "v", "b", "n", "m" };
 
         boolean shouldShowUppercase = isShiftEnabled || autoCapitalizeNext;
         for (int i = 0; i < letterButtons.length && i < letters.length; i++) {
@@ -370,5 +396,56 @@ public class NumberPadService extends InputMethodService {
                 letterButtons[i].setText(shouldShowUppercase ? letters[i].toUpperCase() : letters[i]);
             }
         }
+    }
+
+    private View createSymbolView() {
+        View view = getLayoutInflater().inflate(R.layout.symbol_keyboard_view, null);
+
+        // Row 1 buttons
+        setupTextButton(view, R.id.btnSym1, "1");
+        setupTextButton(view, R.id.btnSym2, "2");
+        setupTextButton(view, R.id.btnSym3, "3");
+        setupTextButton(view, R.id.btnSym4, "4");
+        setupTextButton(view, R.id.btnSym5, "5");
+        setupTextButton(view, R.id.btnSym6, "6");
+        setupTextButton(view, R.id.btnSym7, "7");
+        setupTextButton(view, R.id.btnSym8, "8");
+        setupTextButton(view, R.id.btnSym9, "9");
+        setupTextButton(view, R.id.btnSym0, "0");
+
+        // Row 2 buttons
+        setupTextButton(view, R.id.btnSymAt, "@");
+        setupTextButton(view, R.id.btnSymHash, "#");
+        setupTextButton(view, R.id.btnSymDollar, "$");
+        setupTextButton(view, R.id.btnSymPercent, "%");
+        setupTextButton(view, R.id.btnSymAmpersand, "&");
+        setupTextButton(view, R.id.btnSymMinus, "-");
+        setupTextButton(view, R.id.btnSymPlus, "+");
+        setupTextButton(view, R.id.btnSymParenLeft, "(");
+        setupTextButton(view, R.id.btnSymParenRight, ")");
+        setupTextButton(view, R.id.btnSymSlash, "/");
+
+        // Row 3 buttons
+        setupTextButton(view, R.id.btnSymEquals, "=");
+        setupTextButton(view, R.id.btnSymAsterisk, "*");
+        setupTextButton(view, R.id.btnSymQuoteDouble, "\"");
+        setupTextButton(view, R.id.btnSymQuoteSingle, "'");
+        setupTextButton(view, R.id.btnSymColon, ":");
+        setupTextButton(view, R.id.btnSymSemicolon, ";");
+        setupTextButton(view, R.id.btnSymExclamation, "!");
+        setupTextButton(view, R.id.btnSymQuestion, "?");
+        setupBackspaceButton(view, R.id.btnBackSym);
+
+        // Row 4 buttons
+        Button btnABC = view.findViewById(R.id.btnABC_Sym);
+        btnABC.setOnClickListener(v -> {
+            isQwertyMode = true;
+            setInputView(createQwertyView());
+        });
+        setupTextButton(view, R.id.btnSpaceSym, " ");
+        setupTextButton(view, R.id.btnCommaSym, ",");
+        setupButton(view, R.id.btnEnterSym, KeyEvent.KEYCODE_ENTER);
+
+        return view;
     }
 }

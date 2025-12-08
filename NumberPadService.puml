@@ -1,0 +1,32 @@
+@startuml
+class NumberPadService {
+    {static} -PREFS_NAME : String = "NumberPadPrefs"
+    {static} -KEY_TAB_MODE : String = "tab_mode_enabled"
+    {static} -REPEAT_DELAY : long = 50
+    -prefs : SharedPreferences
+    -isTabModeEnabled : boolean
+    -isQwertyMode : boolean
+    -isShiftEnabled : boolean
+    -autoCapitalizeNext : boolean
+    -toggleButton : Button
+    -shiftButton : Button
+    -letterButtons : Button[]
+    -letters : String[]
+    -deleteHandler : Handler
+    -deleteRunnable : Runnable
+
+    +onCreateInputView() : View
+    -createNumberPadView() : View
+    -createQwertyView() : View
+    -updateToggleButton() : void
+    -updateShiftButton() : void
+    -setupBackspaceButton(parent: View, id: int) : void
+    -setupButton(parent: View, id: int, keyCode: int) : void
+    -setupLetterButton(parent: View, id: int, letter: String) : void
+    -setupTextButton(parent: View, id: int, text: String) : void
+    -setupArrowButton(parent: View, id: int, isLeft: boolean) : void
+    -updateLetterButtonsCase() : void
+}
+
+NumberPadService --|> android.inputmethodservice.InputMethodService
+@enduml

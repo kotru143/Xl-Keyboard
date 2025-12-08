@@ -24,12 +24,12 @@
         "source": "C:\\Users\\kotru\\.gradle\\daemon\\9.0-milestone-1\\com.example.xlkeyboard.app-main-6:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.example.xlkeyboard.app-debug-4:/layout_keyboard_view.xml.flat",
-        "source": "com.example.xlkeyboard.app-main-6:/layout/keyboard_view.xml"
-    },
-    {
         "merged": "C:\\Users\\kotru\\.gradle\\daemon\\9.0-milestone-1\\com.example.xlkeyboard.app-debug-4:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\kotru\\.gradle\\daemon\\9.0-milestone-1\\com.example.xlkeyboard.app-main-6:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.xlkeyboard.app-debug-4:/layout_symbol_keyboard_view.xml.flat",
+        "source": "com.example.xlkeyboard.app-main-6:/layout/symbol_keyboard_view.xml"
     },
     {
         "merged": "C:\\Users\\kotru\\.gradle\\daemon\\9.0-milestone-1\\com.example.xlkeyboard.app-debug-4:\\drawable_ic_launcher_background.xml.flat",

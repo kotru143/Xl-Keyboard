@@ -17,23 +17,37 @@
 
         <Button
             android:id="@+id/btnToggleModeQwerty"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:backgroundTint="@color/toggle_inactive"
             android:text="@string/key_toggle_arrow"
-            android:textSize="18sp"
+            android:textSize="18sp" />
 
+        <View
+            android:layout_width="145dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
             android:backgroundTint="@color/toggle_inactive" />
 
         <Button
-            android:id="@+id/btn123"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/key_123"
-            android:textSize="18sp"
+            android:id="@+id/btnsym"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:backgroundTint="@color/toggle_inactive"
+            android:text="@string/key_sym"
+            android:textSize="18sp" />
 
-            android:backgroundTint="@color/toggle_inactive" />
+        <Button
+            android:id="@+id/btn123"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/toggle_inactive"
+            android:text="@string/key_123"
+
+            android:textSize="18sp" />
     </LinearLayout>
 
     <!-- Row 1: Q W E R T Y U I O P -->

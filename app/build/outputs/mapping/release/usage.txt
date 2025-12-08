@@ -1,7 +1,9 @@
 com.example.xlkeyboard.NumberPadService:
+    private static final long DOUBLE_TAP_DELAY
     private static final java.lang.String KEY_TAB_MODE
     private static final java.lang.String PREFS_NAME
     private static final long REPEAT_DELAY
+    private void updateToggleButton()
 com.example.xlkeyboard.R$color:
     public static int black
     public static int purple_200
@@ -13,7 +15,6 @@ com.example.xlkeyboard.R$color:
     private void <init>()
 com.example.xlkeyboard.R$drawable
 com.example.xlkeyboard.R$id:
-    public static int btnsym
     private void <init>()
 com.example.xlkeyboard.R$layout:
     private void <init>()
@@ -67,7 +68,7 @@ com.example.xlkeyboard.R
 com.example.xlkeyboard.NumberPadService:
     public final void setupArrowButton(android.view.View,int,boolean)
     public final void setupBackspaceButton(android.view.View,int)
-    public final void setupTextButton(android.view.View,int,java.lang.String)
+    public final void setupToggleButton(android.view.View,int)
 com.example.xlkeyboard.R$color
 com.example.xlkeyboard.R$id
 com.example.xlkeyboard.R$layout

@@ -3,8 +3,8 @@
 # min_api: 24
 # common_typos_disable
 # {"id":"com.android.tools.r8.mapping","version":"2.2"}
-# pg_map_id: b30b8d5362f4072106bdac7514e1fcfb3702b3e49f19ecd883cf75490eeccf4b
-# pg_map_hash: SHA-256 b30b8d5362f4072106bdac7514e1fcfb3702b3e49f19ecd883cf75490eeccf4b
+# pg_map_id: a3231c67e14354229242dad8539a69ee1e92acbe680d66e39483a31f1c51784b
+# pg_map_hash: SHA-256 a3231c67e14354229242dad8539a69ee1e92acbe680d66e39483a31f1c51784b
 com.example.xlkeyboard.MainActivity -> com.example.xlkeyboard.MainActivity:
 # {"id":"sourceFile","fileName":"MainActivity.java"}
     1:1:void <init>():12:12 -> <init>
@@ -30,102 +30,97 @@ com.example.xlkeyboard.NumberPadService -> com.example.xlkeyboard.NumberPadServi
     boolean isTabModeEnabled -> b
     boolean isQwertyMode -> c
     boolean isShiftEnabled -> d
-    boolean autoCapitalizeNext -> e
-    android.widget.Button toggleButton -> f
-    android.widget.Button shiftButton -> g
-    android.widget.Button[] letterButtons -> h
-    android.os.Handler deleteHandler -> i
-    java.lang.Runnable deleteRunnable -> j
+    boolean isCapsLock -> e
+    long lastShiftPressTime -> f
+    boolean autoCapitalizeNext -> g
+    android.widget.Button toggleButton -> h
+    android.widget.Button shiftButton -> i
+    android.widget.Button[] letterButtons -> j
+    java.lang.String[] letters -> k
+    android.os.Handler deleteHandler -> l
+    java.lang.Runnable deleteRunnable -> m
       # {"id":"com.android.tools.r8.residualsignature","signature":"La/h;"}
-    int $r8$clinit -> k
+    int $r8$clinit -> n
       # {"id":"com.android.tools.r8.synthesized"}
     1:1:void <init>():12:12 -> <init>
-    2:5:void <init>():19:22 -> <init>
-    6:7:void <init>():27:28 -> <init>
-    1:6:void setupButton(android.view.View,int,int):269:269 -> a
-    7:15:void setupButton(android.view.View,int,int):270:270 -> a
-    1:6:void setupLetterButton(android.view.View,int,java.lang.String):282:282 -> b
-    7:16:void setupLetterButton(android.view.View,int,java.lang.String):283:283 -> b
-    1:1:void updateLetterButtonsCase():359:359 -> c
-    2:2:void updateLetterButtonsCase():363:363 -> c
-    3:6:void updateLetterButtonsCase():367:370 -> c
-    1:2:void updateShiftButton():234:235 -> d
-    3:3:void updateShiftButton():237:237 -> d
-    4:4:void updateShiftButton():236:236 -> d
-    5:5:void updateShiftButton():240:240 -> d
-    6:6:void updateShiftButton():239:239 -> d
-    1:5:void updateToggleButton():220:224 -> e
-    6:6:void updateToggleButton():223:223 -> e
-    7:9:void updateToggleButton():226:228 -> e
-    10:10:void updateToggleButton():227:227 -> e
-    1:1:android.view.View onCreateInputView():41:41 -> onCreateInputView
-    2:3:android.view.View createQwertyView():97:98 -> onCreateInputView
-    2:3:android.view.View onCreateInputView():42 -> onCreateInputView
-    4:6:android.view.View createQwertyView():101:103 -> onCreateInputView
-    4:6:android.view.View onCreateInputView():42 -> onCreateInputView
-    7:7:android.view.View createQwertyView():105:105 -> onCreateInputView
-    7:7:android.view.View onCreateInputView():42 -> onCreateInputView
-    8:8:android.view.View createQwertyView():104:104 -> onCreateInputView
-    8:8:android.view.View onCreateInputView():42 -> onCreateInputView
-    9:9:android.view.View createQwertyView():107:107 -> onCreateInputView
-    9:9:android.view.View onCreateInputView():42 -> onCreateInputView
-    10:10:android.view.View createQwertyView():109:109 -> onCreateInputView
-    10:10:android.view.View onCreateInputView():42 -> onCreateInputView
-    11:11:android.view.View createQwertyView():108:108 -> onCreateInputView
-    11:11:android.view.View onCreateInputView():42 -> onCreateInputView
-    12:12:android.view.View createQwertyView():111:111 -> onCreateInputView
-    12:12:android.view.View onCreateInputView():42 -> onCreateInputView
-    13:14:android.view.View createQwertyView():126:127 -> onCreateInputView
-    13:14:android.view.View onCreateInputView():42 -> onCreateInputView
-    15:41:android.view.View createQwertyView():133:159 -> onCreateInputView
-    15:41:android.view.View onCreateInputView():42 -> onCreateInputView
-    42:42:android.view.View createQwertyView():161:161 -> onCreateInputView
-    42:42:android.view.View onCreateInputView():42 -> onCreateInputView
-    43:45:android.view.View createQwertyView():166:168 -> onCreateInputView
-    43:45:android.view.View onCreateInputView():42 -> onCreateInputView
-    46:55:android.view.View createQwertyView():178:187 -> onCreateInputView
-    46:55:android.view.View onCreateInputView():42 -> onCreateInputView
-    56:64:android.view.View createQwertyView():190:198 -> onCreateInputView
-    56:64:android.view.View onCreateInputView():42 -> onCreateInputView
-    65:71:android.view.View createQwertyView():201:207 -> onCreateInputView
-    65:71:android.view.View onCreateInputView():42 -> onCreateInputView
-    72:73:void setupBackspaceButton(android.view.View,int):246:247 -> onCreateInputView
-    72:73:android.view.View createQwertyView():210 -> onCreateInputView
-    72:73:android.view.View onCreateInputView():42 -> onCreateInputView
-    74:75:void setupTextButton(android.view.View,int,java.lang.String):306:307 -> onCreateInputView
-    74:75:android.view.View createQwertyView():211 -> onCreateInputView
-    74:75:android.view.View onCreateInputView():42 -> onCreateInputView
-    76:77:void setupTextButton(android.view.View,int,java.lang.String):306:307 -> onCreateInputView
-    76:77:android.view.View createQwertyView():212 -> onCreateInputView
-    76:77:android.view.View onCreateInputView():42 -> onCreateInputView
-    78:79:void setupTextButton(android.view.View,int,java.lang.String):306:307 -> onCreateInputView
-    78:79:android.view.View createQwertyView():213 -> onCreateInputView
-    78:79:android.view.View onCreateInputView():42 -> onCreateInputView
-    80:80:android.view.View createQwertyView():214:214 -> onCreateInputView
-    80:80:android.view.View onCreateInputView():42 -> onCreateInputView
-    81:81:android.view.View createNumberPadView():49:49 -> onCreateInputView
-    81:81:android.view.View onCreateInputView():44 -> onCreateInputView
-    82:83:android.view.View createNumberPadView():52:53 -> onCreateInputView
-    82:83:android.view.View onCreateInputView():44 -> onCreateInputView
-    84:86:android.view.View createNumberPadView():56:58 -> onCreateInputView
-    84:86:android.view.View onCreateInputView():44 -> onCreateInputView
-    87:88:android.view.View createNumberPadView():65:66 -> onCreateInputView
-    87:88:android.view.View onCreateInputView():44 -> onCreateInputView
-    89:98:android.view.View createNumberPadView():72:81 -> onCreateInputView
-    89:98:android.view.View onCreateInputView():44 -> onCreateInputView
-    99:100:android.view.View createNumberPadView():83:84 -> onCreateInputView
-    99:100:android.view.View onCreateInputView():44 -> onCreateInputView
-    101:102:void setupArrowButton(android.view.View,int,boolean):326:327 -> onCreateInputView
-    101:102:android.view.View createNumberPadView():87 -> onCreateInputView
-    101:102:android.view.View onCreateInputView():44 -> onCreateInputView
-    103:104:void setupArrowButton(android.view.View,int,boolean):326:327 -> onCreateInputView
-    103:104:android.view.View createNumberPadView():88 -> onCreateInputView
-    103:104:android.view.View onCreateInputView():44 -> onCreateInputView
-    105:106:void setupBackspaceButton(android.view.View,int):246:247 -> onCreateInputView
-    105:106:android.view.View createNumberPadView():90 -> onCreateInputView
-    105:106:android.view.View onCreateInputView():44 -> onCreateInputView
-    107:107:android.view.View createNumberPadView():91:91 -> onCreateInputView
-    107:107:android.view.View onCreateInputView():44 -> onCreateInputView
+    2:6:void <init>():19:23 -> <init>
+    7:7:void <init>():26:26 -> <init>
+    8:8:void <init>():31:31 -> <init>
+    9:10:void <init>():35:36 -> <init>
+    1:1:android.view.View createQwertyView():105:105 -> a
+    2:3:android.view.View createQwertyView():108:109 -> a
+    4:6:void setupToggleButton(android.view.View,int):200:202 -> a
+    4:6:android.view.View createQwertyView():114 -> a
+    7:7:android.view.View createQwertyView():117:117 -> a
+    8:9:android.view.View createQwertyView():120:121 -> a
+    10:11:android.view.View createQwertyView():129:130 -> a
+    12:12:android.view.View createQwertyView():133:133 -> a
+    13:22:android.view.View createQwertyView():158:167 -> a
+    23:31:android.view.View createQwertyView():170:178 -> a
+    32:38:android.view.View createQwertyView():181:187 -> a
+    39:40:void setupBackspaceButton(android.view.View,int):259:260 -> a
+    39:40:android.view.View createQwertyView():190 -> a
+    41:44:android.view.View createQwertyView():191:194 -> a
+    1:1:android.view.View createSymbolView():402:402 -> b
+    2:11:android.view.View createSymbolView():405:414 -> b
+    12:21:android.view.View createSymbolView():417:426 -> b
+    22:29:android.view.View createSymbolView():429:436 -> b
+    30:31:void setupBackspaceButton(android.view.View,int):259:260 -> b
+    30:31:android.view.View createSymbolView():437 -> b
+    32:33:android.view.View createSymbolView():440:441 -> b
+    34:36:android.view.View createSymbolView():445:447 -> b
+    1:6:void setupButton(android.view.View,int,int):282:282 -> c
+    7:15:void setupButton(android.view.View,int,int):283:283 -> c
+    1:1:void setupLetterButton(android.view.View,int,java.lang.String):295:295 -> d
+    2:3:void setupLetterButton(android.view.View,int,java.lang.String):299:300 -> d
+    4:5:void setupLetterButton(android.view.View,int,java.lang.String):305:306 -> d
+    6:6:void setupLetterButton(android.view.View,int,java.lang.String):309:309 -> d
+    1:6:void setupTextButton(android.view.View,int,java.lang.String):333:333 -> e
+    7:16:void setupTextButton(android.view.View,int,java.lang.String):334:334 -> e
+    1:1:void updateLetterButtonsCase():389:389 -> f
+    2:5:void updateLetterButtonsCase():393:396 -> f
+    1:2:void updateShiftButton():242:243 -> g
+    3:3:void updateShiftButton():245:245 -> g
+    4:4:void updateShiftButton():244:244 -> g
+    5:5:void updateShiftButton():253:253 -> g
+    6:6:void updateShiftButton():252:252 -> g
+    4:11:void updateToggleButtonState(android.widget.Button):230:230 -> h
+    12:14:void updateToggleButtonState(android.widget.Button):231:231 -> h
+    15:25:void updateToggleButtonState(android.widget.Button):233:233 -> h
+    26:32:void updateToggleButtonState(android.widget.Button):232:232 -> h
+    33:35:void updateToggleButtonState(android.widget.Button):235:235 -> h
+    36:46:void updateToggleButtonState(android.widget.Button):237:237 -> h
+    47:50:void updateToggleButtonState(android.widget.Button):236:236 -> h
+    1:2:android.view.View onCreateInputView():49:50 -> onCreateInputView
+    3:3:android.view.View createNumberPadView():57:57 -> onCreateInputView
+    3:3:android.view.View onCreateInputView():52 -> onCreateInputView
+    4:5:android.view.View createNumberPadView():60:61 -> onCreateInputView
+    4:5:android.view.View onCreateInputView():52 -> onCreateInputView
+    6:7:android.view.View createNumberPadView():64:65 -> onCreateInputView
+    6:7:android.view.View onCreateInputView():52 -> onCreateInputView
+    8:10:void setupToggleButton(android.view.View,int):200:202 -> onCreateInputView
+    8:10:android.view.View createNumberPadView():70 -> onCreateInputView
+    8:10:android.view.View onCreateInputView():52 -> onCreateInputView
+    11:11:void setupToggleButton(android.view.View,int):217:217 -> onCreateInputView
+    11:11:android.view.View createNumberPadView():70 -> onCreateInputView
+    11:11:android.view.View onCreateInputView():52 -> onCreateInputView
+    12:13:android.view.View createNumberPadView():73:74 -> onCreateInputView
+    12:13:android.view.View onCreateInputView():52 -> onCreateInputView
+    14:23:android.view.View createNumberPadView():80:89 -> onCreateInputView
+    14:23:android.view.View onCreateInputView():52 -> onCreateInputView
+    24:25:android.view.View createNumberPadView():91:92 -> onCreateInputView
+    24:25:android.view.View onCreateInputView():52 -> onCreateInputView
+    26:27:void setupArrowButton(android.view.View,int,boolean):354:355 -> onCreateInputView
+    26:27:android.view.View createNumberPadView():95 -> onCreateInputView
+    26:27:android.view.View onCreateInputView():52 -> onCreateInputView
+    28:29:void setupArrowButton(android.view.View,int,boolean):354:355 -> onCreateInputView
+    28:29:android.view.View createNumberPadView():96 -> onCreateInputView
+    28:29:android.view.View onCreateInputView():52 -> onCreateInputView
+    30:31:void setupBackspaceButton(android.view.View,int):259:260 -> onCreateInputView
+    30:31:android.view.View createNumberPadView():98 -> onCreateInputView
+    30:31:android.view.View onCreateInputView():52 -> onCreateInputView
+    32:32:android.view.View createNumberPadView():99:99 -> onCreateInputView
+    32:32:android.view.View onCreateInputView():52 -> onCreateInputView
 com.example.xlkeyboard.NumberPadService$$ExternalSyntheticLambda0 -> a.b:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
@@ -133,56 +128,119 @@ com.example.xlkeyboard.NumberPadService$$ExternalSyntheticLambda0 -> a.b:
       # {"id":"com.android.tools.r8.synthesized"}
     com.example.xlkeyboard.NumberPadService com.example.xlkeyboard.NumberPadService$$InternalSyntheticLambda$1$8550abeb62a635af2816de4c67812c0ca7011afe8580c3d4195f02fdff3a0c97$0.f$0 -> b
       # {"id":"com.android.tools.r8.synthesized"}
-    android.widget.Button com.example.xlkeyboard.NumberPadService$$InternalSyntheticLambda$1$8550abeb62a635af2816de4c67812c0ca7011afe8580c3d4195f02fdff3a0c97$0.f$1 -> c
-      # {"id":"com.android.tools.r8.residualsignature","signature":"Ljava/lang/Object;"}
+    1:8:void a.NumberPadService$$ExternalSyntheticLambda0.<init>(com.example.xlkeyboard.NumberPadService,int):0:0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    1:10:void a.NumberPadService$$ExternalSyntheticLambda0.<init>(com.example.xlkeyboard.NumberPadService,java.lang.Object,int):0:0 -> <init>
+    10:11:void com.example.xlkeyboard.NumberPadService.lambda$createSymbolView$11(android.view.View):442:442 -> onClick
+    10:11:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
       # {"id":"com.android.tools.r8.synthesized"}
-    10:17:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$4(java.lang.String[],android.view.View):169:169 -> onClick
-    10:17:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-      # {"id":"com.android.tools.r8.synthesized"}
-    18:21:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$4(java.lang.String[],android.view.View):170:170 -> onClick
-    18:21:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    22:26:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$4(java.lang.String[],android.view.View):172:172 -> onClick
-    22:26:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    27:48:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$4(java.lang.String[],android.view.View):173:173 -> onClick
-    27:48:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    49:52:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0:0 -> onClick
-    53:60:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$2(android.widget.Button,android.view.View):112:112 -> onClick
-    53:60:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    61:77:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$2(android.widget.Button,android.view.View):113:113 -> onClick
-    61:77:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    78:85:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$2(android.widget.Button,android.view.View):114:114 -> onClick
-    78:85:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    86:88:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$2(android.widget.Button,android.view.View):115:115 -> onClick
-    86:88:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    89:99:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$2(android.widget.Button,android.view.View):117:117 -> onClick
-    89:99:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    100:106:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$2(android.widget.Button,android.view.View):116:116 -> onClick
-    100:106:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    107:109:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$2(android.widget.Button,android.view.View):119:119 -> onClick
-    107:109:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    110:120:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$2(android.widget.Button,android.view.View):121:121 -> onClick
-    110:120:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    121:124:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$2(android.widget.Button,android.view.View):120:120 -> onClick
-    121:124:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-com.example.xlkeyboard.NumberPadService$$ExternalSyntheticLambda1 -> a.c:
+    12:19:void com.example.xlkeyboard.NumberPadService.lambda$createSymbolView$11(android.view.View):443:443 -> onClick
+    12:19:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    20:21:void com.example.xlkeyboard.NumberPadService.lambda$createNumberPadView$1(android.view.View):75:75 -> onClick
+    20:21:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    22:29:void com.example.xlkeyboard.NumberPadService.lambda$createNumberPadView$1(android.view.View):76:76 -> onClick
+    22:29:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    30:31:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0:0 -> onClick
+    32:39:void com.example.xlkeyboard.NumberPadService.lambda$createNumberPadView$0(android.view.View):66:66 -> onClick
+    32:39:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    40:41:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0:0 -> onClick
+    42:45:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$4(android.view.View):134:134 -> onClick
+    42:45:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    46:55:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$4(android.view.View):135:135 -> onClick
+    46:55:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    56:57:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$4(android.view.View):137:137 -> onClick
+    56:57:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    58:60:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$4(android.view.View):138:138 -> onClick
+    58:60:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    61:64:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$4(android.view.View):141:141 -> onClick
+    61:64:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    65:66:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$4(android.view.View):143:143 -> onClick
+    65:66:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    67:69:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$4(android.view.View):144:144 -> onClick
+    67:69:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    70:74:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$4(android.view.View):147:147 -> onClick
+    70:74:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    75:76:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$4(android.view.View):150:150 -> onClick
+    75:76:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    77:79:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$4(android.view.View):152:152 -> onClick
+    77:79:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    80:83:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$4(android.view.View):153:153 -> onClick
+    80:83:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    84:85:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$3(android.view.View):122:122 -> onClick
+    84:85:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    86:93:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$3(android.view.View):123:123 -> onClick
+    86:93:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    94:95:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0:0 -> onClick
+    96:104:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$2(android.view.View):110:110 -> onClick
+    96:104:void a.NumberPadService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+com.example.xlkeyboard.NumberPadService$$ExternalSyntheticLambda10 -> a.c:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
-    int a.NumberPadService$$ExternalSyntheticLambda1.$r8$classId -> a
+    com.example.xlkeyboard.NumberPadService com.example.xlkeyboard.NumberPadService$$InternalSyntheticLambda$2$b90708d0122c74baf2dd8669ed83e8738c8bfa0791d3ba2c69f922334a65372c$0.f$0 -> a
       # {"id":"com.android.tools.r8.synthesized"}
-    com.example.xlkeyboard.NumberPadService com.example.xlkeyboard.NumberPadService$$InternalSyntheticLambda$1$8550abeb62a635af2816de4c67812c0ca7011afe8580c3d4195f02fdff3a0c97$1.f$0 -> b
+    boolean com.example.xlkeyboard.NumberPadService$$InternalSyntheticLambda$2$b90708d0122c74baf2dd8669ed83e8738c8bfa0791d3ba2c69f922334a65372c$0.f$1 -> b
       # {"id":"com.android.tools.r8.synthesized"}
-    1:8:void a.NumberPadService$$ExternalSyntheticLambda1.<init>(com.example.xlkeyboard.NumberPadService,int):0:0 -> <init>
+    1:8:void a.NumberPadService$$ExternalSyntheticLambda10.<init>(com.example.xlkeyboard.NumberPadService,boolean):0:0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    7:10:void com.example.xlkeyboard.NumberPadService.lambda$createNumberPadView$1(android.view.View):67:67 -> onClick
-    11:18:void com.example.xlkeyboard.NumberPadService.lambda$createNumberPadView$1(android.view.View):68:68 -> onClick
-    19:26:void com.example.xlkeyboard.NumberPadService.lambda$createNumberPadView$0(android.view.View):59:59 -> onClick
-    27:43:void com.example.xlkeyboard.NumberPadService.lambda$createNumberPadView$0(android.view.View):60:60 -> onClick
-    44:48:void com.example.xlkeyboard.NumberPadService.lambda$createNumberPadView$0(android.view.View):61:61 -> onClick
-    49:52:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$3(android.view.View):128:128 -> onClick
-    53:60:void com.example.xlkeyboard.NumberPadService.lambda$createQwertyView$3(android.view.View):129:129 -> onClick
-com.example.xlkeyboard.NumberPadService$$ExternalSyntheticLambda5 -> a.d:
+    3:11:void com.example.xlkeyboard.NumberPadService.lambda$setupArrowButton$10(boolean,android.view.View):356:356 -> onClick
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/view/View;)V"}
+    12:15:void com.example.xlkeyboard.NumberPadService.lambda$setupArrowButton$10(boolean,android.view.View):360:360 -> onClick
+    16:23:void com.example.xlkeyboard.NumberPadService.lambda$setupArrowButton$10(boolean,android.view.View):362:362 -> onClick
+    24:37:void com.example.xlkeyboard.NumberPadService.lambda$setupArrowButton$10(boolean,android.view.View):366:366 -> onClick
+    38:47:void com.example.xlkeyboard.NumberPadService.lambda$setupArrowButton$10(boolean,android.view.View):368:368 -> onClick
+    48:60:void com.example.xlkeyboard.NumberPadService.lambda$setupArrowButton$10(boolean,android.view.View):372:372 -> onClick
+    61:79:void com.example.xlkeyboard.NumberPadService.lambda$setupArrowButton$10(boolean,android.view.View):374:374 -> onClick
+    80:90:void com.example.xlkeyboard.NumberPadService.lambda$setupArrowButton$10(boolean,android.view.View):380:380 -> onClick
+    91:100:void com.example.xlkeyboard.NumberPadService.lambda$setupArrowButton$10(boolean,android.view.View):381:381 -> onClick
+com.example.xlkeyboard.NumberPadService$$ExternalSyntheticLambda11 -> a.d:
+# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
+# {"id":"com.android.tools.r8.synthesized"}
+    int a.NumberPadService$$ExternalSyntheticLambda11.$r8$classId -> a
+      # {"id":"com.android.tools.r8.synthesized"}
+    com.example.xlkeyboard.NumberPadService com.example.xlkeyboard.NumberPadService$$InternalSyntheticLambda$2$c9378f94d0ef1af951aa23e84deb5b46f7aa7a0f4868f79b1b94a499eabdd547$0.f$0 -> b
+      # {"id":"com.android.tools.r8.synthesized"}
+    java.lang.String com.example.xlkeyboard.NumberPadService$$InternalSyntheticLambda$2$c9378f94d0ef1af951aa23e84deb5b46f7aa7a0f4868f79b1b94a499eabdd547$0.f$1 -> c
+      # {"id":"com.android.tools.r8.synthesized"}
+    1:10:void a.NumberPadService$$ExternalSyntheticLambda11.<init>(com.example.xlkeyboard.NumberPadService,java.lang.String,int):0:0 -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    14:20:void com.example.xlkeyboard.NumberPadService.lambda$setupTextButton$9(java.lang.String,android.view.View):335:335 -> onClick
+    14:20:void a.NumberPadService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+      # {"id":"com.android.tools.r8.synthesized"}
+    21:23:void com.example.xlkeyboard.NumberPadService.lambda$setupTextButton$9(java.lang.String,android.view.View):338:338 -> onClick
+    21:23:void a.NumberPadService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    24:31:void com.example.xlkeyboard.NumberPadService.lambda$setupTextButton$9(java.lang.String,android.view.View):341:341 -> onClick
+    24:31:void a.NumberPadService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    32:34:void com.example.xlkeyboard.NumberPadService.lambda$setupTextButton$9(java.lang.String,android.view.View):342:342 -> onClick
+    32:34:void a.NumberPadService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    35:42:void com.example.xlkeyboard.NumberPadService.lambda$setupTextButton$9(java.lang.String,android.view.View):344:344 -> onClick
+    35:42:void a.NumberPadService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    43:44:void com.example.xlkeyboard.NumberPadService.lambda$setupTextButton$9(java.lang.String,android.view.View):346:346 -> onClick
+    43:44:void a.NumberPadService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    45:48:void com.example.xlkeyboard.NumberPadService.lambda$setupTextButton$9(java.lang.String,android.view.View):349:349 -> onClick
+    45:48:void a.NumberPadService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    49:50:void a.NumberPadService$$ExternalSyntheticLambda11.onClick(android.view.View):0:0 -> onClick
+    51:57:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$8(java.lang.String,android.view.View):310:310 -> onClick
+    51:57:void a.NumberPadService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    58:65:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$8(java.lang.String,android.view.View):315:315 -> onClick
+    58:65:void a.NumberPadService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    66:69:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$8(java.lang.String,android.view.View):316:316 -> onClick
+    66:69:void a.NumberPadService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    70:72:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$8(java.lang.String,android.view.View):317:317 -> onClick
+    70:72:void a.NumberPadService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    73:80:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$8(java.lang.String,android.view.View):320:320 -> onClick
+    73:80:void a.NumberPadService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    81:82:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$8(java.lang.String,android.view.View):321:321 -> onClick
+    81:82:void a.NumberPadService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    83:85:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$8(java.lang.String,android.view.View):322:322 -> onClick
+    83:85:void a.NumberPadService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    86:88:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$8(java.lang.String,android.view.View):323:323 -> onClick
+    86:88:void a.NumberPadService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    89:92:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$8(java.lang.String,android.view.View):325:325 -> onClick
+    89:92:void a.NumberPadService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    93:94:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$8(java.lang.String,android.view.View):326:326 -> onClick
+    93:94:void a.NumberPadService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    95:98:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$8(java.lang.String,android.view.View):327:327 -> onClick
+    95:98:void a.NumberPadService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+com.example.xlkeyboard.NumberPadService$$ExternalSyntheticLambda5 -> a.e:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     com.example.xlkeyboard.NumberPadService com.example.xlkeyboard.NumberPadService$$InternalSyntheticLambda$2$4aafdd07f37b2ab107497361e4b0b72b3dc2c5cfa62d660efe1f1113e1bf8355$0.f$0 -> a
@@ -191,97 +249,46 @@ com.example.xlkeyboard.NumberPadService$$ExternalSyntheticLambda5 -> a.d:
       # {"id":"com.android.tools.r8.synthesized"}
     1:8:void a.NumberPadService$$ExternalSyntheticLambda5.<init>(com.example.xlkeyboard.NumberPadService,int):0:0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    3:11:void com.example.xlkeyboard.NumberPadService.lambda$setupButton$6(int,android.view.View):271:271 -> onClick
+    3:11:void com.example.xlkeyboard.NumberPadService.lambda$setupButton$7(int,android.view.View):284:284 -> onClick
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/view/View;)V"}
-    12:15:void com.example.xlkeyboard.NumberPadService.lambda$setupButton$6(int,android.view.View):275:275 -> onClick
-    16:28:void com.example.xlkeyboard.NumberPadService.lambda$setupButton$6(int,android.view.View):276:276 -> onClick
-    29:38:void com.example.xlkeyboard.NumberPadService.lambda$setupButton$6(int,android.view.View):277:277 -> onClick
-com.example.xlkeyboard.NumberPadService$$ExternalSyntheticLambda6 -> a.e:
+    12:15:void com.example.xlkeyboard.NumberPadService.lambda$setupButton$7(int,android.view.View):288:288 -> onClick
+    16:28:void com.example.xlkeyboard.NumberPadService.lambda$setupButton$7(int,android.view.View):289:289 -> onClick
+    29:38:void com.example.xlkeyboard.NumberPadService.lambda$setupButton$7(int,android.view.View):290:290 -> onClick
+com.example.xlkeyboard.NumberPadService$$ExternalSyntheticLambda6 -> a.f:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     com.example.xlkeyboard.NumberPadService com.example.xlkeyboard.NumberPadService$$InternalSyntheticLambda$2$523974b881d60ae442e352d57ccd68385f57e6360f117b040d4e8a71d735dc60$0.f$0 -> a
       # {"id":"com.android.tools.r8.synthesized"}
     1:6:void a.NumberPadService$$ExternalSyntheticLambda6.<init>(com.example.xlkeyboard.NumberPadService):0:0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    1:1:boolean com.example.xlkeyboard.NumberPadService.lambda$setupBackspaceButton$5(android.view.View,android.view.MotionEvent):248:248 -> onTouch
-    2:2:boolean com.example.xlkeyboard.NumberPadService.lambda$setupBackspaceButton$5(android.view.View,android.view.MotionEvent):261:261 -> onTouch
-    3:3:boolean com.example.xlkeyboard.NumberPadService.lambda$setupBackspaceButton$5(android.view.View,android.view.MotionEvent):251:251 -> onTouch
-    4:4:boolean com.example.xlkeyboard.NumberPadService.lambda$setupBackspaceButton$5(android.view.View,android.view.MotionEvent):253:253 -> onTouch
-    5:5:boolean com.example.xlkeyboard.NumberPadService.lambda$setupBackspaceButton$5(android.view.View,android.view.MotionEvent):256:256 -> onTouch
-com.example.xlkeyboard.NumberPadService$$ExternalSyntheticLambda7 -> a.f:
-# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
-# {"id":"com.android.tools.r8.synthesized"}
-    int a.NumberPadService$$ExternalSyntheticLambda7.$r8$classId -> a
-      # {"id":"com.android.tools.r8.synthesized"}
-    com.example.xlkeyboard.NumberPadService com.example.xlkeyboard.NumberPadService$$InternalSyntheticLambda$2$56f6a6856f704cfb3fcb235e8bb41845bd0750a11fa5c323c1aaa74a5cbbfd4e$0.f$0 -> b
-      # {"id":"com.android.tools.r8.synthesized"}
-    java.lang.String com.example.xlkeyboard.NumberPadService$$InternalSyntheticLambda$2$56f6a6856f704cfb3fcb235e8bb41845bd0750a11fa5c323c1aaa74a5cbbfd4e$0.f$1 -> c
-      # {"id":"com.android.tools.r8.synthesized"}
-    1:10:void a.NumberPadService$$ExternalSyntheticLambda7.<init>(com.example.xlkeyboard.NumberPadService,java.lang.String,int):0:0 -> <init>
-      # {"id":"com.android.tools.r8.synthesized"}
-    14:20:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$7(java.lang.String,android.view.View):284:284 -> onClick
-    14:20:void a.NumberPadService$$ExternalSyntheticLambda7.onClick(android.view.View):0 -> onClick
-      # {"id":"com.android.tools.r8.synthesized"}
-    21:28:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$7(java.lang.String,android.view.View):289:289 -> onClick
-    21:28:void a.NumberPadService$$ExternalSyntheticLambda7.onClick(android.view.View):0 -> onClick
-    29:32:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$7(java.lang.String,android.view.View):290:290 -> onClick
-    29:32:void a.NumberPadService$$ExternalSyntheticLambda7.onClick(android.view.View):0 -> onClick
-    33:35:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$7(java.lang.String,android.view.View):291:291 -> onClick
-    33:35:void a.NumberPadService$$ExternalSyntheticLambda7.onClick(android.view.View):0 -> onClick
-    36:39:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$7(java.lang.String,android.view.View):294:294 -> onClick
-    36:39:void a.NumberPadService$$ExternalSyntheticLambda7.onClick(android.view.View):0 -> onClick
-    40:41:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$7(java.lang.String,android.view.View):295:295 -> onClick
-    40:41:void a.NumberPadService$$ExternalSyntheticLambda7.onClick(android.view.View):0 -> onClick
-    42:44:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$7(java.lang.String,android.view.View):296:296 -> onClick
-    42:44:void a.NumberPadService$$ExternalSyntheticLambda7.onClick(android.view.View):0 -> onClick
-    45:48:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$7(java.lang.String,android.view.View):298:298 -> onClick
-    45:48:void a.NumberPadService$$ExternalSyntheticLambda7.onClick(android.view.View):0 -> onClick
-    49:50:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$7(java.lang.String,android.view.View):299:299 -> onClick
-    49:50:void a.NumberPadService$$ExternalSyntheticLambda7.onClick(android.view.View):0 -> onClick
-    51:54:void com.example.xlkeyboard.NumberPadService.lambda$setupLetterButton$7(java.lang.String,android.view.View):300:300 -> onClick
-    51:54:void a.NumberPadService$$ExternalSyntheticLambda7.onClick(android.view.View):0 -> onClick
-    55:56:void a.NumberPadService$$ExternalSyntheticLambda7.onClick(android.view.View):0:0 -> onClick
-    57:63:void com.example.xlkeyboard.NumberPadService.lambda$setupTextButton$8(java.lang.String,android.view.View):308:308 -> onClick
-    57:63:void a.NumberPadService$$ExternalSyntheticLambda7.onClick(android.view.View):0 -> onClick
-    64:66:void com.example.xlkeyboard.NumberPadService.lambda$setupTextButton$8(java.lang.String,android.view.View):311:311 -> onClick
-    64:66:void a.NumberPadService$$ExternalSyntheticLambda7.onClick(android.view.View):0 -> onClick
-    67:74:void com.example.xlkeyboard.NumberPadService.lambda$setupTextButton$8(java.lang.String,android.view.View):314:314 -> onClick
-    67:74:void a.NumberPadService$$ExternalSyntheticLambda7.onClick(android.view.View):0 -> onClick
-    75:76:void com.example.xlkeyboard.NumberPadService.lambda$setupTextButton$8(java.lang.String,android.view.View):315:315 -> onClick
-    75:76:void a.NumberPadService$$ExternalSyntheticLambda7.onClick(android.view.View):0 -> onClick
-    77:80:void com.example.xlkeyboard.NumberPadService.lambda$setupTextButton$8(java.lang.String,android.view.View):316:316 -> onClick
-    77:80:void a.NumberPadService$$ExternalSyntheticLambda7.onClick(android.view.View):0 -> onClick
-    81:88:void com.example.xlkeyboard.NumberPadService.lambda$setupTextButton$8(java.lang.String,android.view.View):317:317 -> onClick
-    81:88:void a.NumberPadService$$ExternalSyntheticLambda7.onClick(android.view.View):0 -> onClick
-    89:90:void com.example.xlkeyboard.NumberPadService.lambda$setupTextButton$8(java.lang.String,android.view.View):319:319 -> onClick
-    89:90:void a.NumberPadService$$ExternalSyntheticLambda7.onClick(android.view.View):0 -> onClick
-    91:94:void com.example.xlkeyboard.NumberPadService.lambda$setupTextButton$8(java.lang.String,android.view.View):320:320 -> onClick
-    91:94:void a.NumberPadService$$ExternalSyntheticLambda7.onClick(android.view.View):0 -> onClick
+    1:1:boolean com.example.xlkeyboard.NumberPadService.lambda$setupBackspaceButton$6(android.view.View,android.view.MotionEvent):261:261 -> onTouch
+    2:2:boolean com.example.xlkeyboard.NumberPadService.lambda$setupBackspaceButton$6(android.view.View,android.view.MotionEvent):274:274 -> onTouch
+    3:3:boolean com.example.xlkeyboard.NumberPadService.lambda$setupBackspaceButton$6(android.view.View,android.view.MotionEvent):264:264 -> onTouch
+    4:4:boolean com.example.xlkeyboard.NumberPadService.lambda$setupBackspaceButton$6(android.view.View,android.view.MotionEvent):266:266 -> onTouch
+    5:5:boolean com.example.xlkeyboard.NumberPadService.lambda$setupBackspaceButton$6(android.view.View,android.view.MotionEvent):269:269 -> onTouch
 com.example.xlkeyboard.NumberPadService$$ExternalSyntheticLambda8 -> a.g:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
-    com.example.xlkeyboard.NumberPadService com.example.xlkeyboard.NumberPadService$$InternalSyntheticLambda$2$b90708d0122c74baf2dd8669ed83e8738c8bfa0791d3ba2c69f922334a65372c$0.f$0 -> a
+    com.example.xlkeyboard.NumberPadService com.example.xlkeyboard.NumberPadService$$InternalSyntheticLambda$2$7b3810fc3d9574efd8e5e46c194375acacfa77d5cfb52116f983b723abde77f0$0.f$0 -> a
       # {"id":"com.android.tools.r8.synthesized"}
-    boolean com.example.xlkeyboard.NumberPadService$$InternalSyntheticLambda$2$b90708d0122c74baf2dd8669ed83e8738c8bfa0791d3ba2c69f922334a65372c$0.f$1 -> b
+    android.widget.Button com.example.xlkeyboard.NumberPadService$$InternalSyntheticLambda$2$7b3810fc3d9574efd8e5e46c194375acacfa77d5cfb52116f983b723abde77f0$0.f$1 -> b
       # {"id":"com.android.tools.r8.synthesized"}
-    1:8:void a.NumberPadService$$ExternalSyntheticLambda8.<init>(com.example.xlkeyboard.NumberPadService,boolean):0:0 -> <init>
+    int com.example.xlkeyboard.NumberPadService$$InternalSyntheticLambda$2$7b3810fc3d9574efd8e5e46c194375acacfa77d5cfb52116f983b723abde77f0$0.f$2 -> c
       # {"id":"com.android.tools.r8.synthesized"}
-    3:11:void com.example.xlkeyboard.NumberPadService.lambda$setupArrowButton$9(boolean,android.view.View):328:328 -> onClick
+    1:10:void a.NumberPadService$$ExternalSyntheticLambda8.<init>(com.example.xlkeyboard.NumberPadService,android.widget.Button,int):0:0 -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    1:8:void com.example.xlkeyboard.NumberPadService.lambda$setupToggleButton$5(android.widget.Button,int,android.view.View):203:203 -> onClick
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/view/View;)V"}
-    12:15:void com.example.xlkeyboard.NumberPadService.lambda$setupArrowButton$9(boolean,android.view.View):332:332 -> onClick
-    16:23:void com.example.xlkeyboard.NumberPadService.lambda$setupArrowButton$9(boolean,android.view.View):334:334 -> onClick
-    24:37:void com.example.xlkeyboard.NumberPadService.lambda$setupArrowButton$9(boolean,android.view.View):338:338 -> onClick
-    38:47:void com.example.xlkeyboard.NumberPadService.lambda$setupArrowButton$9(boolean,android.view.View):340:340 -> onClick
-    48:60:void com.example.xlkeyboard.NumberPadService.lambda$setupArrowButton$9(boolean,android.view.View):344:344 -> onClick
-    61:79:void com.example.xlkeyboard.NumberPadService.lambda$setupArrowButton$9(boolean,android.view.View):346:346 -> onClick
-    80:90:void com.example.xlkeyboard.NumberPadService.lambda$setupArrowButton$9(boolean,android.view.View):352:352 -> onClick
-    91:100:void com.example.xlkeyboard.NumberPadService.lambda$setupArrowButton$9(boolean,android.view.View):353:353 -> onClick
+    9:25:void com.example.xlkeyboard.NumberPadService.lambda$setupToggleButton$5(android.widget.Button,int,android.view.View):204:204 -> onClick
+    26:33:void com.example.xlkeyboard.NumberPadService.lambda$setupToggleButton$5(android.widget.Button,int,android.view.View):205:205 -> onClick
+    34:37:void com.example.xlkeyboard.NumberPadService.lambda$setupToggleButton$5(android.widget.Button,int,android.view.View):208:208 -> onClick
+    38:43:void com.example.xlkeyboard.NumberPadService.lambda$setupToggleButton$5(android.widget.Button,int,android.view.View):209:209 -> onClick
 com.example.xlkeyboard.NumberPadService$1 -> a.h:
 # {"id":"sourceFile","fileName":"NumberPadService.java"}
     com.example.xlkeyboard.NumberPadService this$0 -> a
-    1:6:void <init>(com.example.xlkeyboard.NumberPadService):28:28 -> <init>
-    1:1:void run():31:31 -> run
-    2:2:void run():33:33 -> run
+    1:6:void <init>(com.example.xlkeyboard.NumberPadService):36:36 -> <init>
+    1:1:void run():39:39 -> run
+    2:2:void run():41:41 -> run
     3:3:android.os.Handler com.example.xlkeyboard.NumberPadService.access$000(com.example.xlkeyboard.NumberPadService):12:12 -> run
-    3:3:void run():34 -> run
-    4:4:void run():34:34 -> run
+    3:3:void run():42 -> run
+    4:4:void run():42:42 -> run

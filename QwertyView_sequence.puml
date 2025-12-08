@@ -1,0 +1,76 @@
+@startuml
+title createQwertyView Flow
+
+participant NumberPadService as Service
+participant "LayoutInflater" as Inflaters
+participant "View (Qwerty Layout)" as View
+participant "Button (Toggle)" as BtnToggle
+participant "Button (123)" as Btn123
+participant "Button (Shift)" as BtnShift
+participant "Button (Letters)" as BtnLetters
+participant "Resources" as Res
+
+Service -> Service : createQwertyView()
+activate Service
+
+Service -> Inflaters : inflate(R.layout.qwerty_keyboard_view, null)
+activate Inflaters
+Inflaters --> Service : View
+deactivate Inflaters
+
+group Setup Toggle Button
+    Service -> View : findViewById(R.id.btnToggleModeQwerty)
+    activate View
+    View --> Service : BtnToggle
+    deactivate View
+
+    alt isTabModeEnabled
+        Service -> BtnToggle : setText(R.string.key_toggle_tab)
+        Service -> Res : getColorStateList(R.color.toggle_active)
+        Service -> BtnToggle : setBackgroundTintList(...)
+    else
+        Service -> BtnToggle : setText(R.string.key_toggle_arrow)
+        Service -> Res : getColorStateList(R.color.toggle_inactive)
+        Service -> BtnToggle : setBackgroundTintList(...)
+    end
+
+    Service -> BtnToggle : setOnClickListener(...)
+end
+
+group Setup 123 Button
+    Service -> View : findViewById(R.id.btn123)
+    Service -> Btn123 : setOnClickListener(...)
+end
+
+group Setup Letter Buttons Array
+    Service -> Service : letterButtons = new Button[26]
+    loop for each letter (Q-M)
+        Service -> View : findViewById(R.id.btnX)
+        Service -> Service : letterButtons[i] = Button
+    end
+end
+
+group Setup Shift Button
+    Service -> View : findViewById(R.id.btnShift)
+    Service -> Service : updateShiftButton()
+    Service -> BtnShift : setOnClickListener(...)
+end
+
+group Setup Individual Letter Buttons
+    loop for each letter
+        Service -> Service : setupLetterButton(view, id, letter)
+    end
+end
+
+group Setup Special Buttons
+    Service -> Service : setupBackspaceButton(view, R.id.btnBackQwerty)
+    Service -> Service : setupTextButton(view, R.id.btnDotQwerty, ".")
+    Service -> Service : setupTextButton(view, R.id.btnSpaceQwerty, " ")
+    Service -> Service : setupTextButton(view, R.id.btnCommaQwerty, ",")
+    Service -> Service : setupButton(view, R.id.btnEnterQwerty, ENTER)
+end
+
+Service --> service : return View
+deactivate Service
+
+@enduml

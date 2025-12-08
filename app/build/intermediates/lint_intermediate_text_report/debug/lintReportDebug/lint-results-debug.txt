@@ -1,0 +1,495 @@
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\example\xlkeyboard\NumberPadService.java:173: Warning: Implicitly using the default locale is a common source of bugs: Use toUpperCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+                letterButtons[i].setText(isShiftEnabled ? letters[i].toUpperCase() : letters[i]);
+                                                                     ~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\example\xlkeyboard\NumberPadService.java:290: Warning: Implicitly using the default locale is a common source of bugs: Use toUpperCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+            String text = shouldCapitalize ? letter.toUpperCase() : letter;
+                                                    ~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\example\xlkeyboard\NumberPadService.java:370: Warning: Implicitly using the default locale is a common source of bugs: Use toUpperCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+                letterButtons[i].setText(shouldShowUppercase ? letters[i].toUpperCase() : letters[i]);
+                                                                          ~~~~~~~~~~~
+
+   Explanation for issues of type "DefaultLocale":
+   Calling String#toLowerCase() or #toUpperCase() without specifying an
+   explicit locale is a common source of bugs. The reason for that is that
+   those methods will use the current locale on the user's device, and even
+   though the code appears to work correctly when you are developing the app,
+   it will fail in some locales. For example, in the Turkish locale, the
+   uppercase replacement for i is not I.
+
+   If you want the methods to just perform ASCII replacement, for example to
+   convert an enum name, call String#toUpperCase(Locale.ROOT) instead. If you
+   really want to use the current locale, call
+   String#toUpperCase(Locale.getDefault()) instead.
+
+   https://developer.android.com/reference/java/util/Locale.html#default_locale
+
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build.gradle:12: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdk 34
+        ~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application or sdk runs on a version of Android that is more
+   recent than your targetSdkVersion specifies that it has been tested with,
+   various compatibility modes kick in. This ensures that your application
+   continues to work, but it may look out of place. For example, if the
+   targetSdkVersion is less than 14, your app may get an option button in the
+   UI.
+
+   To fix this issue, set the targetSdkVersion to the highest available value.
+   Then test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\example\xlkeyboard\NumberPadService.java:49: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+        View view = getLayoutInflater().inflate(R.layout.keyboard_view, null);
+                                                                        ~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\example\xlkeyboard\NumberPadService.java:98: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+        View view = getLayoutInflater().inflate(R.layout.qwerty_keyboard_view, null);
+                                                                               ~~~~
+
+   Explanation for issues of type "InflateParams":
+   When inflating a layout, avoid passing in null as the parent view, since
+   otherwise any layout parameters on the root of the inflated layout will be
+   ignored.
+
+   https://www.bignerdranch.com/blog/understanding-androids-layoutinflater-inflate/
+
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build.gradle:7: Warning: A newer version of compileSdkVersion than 34 is available: 36 [GradleDependency]
+    compileSdk 34
+    ~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build.gradle:45: Warning: A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0 [GradleDependency]
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build.gradle:46: Warning: A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.7.0 [GradleDependency]
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\activity_main.xml:9: Warning: Possible overdraw: Root element paints background #1D6F42 with a theme that also paints a background (inferred theme is @style/Theme.NumberPadApp) [Overdraw]
+    android:background="#1D6F42"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml:6: Warning: Possible overdraw: Root element paints background #FF212121 with a theme that also paints a background (inferred theme is @style/Theme.NumberPadApp) [Overdraw]
+    android:background="#FF212121"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:6: Warning: Possible overdraw: Root element paints background #FF212121 with a theme that also paints a background (inferred theme is @style/Theme.NumberPadApp) [Overdraw]
+    android:background="#FF212121"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\colors.xml:3: Warning: The resource R.color.black appears to be unused [UnusedResources]
+    <color name="black">#FF000000</color>
+           ~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\colors.xml:4: Warning: The resource R.color.white appears to be unused [UnusedResources]
+    <color name="white">#FF018786</color>
+           ~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\colors.xml:5: Warning: The resource R.color.purple_200 appears to be unused [UnusedResources]
+    <color name="purple_200">#FFBB86FC</color>
+           ~~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\colors.xml:6: Warning: The resource R.color.purple_500 appears to be unused [UnusedResources]
+    <color name="purple_500">#FF6200EE</color>
+           ~~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\colors.xml:7: Warning: The resource R.color.purple_700 appears to be unused [UnusedResources]
+    <color name="purple_700">#FF3700B3</color>
+           ~~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\colors.xml:8: Warning: The resource R.color.teal_200 appears to be unused [UnusedResources]
+    <color name="teal_200">#FF03DAC5</color>
+           ~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\colors.xml:9: Warning: The resource R.color.teal_700 appears to be unused [UnusedResources]
+    <color name="teal_700">#FF018786</color>
+           ~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\drawable\ic_launcher_foreground.xml:2: Warning: The resource R.drawable.ic_launcher_foreground appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\strings.xml:3: Warning: The resource R.string.zero appears to be unused [UnusedResources]
+    <string name="zero">0</string>
+            ~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\strings.xml:4: Warning: The resource R.string.one appears to be unused [UnusedResources]
+    <string name="one">1</string>
+            ~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\strings.xml:5: Warning: The resource R.string.two appears to be unused [UnusedResources]
+    <string name="two">2</string>
+            ~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\strings.xml:6: Warning: The resource R.string.three appears to be unused [UnusedResources]
+    <string name="three">3</string>
+            ~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\strings.xml:7: Warning: The resource R.string.four appears to be unused [UnusedResources]
+    <string name="four">4</string>
+            ~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\strings.xml:8: Warning: The resource R.string.five appears to be unused [UnusedResources]
+    <string name="five">5</string>
+            ~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\strings.xml:9: Warning: The resource R.string.six appears to be unused [UnusedResources]
+    <string name="six">6</string>
+            ~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\strings.xml:10: Warning: The resource R.string.seven appears to be unused [UnusedResources]
+    <string name="seven">7</string>
+            ~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\strings.xml:11: Warning: The resource R.string.eight appears to be unused [UnusedResources]
+    <string name="eight">8</string>
+            ~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\strings.xml:12: Warning: The resource R.string.nine appears to be unused [UnusedResources]
+    <string name="nine">9</string>
+            ~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\strings.xml:13: Warning: The resource R.string.up appears to be unused [UnusedResources]
+    <string name="up">Up</string>
+            ~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\strings.xml:14: Warning: The resource R.string.down appears to be unused [UnusedResources]
+    <string name="down">Down</string>
+            ~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\strings.xml:15: Warning: The resource R.string.left appears to be unused [UnusedResources]
+    <string name="left">Left</string>
+            ~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\strings.xml:16: Warning: The resource R.string.right appears to be unused [UnusedResources]
+    <string name="right">Right</string>
+            ~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\strings.xml:28: Warning: The resource R.string.key_down appears to be unused [UnusedResources]
+    <string name="key_down">▼</string>
+            ~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+   Available options:
+
+   **skip-libraries** (default is true):
+   Whether the unused resource check should skip reporting unused resources in libraries.
+
+   Many libraries will declare resources that are part of the library surface; other modules depending on the library will also reference the resources. To avoid reporting all these resources as unused (in the context of a library), the unused resource check normally skips reporting unused resources in libraries. Instead, run the unused resource check on the consuming app module (along with `checkDependencies=true`).
+
+   However, there are cases where you want to check that all the resources declared in a library are used; in that case, you can disable the skip option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UnusedResources">
+           <option name="skip-libraries" value="true" />
+       </issue>
+   </lint>
+   ```
+
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\mipmap-anydpi-v26\ic_launcher.xml:2: Warning: The application adaptive icon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\mipmap-anydpi-v26\ic_launcher_round.xml:2: Warning: The application adaptive roundIcon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+
+   Explanation for issues of type "MonochromeLauncherIcon":
+   If android:roundIcon and android:icon are both in your manifest, you must
+   either remove the reference to android:roundIcon if it is not needed; or,
+   supply the monochrome icon in the drawable defined by the android:roundIcon
+   and android:icon attribute.
+
+   For example, if android:roundIcon and android:icon are both in the
+   manifest, a launcher might choose to use android:roundIcon over
+   android:icon to display the adaptive app icon. Therefore, your themed
+   application iconwill not show if your monochrome attribute is not also
+   specified in android:roundIcon.
+
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml:60: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml:69: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml:78: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml:87: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml:103: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml:112: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml:121: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml:130: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml:146: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml:155: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml:164: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml:173: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml:189: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml:198: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml:207: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml:218: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:60: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:69: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:78: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:87: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:96: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:105: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:114: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:123: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:132: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:141: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:158: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:167: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:176: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:185: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:194: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:203: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:212: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:221: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:230: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:247: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:256: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:265: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:274: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:283: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:292: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:301: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:310: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:319: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:336: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:345: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:354: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:363: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+
+   Explanation for issues of type "ButtonStyle":
+   Button bars typically use a borderless style for the buttons. Set the
+   style="?android:attr/buttonBarButtonStyle" attribute on each of the
+   buttons, and set style="?android:attr/buttonBarStyle" on the parent layout
+
+   https://d.android.com/r/studio-ui/designer/material/dialogs
+
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\example\xlkeyboard\NumberPadService.java:247: Warning: Custom view `Button` has setOnTouchListener called on it but does not override performClick [ClickableViewAccessibility]
+        button.setOnTouchListener((v, event) -> {
+        ^
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\example\xlkeyboard\NumberPadService.java:247: Warning: onTouch lambda should call View#performClick when a click is detected [ClickableViewAccessibility]
+        button.setOnTouchListener((v, event) -> {
+                                  ^
+
+   Explanation for issues of type "ClickableViewAccessibility":
+   If a View that overrides onTouchEvent or uses an OnTouchListener does not
+   also implement performClick and call it when clicks are detected, the View
+   may not handle accessibility actions properly. Logic handling the click
+   actions should ideally be placed in View#performClick as some accessibility
+   services invoke performClick when a click action should occur.
+
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:65: Warning: Hardcoded string "q", should use @string resource [HardcodedText]
+            android:text="q"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:74: Warning: Hardcoded string "w", should use @string resource [HardcodedText]
+            android:text="w"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:83: Warning: Hardcoded string "e", should use @string resource [HardcodedText]
+            android:text="e"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:92: Warning: Hardcoded string "r", should use @string resource [HardcodedText]
+            android:text="r"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:101: Warning: Hardcoded string "t", should use @string resource [HardcodedText]
+            android:text="t"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:110: Warning: Hardcoded string "y", should use @string resource [HardcodedText]
+            android:text="y"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:119: Warning: Hardcoded string "u", should use @string resource [HardcodedText]
+            android:text="u"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:128: Warning: Hardcoded string "i", should use @string resource [HardcodedText]
+            android:text="i"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:137: Warning: Hardcoded string "o", should use @string resource [HardcodedText]
+            android:text="o"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:146: Warning: Hardcoded string "p", should use @string resource [HardcodedText]
+            android:text="p"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:163: Warning: Hardcoded string "a", should use @string resource [HardcodedText]
+            android:text="a"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:172: Warning: Hardcoded string "s", should use @string resource [HardcodedText]
+            android:text="s"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:181: Warning: Hardcoded string "d", should use @string resource [HardcodedText]
+            android:text="d"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:190: Warning: Hardcoded string "f", should use @string resource [HardcodedText]
+            android:text="f"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:199: Warning: Hardcoded string "g", should use @string resource [HardcodedText]
+            android:text="g"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:208: Warning: Hardcoded string "h", should use @string resource [HardcodedText]
+            android:text="h"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:217: Warning: Hardcoded string "j", should use @string resource [HardcodedText]
+            android:text="j"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:226: Warning: Hardcoded string "k", should use @string resource [HardcodedText]
+            android:text="k"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:235: Warning: Hardcoded string "l", should use @string resource [HardcodedText]
+            android:text="l"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:252: Warning: Hardcoded string "⇧", should use @string resource [HardcodedText]
+            android:text="⇧"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:261: Warning: Hardcoded string "z", should use @string resource [HardcodedText]
+            android:text="z"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:270: Warning: Hardcoded string "x", should use @string resource [HardcodedText]
+            android:text="x"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:279: Warning: Hardcoded string "c", should use @string resource [HardcodedText]
+            android:text="c"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:288: Warning: Hardcoded string "v", should use @string resource [HardcodedText]
+            android:text="v"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:297: Warning: Hardcoded string "b", should use @string resource [HardcodedText]
+            android:text="b"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:306: Warning: Hardcoded string "n", should use @string resource [HardcodedText]
+            android:text="n"
+            ~~~~~~~~~~~~~~~~
+C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml:315: Warning: Hardcoded string "m", should use @string resource [HardcodedText]
+            android:text="m"
+            ~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+0 errors, 114 warnings

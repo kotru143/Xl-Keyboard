@@ -1,0 +1,52 @@
+@startuml
+package com.example.xlkeyboard {
+
+  class MainActivity {
+    +onCreate(savedInstanceState: Bundle): void
+  }
+
+  class NumberPadService {
+    -static PREFS_NAME: String
+    -static KEY_TAB_MODE: String
+    -static REPEAT_DELAY: long
+    -prefs: SharedPreferences
+    -isTabModeEnabled: boolean
+    -isQwertyMode: boolean
+    -isShiftEnabled: boolean
+    -autoCapitalizeNext: boolean
+    -toggleButton: Button
+    -shiftButton: Button
+    -letterButtons: Button[]
+    -letters: String[]
+    -deleteHandler: Handler
+    -deleteRunnable: Runnable
+
+    +onCreateInputView(): View
+    -createNumberPadView(): View
+    -createQwertyView(): View
+    -updateToggleButton(): void
+    -updateShiftButton(): void
+    -setupBackspaceButton(parent: View, id: int): void
+    -setupButton(parent: View, id: int, keyCode: int): void
+    -setupLetterButton(parent: View, id: int, letter: String): void
+    -setupTextButton(parent: View, id: int, text: String): void
+    -setupArrowButton(parent: View, id: int, isLeft: boolean): void
+    -updateLetterButtonsCase(): void
+  }
+
+  MainActivity --|> android.app.Activity
+  NumberPadService --|> android.inputmethodservice.InputMethodService
+
+  note right of MainActivity
+    Launcher Activity to enable
+    and select the keyboard
+  end note
+
+  note right of NumberPadService
+    Core InputMethodService implementation.
+    Handles keyboard view creation (NumberPad/Qwerty)
+    and input event handling.
+  end note
+
+}
+@enduml

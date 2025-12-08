@@ -1,9 +1,9 @@
-# The proguard configuration file for the following section is C:\Users\kotru\.gemini\antigravity\scratch\AndroidNumberPad\app\build\intermediates\aapt_proguard_file\release\processReleaseResources\aapt_rules.txt
+# The proguard configuration file for the following section is C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build\intermediates\aapt_proguard_file\release\processReleaseResources\aapt_rules.txt
 -keep class com.example.xlkeyboard.MainActivity { <init>(); }
 -keep class com.example.xlkeyboard.NumberPadService { <init>(); }
 
-# End of content from C:\Users\kotru\.gemini\antigravity\scratch\AndroidNumberPad\app\build\intermediates\aapt_proguard_file\release\processReleaseResources\aapt_rules.txt
-# The proguard configuration file for the following section is C:\Users\kotru\.gemini\antigravity\scratch\AndroidNumberPad\app\build\intermediates\default_proguard_files\global\proguard-android-optimize.txt-8.13.1
+# End of content from C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build\intermediates\aapt_proguard_file\release\processReleaseResources\aapt_rules.txt
+# The proguard configuration file for the following section is C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build\intermediates\default_proguard_files\global\proguard-android-optimize.txt-8.13.1
 # This is a configuration file for ProGuard.
 # http://proguard.sourceforge.net/index.html#manual/usage.html
 #
@@ -94,7 +94,7 @@
 # These classes are duplicated between android.jar and core-lambda-stubs.jar.
 -dontnote java.lang.invoke.**
 
-# End of content from C:\Users\kotru\.gemini\antigravity\scratch\AndroidNumberPad\app\build\intermediates\default_proguard_files\global\proguard-android-optimize.txt-8.13.1
+# End of content from C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build\intermediates\default_proguard_files\global\proguard-android-optimize.txt-8.13.1
 # The proguard configuration file for the following section is <unknown>
 
 # End of content from <unknown>

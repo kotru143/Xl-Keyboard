@@ -1,0 +1,79 @@
+@startuml
+title Initialization Flow
+
+actor User
+participant "System (Android)" as System
+participant NumberPadService as Service
+participant "Method: createNumberPadView" as CreateView
+
+User -> System : Start Input Method
+System -> Service : onCreateInputView()
+activate Service
+
+alt isQwertyMode == false
+    Service -> Service : createNumberPadView()
+    activate Service
+    
+    Service -> CreateView : inflate(R.layout.keyboard_view)
+    Service -> CreateView : getSharedPreferences()
+    Service -> CreateView : setupButton(btn0...btn9)
+    Service -> CreateView : setupArrowButton(btnLeft, btnRight)
+    
+    deactivate Service
+else isQwertyMode == true
+    Service -> Service : createQwertyView()
+    activate Service
+    Service -> Service : setupLetterButton(btnQ...btnM)
+    deactivate Service
+end
+
+Service --> System : return View
+deactivate Service
+
+newpage
+
+title Key Press Flow (Letter A)
+
+actor User
+participant "Button (A)" as Button
+participant "OnClickListener" as Listener
+participant NumberPadService as Service
+participant "InputConnection" as IC
+
+User -> Button : Click
+Button -> Listener : onClick(v)
+activate Listener
+
+Listener -> Service : getCurrentInputConnection()
+Service --> Listener : InputConnection
+
+alt Auto-Capitalize or Shift Enabled
+    Listener -> IC : commitText("A", 1)
+else Normal
+    Listener -> IC : commitText("a", 1)
+end
+
+Listener -> Service : updateShiftButton() (if needed)
+
+deactivate Listener
+
+newpage
+
+title Mode Switching Flow
+
+actor User
+participant "Toggle Button" as Toggle
+participant NumberPadService as Service
+participant "SharedPreferences" as Prefs
+
+User -> Toggle : Click
+Toggle -> Service : onClick(v)
+activate Service
+
+Service -> Service : isTabModeEnabled = !isTabModeEnabled
+Service -> Prefs : edit().putBoolean(KEY_TAB_MODE, ...).apply()
+Service -> Service : updateToggleButton()
+
+deactivate Service
+
+@enduml
