@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="#FF212121"
+    android:background="@color/black"
     android:paddingBottom="10dp">
 
     <!-- Toggle + 123 Button Row -->
@@ -15,7 +15,7 @@
         android:paddingBottom="5dp"
         android:weightSum="4">
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnToggleModeQwerty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
             android:layout_weight="0"
             android:backgroundTint="@color/toggle_inactive" />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnsym"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
             android:text="@string/key_sym"
             android:textSize="18sp" />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btn123"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
         android:orientation="horizontal"
         android:weightSum="10">
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnQ"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -66,7 +66,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnW"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -75,7 +75,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnE"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -84,7 +84,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnR"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -93,7 +93,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnT"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -102,7 +102,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnY"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -111,7 +111,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnU"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -120,7 +120,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnI"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -129,7 +129,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnO"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -138,7 +138,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnP"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -155,7 +155,7 @@
         android:orientation="horizontal"
         android:weightSum="9">
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnA"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -164,7 +164,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnS"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -173,7 +173,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnD"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -182,7 +182,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnF"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -191,7 +191,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnG"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -200,7 +200,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnH"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -209,7 +209,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnJ"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -218,7 +218,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnK"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -227,7 +227,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnL"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -244,7 +244,7 @@
         android:orientation="horizontal"
         android:weightSum="10">
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnShift"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -253,7 +253,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnZ"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -262,7 +262,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnX"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -271,7 +271,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnC"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -280,7 +280,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnV"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -289,7 +289,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnB"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -298,7 +298,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnN"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -307,7 +307,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnM"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -316,7 +316,7 @@
             android:textSize="20sp"
  />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnBackQwerty"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -333,7 +333,7 @@
         android:orientation="horizontal"
         android:weightSum="6">
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnDotQwerty"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -342,7 +342,7 @@
             android:textSize="20sp"
             android:minHeight="60dp" />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnSpaceQwerty"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -351,7 +351,7 @@
             android:textSize="20sp"
             android:minHeight="60dp" />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnCommaQwerty"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -360,7 +360,7 @@
             android:textSize="20sp"
             android:minHeight="60dp" />
 
-        <Button
+        <Button style="@style/KeyboardButton"
             android:id="@+id/btnEnterQwerty"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

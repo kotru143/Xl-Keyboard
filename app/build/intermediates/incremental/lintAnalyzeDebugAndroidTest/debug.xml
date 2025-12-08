@@ -1,6 +1,6 @@
 <variant
     name="debug"
-    package="com.example.xlkeyboard"
+    package="com.xlkeyboard"
     minSdkVersion="24"
     targetSdkVersion="34"
     debuggable="true"
@@ -23,7 +23,7 @@
   </testFixturesSourceProviders>
   <artifact
       type="INSTRUMENTATION_TEST"
-      applicationId="com.example.xlkeyboard.test"
+      applicationId="com.xlkeyboard.test"
       generatedResourceFolders="build\generated\res\resValues\androidTest\debug"
       desugaredMethodsFiles="C:\Users\kotru\.gradle\caches\9.0-milestone-1\transforms\bfdc648fbe668315be7987a14990669d\transformed\D8BackportedDesugaredMethods.txt">
   </artifact>

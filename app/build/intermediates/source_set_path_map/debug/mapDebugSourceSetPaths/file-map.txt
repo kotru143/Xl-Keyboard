@@ -1,8 +1,8 @@
-com.example.xlkeyboard.app-pngs-0 C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build\generated\res\pngs\debug
-com.example.xlkeyboard.app-resValues-1 C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build\generated\res\resValues\debug
-com.example.xlkeyboard.app-updated_navigation_xml-2 C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build\generated\updated_navigation_xml\debug
-com.example.xlkeyboard.app-packageDebugResources-3 C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.xlkeyboard.app-packageDebugResources-4 C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.xlkeyboard.app-debug-5 C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build\intermediates\merged_res\debug\mergeDebugResources
-com.example.xlkeyboard.app-debug-6 C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\debug\res
-com.example.xlkeyboard.app-main-7 C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res
+com.xlkeyboard.app-pngs-0 C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build\generated\res\pngs\debug
+com.xlkeyboard.app-resValues-1 C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build\generated\res\resValues\debug
+com.xlkeyboard.app-updated_navigation_xml-2 C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build\generated\updated_navigation_xml\debug
+com.xlkeyboard.app-packageDebugResources-3 C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.xlkeyboard.app-packageDebugResources-4 C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.xlkeyboard.app-debug-5 C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.xlkeyboard.app-debug-6 C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\debug\res
+com.xlkeyboard.app-main-7 C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res

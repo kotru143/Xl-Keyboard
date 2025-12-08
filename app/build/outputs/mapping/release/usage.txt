@@ -1,25 +1,22 @@
-com.example.xlkeyboard.NumberPadService:
-    private static final long DOUBLE_TAP_DELAY
-    private static final java.lang.String KEY_TAB_MODE
-    private static final java.lang.String PREFS_NAME
-    private static final long REPEAT_DELAY
-    private void updateToggleButton()
-com.example.xlkeyboard.R$color:
+com.xlkeyboard.R$color:
     public static int black
+    public static int button_background_dark
+    public static int dark_button_background
     public static int purple_200
     public static int purple_500
     public static int purple_700
+    public static int real_white
     public static int teal_200
     public static int teal_700
     public static int white
     private void <init>()
-com.example.xlkeyboard.R$drawable
-com.example.xlkeyboard.R$id:
+com.xlkeyboard.R$drawable
+com.xlkeyboard.R$id:
     private void <init>()
-com.example.xlkeyboard.R$layout:
+com.xlkeyboard.R$layout:
     private void <init>()
-com.example.xlkeyboard.R$mipmap
-com.example.xlkeyboard.R$string:
+com.xlkeyboard.R$mipmap
+com.xlkeyboard.R$string:
     public static int _1_enable_keyboard
     public static int _2_select_keyboard
     public static int app_name
@@ -62,14 +59,21 @@ com.example.xlkeyboard.R$string:
     public static int xl_keyboard_setup
     public static int zero
     private void <init>()
-com.example.xlkeyboard.R$style
-com.example.xlkeyboard.R$xml
-com.example.xlkeyboard.R
-com.example.xlkeyboard.NumberPadService:
+com.xlkeyboard.R$style
+com.xlkeyboard.R$xml
+com.xlkeyboard.R
+com.xlkeyboard.XlKeyboardService:
+    private static final long DOUBLE_TAP_DELAY
+    private static final java.lang.String KEY_TAB_MODE
+    private static final java.lang.String PREFS_NAME
+    private static final long REPEAT_DELAY
+    private void updateToggleButton()
+com.xlkeyboard.R$color
+com.xlkeyboard.R$id
+com.xlkeyboard.R$layout
+com.xlkeyboard.R$string
+com.xlkeyboard.XlKeyboardService:
+    public static void sendKeyEvent()
     public final void setupArrowButton(android.view.View,int,boolean)
     public final void setupBackspaceButton(android.view.View,int)
     public final void setupToggleButton(android.view.View,int)
-com.example.xlkeyboard.R$color
-com.example.xlkeyboard.R$id
-com.example.xlkeyboard.R$layout
-com.example.xlkeyboard.R$string

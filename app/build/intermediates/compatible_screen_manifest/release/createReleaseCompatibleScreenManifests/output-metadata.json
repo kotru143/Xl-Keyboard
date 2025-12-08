@@ -4,7 +4,7 @@
     "type": "COMPATIBLE_SCREEN_MANIFEST",
     "kind": "Directory"
   },
-  "applicationId": "com.example.xlkeyboard",
+  "applicationId": "com.xlkeyboard",
   "variantName": "release",
   "elements": []
 }

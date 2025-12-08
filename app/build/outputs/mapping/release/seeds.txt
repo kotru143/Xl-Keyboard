@@ -1,4 +1,4 @@
-com.example.xlkeyboard.MainActivity
-com.example.xlkeyboard.NumberPadService
-com.example.xlkeyboard.NumberPadService: NumberPadService()
-com.example.xlkeyboard.MainActivity: MainActivity()
+com.xlkeyboard.XlKeyboardService
+com.xlkeyboard.MainActivity
+com.xlkeyboard.MainActivity: MainActivity()
+com.xlkeyboard.XlKeyboardService: XlKeyboardService()

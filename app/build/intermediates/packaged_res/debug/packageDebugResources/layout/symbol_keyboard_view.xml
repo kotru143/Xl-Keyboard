@@ -3,9 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="#FF212121"
+    android:background="@color/black"
     android:paddingBottom="10dp">
 
+    <!-- Layout buttons on the screen -->
     <!-- Row 1: 1 2 3 4 5 6 7 8 9 0 -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,16 +14,16 @@
         android:orientation="horizontal"
         android:weightSum="10">
 
-        <Button android:id="@+id/btnSym1" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="1" android:textSize="20sp" />
-        <Button android:id="@+id/btnSym2" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="2" android:textSize="20sp" />
-        <Button android:id="@+id/btnSym3" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="3" android:textSize="20sp" />
-        <Button android:id="@+id/btnSym4" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="4" android:textSize="20sp" />
-        <Button android:id="@+id/btnSym5" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="5" android:textSize="20sp" />
-        <Button android:id="@+id/btnSym6" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="6" android:textSize="20sp" />
-        <Button android:id="@+id/btnSym7" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="7" android:textSize="20sp" />
-        <Button android:id="@+id/btnSym8" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="8" android:textSize="20sp" />
-        <Button android:id="@+id/btnSym9" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="9" android:textSize="20sp" />
-        <Button android:id="@+id/btnSym0" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="0" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSym1" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="1" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSym2" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="2" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSym3" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="3" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSym4" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="4" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSym5" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="5" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSym6" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="6" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSym7" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="7" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSym8" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="8" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSym9" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="9" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSym0" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="0" android:textSize="20sp" />
     </LinearLayout>
 
     <!-- Row 2: @ # $ % & - + ( ) / -->
@@ -32,16 +33,16 @@
         android:orientation="horizontal"
         android:weightSum="10">
 
-        <Button android:id="@+id/btnSymAt" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="@" android:textSize="20sp" />
-        <Button android:id="@+id/btnSymHash" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="#" android:textSize="20sp" />
-        <Button android:id="@+id/btnSymDollar" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="$" android:textSize="20sp" />
-        <Button android:id="@+id/btnSymPercent" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="%" android:textSize="20sp" />
-        <Button android:id="@+id/btnSymAmpersand" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="&amp;" android:textSize="20sp" />
-        <Button android:id="@+id/btnSymMinus" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="-" android:textSize="20sp" />
-        <Button android:id="@+id/btnSymPlus" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="+" android:textSize="20sp" />
-        <Button android:id="@+id/btnSymParenLeft" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="(" android:textSize="20sp" />
-        <Button android:id="@+id/btnSymParenRight" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text=")" android:textSize="20sp" />
-        <Button android:id="@+id/btnSymSlash" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="/" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymAt" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="@" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymHash" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="#" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymDollar" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="₹" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymPercent" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="%" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymAmpersand" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="&amp;" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymMinus" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="-" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymPlus" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="+" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymParenLeft" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="(" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymParenRight" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text=")" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymSlash" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="/" android:textSize="20sp" />
     </LinearLayout>
 
     <!-- Row 3: = * " ' : ; ! ? Backspace -->
@@ -51,15 +52,15 @@
         android:orientation="horizontal"
         android:weightSum="9">
 
-        <Button android:id="@+id/btnSymEquals" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="=" android:textSize="20sp" />
-        <Button android:id="@+id/btnSymAsterisk" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="*" android:textSize="20sp" />
-        <Button android:id="@+id/btnSymQuoteDouble" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text='"' android:textSize="20sp" />
-        <Button android:id="@+id/btnSymQuoteSingle" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="'" android:textSize="20sp" />
-        <Button android:id="@+id/btnSymColon" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text=":" android:textSize="20sp" />
-        <Button android:id="@+id/btnSymSemicolon" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text=";" android:textSize="20sp" />
-        <Button android:id="@+id/btnSymExclamation" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="!" android:textSize="20sp" />
-        <Button android:id="@+id/btnSymQuestion" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="?" android:textSize="20sp" />
-        <Button android:id="@+id/btnBackSym" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_backspace" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymEquals" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="=" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymAsterisk" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="*" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymQuoteDouble" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text='"' android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymQuoteSingle" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="'" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymColon" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text=":" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymSemicolon" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text=";" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymExclamation" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="!" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymQuestion" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="?" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnBackSym" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_backspace" android:textSize="20sp" />
     </LinearLayout>
 
     <!-- Row 4: ABC Space Comma Enter -->
@@ -69,41 +70,10 @@
         android:orientation="horizontal"
         android:weightSum="6">
 
-        <Button
-            android:id="@+id/btnABC_Sym"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/key_abc"
-            android:textSize="18sp"
-            android:minHeight="60dp" />
-
-        <Button
-            android:id="@+id/btnSpaceSym"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="@string/key_space"
-            android:textSize="20sp"
-            android:minHeight="60dp" />
-
-        <Button
-            android:id="@+id/btnCommaSym"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/key_comma"
-            android:textSize="20sp"
-            android:minHeight="60dp" />
-
-        <Button
-            android:id="@+id/btnEnterSym"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/key_enter"
-            android:textSize="20sp"
-            android:minHeight="60dp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnABC_Sym" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_abc" android:textSize="18sp" android:minHeight="60dp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSpaceSym" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3" android:text="@string/key_space" android:textSize="20sp" android:minHeight="60dp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnCommaSym" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/key_comma" android:textSize="20sp" android:minHeight="60dp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnEnterSym" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/key_enter" android:textSize="20sp" android:minHeight="60dp" />
     </LinearLayout>
 
 </LinearLayout>

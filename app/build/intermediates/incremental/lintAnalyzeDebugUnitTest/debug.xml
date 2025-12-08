@@ -1,6 +1,6 @@
 <variant
     name="debug"
-    package="com.example.xlkeyboard"
+    package="com.xlkeyboard"
     minSdkVersion="24"
     targetSdkVersion="34"
     debuggable="true"

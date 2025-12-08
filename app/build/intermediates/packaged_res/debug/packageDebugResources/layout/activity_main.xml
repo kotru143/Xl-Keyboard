@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="32dp"
-    android:background="#1D6F42"
+    android:background="@color/button_background_dark"
     tools:context=".MainActivity">
 
     <!--weight value varies the size of the gap
@@ -32,7 +32,7 @@
         android:text="@string/_1_enable_keyboard"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@android:color/white"
-        android:textColor="#1D6F42"/>
+        android:textColor="@android:color/black"/>
 
     <Button
         android:id="@+id/btnSelect"
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:text="@string/_2_select_keyboard"
         android:backgroundTint="@android:color/white"
-        android:textColor="#1D6F42"/>
+        android:textColor="@android:color/black"/>
 
     <!--android:layout_weight="0.5"-->
     <View

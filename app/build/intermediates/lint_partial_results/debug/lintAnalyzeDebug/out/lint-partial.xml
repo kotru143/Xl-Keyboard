@@ -4,32 +4,32 @@
             <map id="actionsSent">
                     <map id="android.settings.INPUT_METHOD_SETTINGS (used to start an activity)">
                         <location id="0"
-                            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/xlkeyboard/MainActivity.java"
-                            line="23"
+                            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/xlkeyboard/MainActivity.java"
+                            line="25"
                             column="31"
-                            startOffset="721"
-                            endLine="23"
+                            startOffset="831"
+                            endLine="25"
                             endColumn="80"
-                            endOffset="770"/>
+                            endOffset="880"/>
                     </map>
             </map>
     </map>
     <map id="UnsafeIntentLaunch">
             <map id="unprotected">
                 <entry
-                    name="com.example.xlkeyboard.MainActivity"
+                    name="com.xlkeyboard.MainActivity"
                     boolean="true"/>
             </map>
     </map>
     <map id="UnusedResources">
-        <location id="R.color.black"
+        <location id="R.color.dark_button_background"
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
-            line="3"
+            line="12"
             column="12"
-            startOffset="64"
-            endLine="3"
-            endColumn="24"
-            endOffset="76"/>
+            startOffset="490"
+            endLine="12"
+            endColumn="41"
+            endOffset="519"/>
         <location id="R.color.purple_200"
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
             line="5"
@@ -208,7 +208,7 @@
             endOffset="86"/>
         <entry
             name="model"
-            string="color[toggle_inactive(U),black(D),white(D),purple_200(D),purple_500(D),purple_700(D),teal_200(D),teal_700(D),toggle_active(U)],drawable[ic_excel_foreground(U),ic_launcher_background(U),ic_launcher_foreground(D)],id[btnEnable(U),btnSelect(U),btnToggleMode(U),btnsym(D),btnABC(U),btn1(U),btn2(U),btn3(U),btnRight(U),btn4(U),btn5(U),btn6(U),btnLeft(U),btn7(U),btn8(U),btn9(U),btnBack(U),btnDot(U),btn0(U),btnUp(U),btnEnter(U),btnToggleModeQwerty(U),btn123(U),btnQ(U),btnW(U),btnE(U),btnR(U),btnT(U),btnY(U),btnU(U),btnI(U),btnO(U),btnP(U),btnA(U),btnS(U),btnD(U),btnF(U),btnG(U),btnH(U),btnJ(U),btnK(U),btnL(U),btnShift(U),btnZ(U),btnX(U),btnC(U),btnV(U),btnB(U),btnN(U),btnM(U),btnBackQwerty(U),btnDotQwerty(U),btnSpaceQwerty(U),btnCommaQwerty(U),btnEnterQwerty(U)],layout[activity_main(U),keyboard_view(U),qwerty_keyboard_view(U)],mipmap[ic_launcher(U),ic_launcher_round(U)],string[app_name(U),xl_keyboard_setup(U),_1_enable_keyboard(U),_2_select_keyboard(U),created_by_kotru143_gmail_com(U),key_toggle_arrow(U),key_sym(U),key_abc(U),key_1(U),key_2(U),key_3(U),key_right(U),key_4(U),key_5(U),key_6(U),key_left(U),key_7(U),key_8(U),key_9(U),key_backspace(U),key_dot(U),key_0(U),key_up(U),key_enter(U),key_123(U),key_space(U),key_comma(U),zero(D),one(D),two(D),three(D),four(D),five(D),six(D),seven(D),eight(D),nine(D),up(D),down(D),left(D),right(D),key_down(D),key_toggle_tab(U)],style[Theme_NumberPadApp(U)],xml[data_extraction_rules(U),backup_rules(U),method(U)];43^49^4a^4b^4c,44^0^4d^4e^4f^50^51^52^53^54^55^56^57^58^59^5a^5b^5c^5d^5e^5f,45^0^4d^4e^60^5b^5c^61^62^5f,46^a^9,47^a^9,76^48;;;"/>
+            string="color[button_background_dark(U),black(U),toggle_inactive(U),white(D),purple_200(D),purple_500(D),purple_700(D),teal_200(D),teal_700(D),toggle_active(U),dark_button_background(D),real_white(U)],drawable[ic_excel_foreground(U),ic_launcher_background(U),ic_launcher_foreground(D)],id[btnEnable(U),btnSelect(U),btnToggleMode(U),btnsym(U),btnABC(U),btn1(U),btn2(U),btn3(U),btnRight(U),btn4(U),btn5(U),btn6(U),btnLeft(U),btn7(U),btn8(U),btn9(U),btnBack(U),btnDot(U),btn0(U),btnUp(U),btnEnter(U),btnToggleModeQwerty(U),btn123(U),btnQ(U),btnW(U),btnE(U),btnR(U),btnT(U),btnY(U),btnU(U),btnI(U),btnO(U),btnP(U),btnA(U),btnS(U),btnD(U),btnF(U),btnG(U),btnH(U),btnJ(U),btnK(U),btnL(U),btnShift(U),btnZ(U),btnX(U),btnC(U),btnV(U),btnB(U),btnN(U),btnM(U),btnBackQwerty(U),btnDotQwerty(U),btnSpaceQwerty(U),btnCommaQwerty(U),btnEnterQwerty(U),btnSym1(U),btnSym2(U),btnSym3(U),btnSym4(U),btnSym5(U),btnSym6(U),btnSym7(U),btnSym8(U),btnSym9(U),btnSym0(U),btnSymAt(U),btnSymHash(U),btnSymDollar(U),btnSymPercent(U),btnSymAmpersand(U),btnSymMinus(U),btnSymPlus(U),btnSymParenLeft(U),btnSymParenRight(U),btnSymSlash(U),btnSymEquals(U),btnSymAsterisk(U),btnSymQuoteDouble(U),btnSymQuoteSingle(U),btnSymColon(U),btnSymSemicolon(U),btnSymExclamation(U),btnSymQuestion(U),btnBackSym(U),btnABC_Sym(U),btnSpaceSym(U),btnCommaSym(U),btnEnterSym(U)],layout[activity_main(U),keyboard_view(U),qwerty_keyboard_view(U),symbol_keyboard_view(U)],mipmap[ic_launcher(U),ic_launcher_round(U)],string[app_name(U),xl_keyboard_setup(U),_1_enable_keyboard(U),_2_select_keyboard(U),created_by_kotru143_gmail_com(U),key_toggle_arrow(U),key_sym(U),key_abc(U),key_1(U),key_2(U),key_3(U),key_right(U),key_4(U),key_5(U),key_6(U),key_left(U),key_7(U),key_8(U),key_9(U),key_backspace(U),key_dot(U),key_0(U),key_up(U),key_enter(U),key_123(U),key_space(U),key_comma(U),zero(D),one(D),two(D),three(D),four(D),five(D),six(D),seven(D),eight(D),nine(D),up(D),down(D),left(D),right(D),key_down(D),key_toggle_tab(U)],style[Theme_XlKeyboard(U),KeyboardButton(U)],xml[data_extraction_rules(U),backup_rules(U),method(U)];67^0^6e^6f^70^71,68^1^2^72^99^73^74^75^76^77^78^79^7a^7b^7c^7d^7e^7f^80^81^82^83^84,69^1^2^72^99^73^85^80^81^86^87^84,6a^1^99^80^74^86^87^84,6b^d^c,6c^d^c,99^0^b,9c^6d;;;"/>
     </map>
 
 </incidents>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.xlkeyboard"
+    package="com.xlkeyboard"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -17,10 +17,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.NumberPadApp" >
+        android:theme="@style/Theme.XlKeyboard" >
         <activity
-            android:name="com.example.xlkeyboard.MainActivity"
-            android:exported="true" >
+            android:name="com.xlkeyboard.MainActivity"
+            android:exported="true"
+            android:screenOrientation="unspecified" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,7 +30,7 @@
         </activity>
 
         <service
-            android:name="com.example.xlkeyboard.NumberPadService"
+            android:name="com.xlkeyboard.XlKeyboardService"
             android:exported="true"
             android:label="@string/app_name"
             android:permission="android.permission.BIND_INPUT_METHOD" >

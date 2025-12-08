@@ -11,29 +11,11 @@
         explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.ROOT)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
         url="https://developer.android.com/reference/java/util/Locale.html#default_locale"
         urls="https://developer.android.com/reference/java/util/Locale.html#default_locale"
-        errorLine1="                letterButtons[i].setText(isShiftEnabled ? letters[i].toUpperCase() : letters[i]);"
-        errorLine2="                                                                     ~~~~~~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\example\xlkeyboard\NumberPadService.java"
-            line="173"
-            column="70"/>
-    </issue>
-
-    <issue
-        id="DefaultLocale"
-        severity="Warning"
-        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
-        category="Correctness"
-        priority="6"
-        summary="Implied default locale in case conversion"
-        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.ROOT)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
-        url="https://developer.android.com/reference/java/util/Locale.html#default_locale"
-        urls="https://developer.android.com/reference/java/util/Locale.html#default_locale"
         errorLine1="            String text = shouldCapitalize ? letter.toUpperCase() : letter;"
         errorLine2="                                                    ~~~~~~~~~~~">
         <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\example\xlkeyboard\NumberPadService.java"
-            line="290"
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\xlkeyboard\XlKeyboardService.java"
+            line="357"
             column="53"/>
     </issue>
 
@@ -47,11 +29,11 @@
         explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.ROOT)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
         url="https://developer.android.com/reference/java/util/Locale.html#default_locale"
         urls="https://developer.android.com/reference/java/util/Locale.html#default_locale"
-        errorLine1="                letterButtons[i].setText(shouldShowUppercase ? letters[i].toUpperCase() : letters[i]);"
+        errorLine1="                letterButtons[i].setText(shouldShowUppercase ? LETTERS[i].toUpperCase() : LETTERS[i]);"
         errorLine2="                                                                          ~~~~~~~~~~~">
         <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\example\xlkeyboard\NumberPadService.java"
-            line="370"
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\xlkeyboard\XlKeyboardService.java"
+            line="432"
             column="75"/>
     </issue>
 
@@ -65,8 +47,8 @@
         explanation="When your application or sdk runs on a version of Android that is more recent than your `targetSdkVersion` specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the `targetSdkVersion` is less than 14, your app may get an option button in the UI.&#xA;&#xA;To fix this issue, set the `targetSdkVersion` to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: https://developer.android.com/reference/android/os/Build.VERSION_CODES.html as well as follow this guide:&#xA;https://developer.android.com/distribute/best-practices/develop/target-sdk.html"
         url="https://developer.android.com/distribute/best-practices/develop/target-sdk.html"
         urls="https://developer.android.com/distribute/best-practices/develop/target-sdk.html,https://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
-        errorLine1="        targetSdk 34"
-        errorLine2="        ~~~~~~~~~~~~">
+        errorLine1="        targetSdk = 34"
+        errorLine2="        ~~~~~~~~~~~~~~">
         <location
             file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build.gradle"
             line="12"
@@ -86,8 +68,8 @@
         errorLine1="        View view = getLayoutInflater().inflate(R.layout.keyboard_view, null);"
         errorLine2="                                                                        ~~~~">
         <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\example\xlkeyboard\NumberPadService.java"
-            line="49"
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\xlkeyboard\XlKeyboardService.java"
+            line="113"
             column="73"/>
     </issue>
 
@@ -104,8 +86,26 @@
         errorLine1="        View view = getLayoutInflater().inflate(R.layout.qwerty_keyboard_view, null);"
         errorLine2="                                                                               ~~~~">
         <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\example\xlkeyboard\NumberPadService.java"
-            line="98"
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\xlkeyboard\XlKeyboardService.java"
+            line="154"
+            column="80"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Layout Inflation without a Parent"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="https://www.bignerdranch.com/blog/understanding-androids-layoutinflater-inflate/"
+        urls="https://www.bignerdranch.com/blog/understanding-androids-layoutinflater-inflate/"
+        errorLine1="        View view = getLayoutInflater().inflate(R.layout.symbol_keyboard_view, null);"
+        errorLine2="                                                                               ~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\xlkeyboard\XlKeyboardService.java"
+            line="438"
             column="80"/>
     </issue>
 
@@ -117,8 +117,8 @@
         priority="4"
         summary="Obsolete Gradle Dependency"
         explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
-        errorLine1="    compileSdk 34"
-        errorLine2="    ~~~~~~~~~~~~~">
+        errorLine1="    compileSdk = 34"
+        errorLine2="    ~~~~~~~~~~~~~~~">
         <location
             file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\build.gradle"
             line="7"
@@ -158,15 +158,63 @@
     </issue>
 
     <issue
+        id="DiscouragedApi"
+        severity="Warning"
+        message="Fixed screen orientations will be ignored in most cases, starting from Android 16. Android is moving toward a model where apps are expected to adapt to various orientations, display sizes, and aspect ratios."
+        category="Correctness"
+        priority="2"
+        summary="Using discouraged APIs"
+        explanation="Discouraged APIs are allowed and are not deprecated, but they may be unfit for common use (e.g. due to slow performance or subtle behavior)."
+        errorLine1="            android:screenOrientation=&quot;unspecified&quot;>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml"
+            line="18"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="DisableBaselineAlignment"
+        severity="Warning"
+        message="Set `android:baselineAligned=&quot;false&quot;` on this element for better performance"
+        category="Performance"
+        priority="3"
+        summary="Missing `baselineAligned` attribute"
+        explanation="When a `LinearLayout` is used to distribute the space proportionally between nested layouts, the baseline alignment property should be turned off to make the layout computation faster."
+        errorLine1="&lt;LinearLayout"
+        errorLine2=" ~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\activity_main.xml"
+            line="2"
+            column="2"/>
+    </issue>
+
+    <issue
         id="Overdraw"
         severity="Warning"
-        message="Possible overdraw: Root element paints background `#1D6F42` with a theme that also paints a background (inferred theme is `@style/Theme.NumberPadApp`)"
+        message="Possible overdraw: Root element paints background `@color/button_background_dark` with a theme that also paints a background (inferred theme is `@style/Theme.XlKeyboard`)"
         category="Performance"
         priority="3"
         summary="Overdraw: Painting regions more than once"
         explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.&#xA;&#xA;NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.&#xA;&#xA;If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.&#xA;&#xA;Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead."
-        errorLine1="    android:background=&quot;#1D6F42&quot;"
-        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="    android:background=&quot;@color/button_background_dark&quot;>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\activity_main.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        severity="Warning"
+        message="Possible overdraw: Root element paints background `@color/button_background_dark` with a theme that also paints a background (inferred theme is `@style/Theme.XlKeyboard`)"
+        category="Performance"
+        priority="3"
+        summary="Overdraw: Painting regions more than once"
+        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.&#xA;&#xA;NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.&#xA;&#xA;If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.&#xA;&#xA;Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead."
+        errorLine1="    android:background=&quot;@color/button_background_dark&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\activity_main.xml"
             line="9"
@@ -176,13 +224,29 @@
     <issue
         id="Overdraw"
         severity="Warning"
-        message="Possible overdraw: Root element paints background `#FF212121` with a theme that also paints a background (inferred theme is `@style/Theme.NumberPadApp`)"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.XlKeyboard`)"
         category="Performance"
         priority="3"
         summary="Overdraw: Painting regions more than once"
         explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.&#xA;&#xA;NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.&#xA;&#xA;If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.&#xA;&#xA;Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead."
-        errorLine1="    android:background=&quot;#FF212121&quot;"
-        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\keyboard_view.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        severity="Warning"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.XlKeyboard`)"
+        category="Performance"
+        priority="3"
+        summary="Overdraw: Painting regions more than once"
+        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.&#xA;&#xA;NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.&#xA;&#xA;If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.&#xA;&#xA;Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead."
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml"
             line="6"
@@ -192,13 +256,29 @@
     <issue
         id="Overdraw"
         severity="Warning"
-        message="Possible overdraw: Root element paints background `#FF212121` with a theme that also paints a background (inferred theme is `@style/Theme.NumberPadApp`)"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.XlKeyboard`)"
         category="Performance"
         priority="3"
         summary="Overdraw: Painting regions more than once"
         explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.&#xA;&#xA;NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.&#xA;&#xA;If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.&#xA;&#xA;Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead."
-        errorLine1="    android:background=&quot;#FF212121&quot;"
-        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        severity="Warning"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.XlKeyboard`)"
+        category="Performance"
+        priority="3"
+        summary="Overdraw: Painting regions more than once"
+        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.&#xA;&#xA;NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.&#xA;&#xA;If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.&#xA;&#xA;Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead."
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
             line="6"
@@ -206,19 +286,35 @@
     </issue>
 
     <issue
-        id="UnusedResources"
+        id="Overdraw"
         severity="Warning"
-        message="The resource `R.color.black` appears to be unused"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.XlKeyboard`)"
         category="Performance"
         priority="3"
-        summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
-        errorLine1="    &lt;color name=&quot;black&quot;>#FF000000&lt;/color>"
-        errorLine2="           ~~~~~~~~~~~~">
+        summary="Overdraw: Painting regions more than once"
+        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.&#xA;&#xA;NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.&#xA;&#xA;If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.&#xA;&#xA;Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead."
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\colors.xml"
-            line="3"
-            column="12"/>
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        severity="Warning"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.XlKeyboard`)"
+        category="Performance"
+        priority="3"
+        summary="Overdraw: Painting regions more than once"
+        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.&#xA;&#xA;NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.&#xA;&#xA;If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.&#xA;&#xA;Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead."
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="6"
+            column="5"/>
     </issue>
 
     <issue
@@ -314,6 +410,22 @@
         <location
             file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\colors.xml"
             line="9"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.dark_button_background` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;color name=&quot;dark_button_background&quot;>#470aefff&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\values\colors.xml"
+            line="12"
             column="12"/>
     </issue>
 
@@ -606,870 +718,6 @@
     </issue>
 
     <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml"
-            line="60"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml"
-            line="69"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml"
-            line="78"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml"
-            line="87"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml"
-            line="103"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml"
-            line="112"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml"
-            line="121"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml"
-            line="130"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml"
-            line="146"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml"
-            line="155"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml"
-            line="164"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml"
-            line="173"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml"
-            line="189"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml"
-            line="198"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml"
-            line="207"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\keyboard_view.xml"
-            line="218"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="60"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="69"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="78"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="87"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="96"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="105"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="114"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="123"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="132"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="141"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="158"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="167"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="176"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="185"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="194"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="203"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="212"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="221"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="230"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="247"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="256"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="265"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="274"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="283"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="292"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="301"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="310"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="319"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="336"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="345"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="354"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="ButtonStyle"
-        severity="Warning"
-        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
-        category="Usability"
-        priority="5"
-        summary="Button should be borderless"
-        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
-        url="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        urls="https://d.android.com/r/studio-ui/designer/material/dialogs"
-        errorLine1="        &lt;Button"
-        errorLine2="         ~~~~~~">
-        <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
-            line="363"
-            column="10"/>
-    </issue>
-
-    <issue
         id="ClickableViewAccessibility"
         severity="Warning"
         message="Custom view ``Button`` has `setOnTouchListener` called on it but does not override `performClick`"
@@ -1480,8 +728,8 @@
         errorLine1="        button.setOnTouchListener((v, event) -> {"
         errorLine2="        ^">
         <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\example\xlkeyboard\NumberPadService.java"
-            line="247"
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\xlkeyboard\XlKeyboardService.java"
+            line="284"
             column="9"/>
     </issue>
 
@@ -1496,9 +744,105 @@
         errorLine1="        button.setOnTouchListener((v, event) -> {"
         errorLine2="                                  ^">
         <location
-            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\example\xlkeyboard\NumberPadService.java"
-            line="247"
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\java\com\xlkeyboard\XlKeyboardService.java"
+            line="284"
             column="35"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;q&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnQ&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;q&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="59"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;w&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnW&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;w&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="60"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;e&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnE&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;e&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="61"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;r&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnR&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;r&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="62"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;t&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnT&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;t&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="63"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;y&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnY&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;y&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="64"
+            column="160"/>
     </issue>
 
     <issue
@@ -1520,6 +864,70 @@
     <issue
         id="HardcodedText"
         severity="Warning"
+        message="Hardcoded string &quot;u&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnU&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;u&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="65"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;i&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnI&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;i&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="66"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;o&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnO&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;o&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="67"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;p&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnP&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;p&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="68"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
         message="Hardcoded string &quot;w&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
@@ -1531,6 +939,86 @@
             file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
             line="74"
             column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;a&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnA&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;a&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="78"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;s&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnS&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;s&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="79"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;d&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnD&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;d&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="80"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;f&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnF&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;f&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="81"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;g&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnG&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;g&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="82"
+            column="160"/>
     </issue>
 
     <issue
@@ -1552,6 +1040,70 @@
     <issue
         id="HardcodedText"
         severity="Warning"
+        message="Hardcoded string &quot;h&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnH&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;h&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="83"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;j&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnJ&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;j&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="84"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;k&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnK&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;k&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="85"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;l&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnL&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;l&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="86"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
         message="Hardcoded string &quot;r&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
@@ -1568,6 +1120,102 @@
     <issue
         id="HardcodedText"
         severity="Warning"
+        message="Hardcoded string &quot;⇧&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnShift&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1.5&quot; android:text=&quot;⇧&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                     ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="96"
+            column="166"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;z&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnZ&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;z&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="97"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;x&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnX&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;x&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="98"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;c&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnC&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;c&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="99"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;v&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnV&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;v&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="100"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;b&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnB&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;b&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="101"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
         message="Hardcoded string &quot;t&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
@@ -1579,6 +1227,38 @@
             file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
             line="101"
             column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;n&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnN&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;n&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="102"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;m&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnM&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;m&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\qwerty_keyboard_view.xml"
+            line="103"
+            column="160"/>
     </issue>
 
     <issue
@@ -1931,6 +1611,838 @@
             file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\qwerty_keyboard_view.xml"
             line="315"
             column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;1&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSym1&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;1&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="16"
+            column="163"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;1&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSym1&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;1&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="17"
+            column="163"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;2&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSym2&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;2&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="17"
+            column="163"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;2&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSym2&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;2&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="18"
+            column="163"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;3&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSym3&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;3&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="18"
+            column="163"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;3&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSym3&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;3&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="19"
+            column="163"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;4&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSym4&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;4&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="19"
+            column="163"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;4&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSym4&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;4&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="20"
+            column="163"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;5&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSym5&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;5&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="20"
+            column="163"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;5&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSym5&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;5&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="21"
+            column="163"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;6&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSym6&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;6&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="21"
+            column="163"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;6&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSym6&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;6&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="22"
+            column="163"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;7&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSym7&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;7&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="22"
+            column="163"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;7&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSym7&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;7&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="23"
+            column="163"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;8&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSym8&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;8&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="23"
+            column="163"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;8&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSym8&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;8&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="24"
+            column="163"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;9&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSym9&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;9&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="24"
+            column="163"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;0&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSym0&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;0&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="25"
+            column="163"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;9&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSym9&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;9&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="25"
+            column="163"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;0&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSym0&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;0&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="26"
+            column="163"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;#&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymHash&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;#&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                     ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="36"
+            column="166"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;#&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymHash&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;#&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                     ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="37"
+            column="166"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;₹&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymDollar&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;₹&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                       ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="37"
+            column="168"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;%&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymPercent&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;%&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                        ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="38"
+            column="169"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;₹&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymDollar&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;₹&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                       ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="38"
+            column="168"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;%&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymPercent&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;%&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                        ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="39"
+            column="169"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;&amp;&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymAmpersand&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;&amp;amp;&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                          ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="39"
+            column="171"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;&amp;&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymAmpersand&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;&amp;amp;&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                          ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="40"
+            column="171"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;-&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymMinus&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;-&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                      ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="40"
+            column="167"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;+&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymPlus&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;+&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                     ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="41"
+            column="166"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;-&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymMinus&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;-&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                      ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="41"
+            column="167"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;(&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymParenLeft&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;(&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                          ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="42"
+            column="171"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;+&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymPlus&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;+&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                     ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="42"
+            column="166"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;(&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymParenLeft&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;(&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                          ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="43"
+            column="171"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;)&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymParenRight&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;)&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                           ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="43"
+            column="172"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;)&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymParenRight&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;)&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                           ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="44"
+            column="172"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;/&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymSlash&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;/&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                      ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="44"
+            column="167"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;/&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymSlash&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;/&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                      ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="45"
+            column="167"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;=&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymEquals&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;=&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                       ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="54"
+            column="168"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;*&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymAsterisk&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;*&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                         ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="55"
+            column="170"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;=&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymEquals&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;=&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                       ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="55"
+            column="168"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;&quot;&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymQuoteDouble&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&apos;&quot;&apos; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                            ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="56"
+            column="173"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;*&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymAsterisk&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;*&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                         ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="56"
+            column="170"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;&quot;&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymQuoteDouble&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&apos;&quot;&apos; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                            ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="57"
+            column="173"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;&apos;&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymQuoteSingle&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;&apos;&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                            ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="57"
+            column="173"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;&apos;&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymQuoteSingle&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;&apos;&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                            ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="58"
+            column="173"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;:&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymColon&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;:&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                      ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="58"
+            column="167"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;:&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymColon&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;:&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                      ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="59"
+            column="167"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;;&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymSemicolon&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;;&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                          ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="59"
+            column="171"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;!&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymExclamation&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;!&quot; android:textSize=&quot;18sp&quot; />"
+        errorLine2="                                                                                                                                                                            ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout-land\symbol_keyboard_view.xml"
+            line="60"
+            column="173"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;;&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymSemicolon&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;;&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                          ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="60"
+            column="171"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;!&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        &lt;Button style=&quot;@style/KeyboardButton&quot; android:id=&quot;@+id/btnSymExclamation&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;match_parent&quot; android:layout_weight=&quot;1&quot; android:text=&quot;!&quot; android:textSize=&quot;20sp&quot; />"
+        errorLine2="                                                                                                                                                                            ~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\res\layout\symbol_keyboard_view.xml"
+            line="61"
+            column="173"/>
     </issue>
 
 </issues>

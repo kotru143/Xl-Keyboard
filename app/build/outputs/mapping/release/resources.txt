@@ -1,12 +1,3 @@
-Marking id:btnToggleMode:2130903118 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking layout:activity_main:2130968576 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btnEnable:2130903065 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btnSelect:2130903085 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking layout:qwerty_keyboard_view:2130968578 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btnsym:2130903127 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btnToggleModeQwerty:2130903119 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btn123:2130903042 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btnShift:2130903086 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnQ:2130903081 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnW:2130903123 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnE:2130903064 reachable: referenced from in_memory_r8_base_classes0.dex
@@ -33,12 +24,16 @@ Marking id:btnV:2130903122 reachable: referenced from in_memory_r8_base_classes0
 Marking id:btnB:2130903054 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnN:2130903078 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnM:2130903077 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btnBackQwerty:2130903056 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btnDotQwerty:2130903063 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btnSpaceQwerty:2130903087 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btnCommaQwerty:2130903059 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btnEnterQwerty:2130903067 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking layout:symbol_keyboard_view:2130968579 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btn0:2130903040 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btn1:2130903041 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btn2:2130903043 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btn3:2130903044 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btn4:2130903045 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btn5:2130903046 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btn6:2130903047 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btn7:2130903048 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btn8:2130903049 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btn9:2130903050 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnSym1:2130903090 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnSym2:2130903091 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnSym3:2130903092 reachable: referenced from in_memory_r8_base_classes0.dex
@@ -67,233 +62,251 @@ Marking id:btnSymColon:2130903102 reachable: referenced from in_memory_r8_base_c
 Marking id:btnSymSemicolon:2130903115 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnSymExclamation:2130903105 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnSymQuestion:2130903112 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking layout:qwerty_keyboard_view:2130968578 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btnsym:2130903127 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btnToggleModeQwerty:2130903119 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btn123:2130903042 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btnShift:2130903086 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btnBackQwerty:2130903056 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btnDotQwerty:2130903063 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btnSpaceQwerty:2130903087 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btnCommaQwerty:2130903059 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btnEnterQwerty:2130903067 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking layout:symbol_keyboard_view:2130968579 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnBackSym:2130903057 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnABC_Sym:2130903053 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnSpaceSym:2130903088 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnCommaSym:2130903060 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnEnterSym:2130903068 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking color:toggle_active:2130771974 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking color:toggle_inactive:2130771975 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking color:toggle_active:2130771977 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking color:toggle_inactive:2130771978 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking string:key_toggle_tab:2131099678 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking string:key_toggle_arrow:2131099677 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking layout:keyboard_view:2130968577 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btnToggleMode:2130903118 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnABC:2130903052 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btn0:2130903040 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btn1:2130903041 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btn2:2130903043 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btn3:2130903044 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btn4:2130903045 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btn5:2130903046 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btn6:2130903047 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btn7:2130903048 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btn8:2130903049 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking id:btn9:2130903050 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnUp:2130903121 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnEnter:2130903066 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnLeft:2130903076 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnRight:2130903083 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnBack:2130903055 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnDot:2130903062 reachable: referenced from in_memory_r8_base_classes0.dex
-@com.example.xlkeyboard:color/black : reachable=false
-@com.example.xlkeyboard:color/purple_200 : reachable=false
-@com.example.xlkeyboard:color/purple_500 : reachable=false
-@com.example.xlkeyboard:color/purple_700 : reachable=false
-@com.example.xlkeyboard:color/teal_200 : reachable=false
-@com.example.xlkeyboard:color/teal_700 : reachable=false
-@com.example.xlkeyboard:color/toggle_active : reachable=true
-@com.example.xlkeyboard:color/toggle_inactive : reachable=true
-@com.example.xlkeyboard:color/white : reachable=false
-@com.example.xlkeyboard:drawable/ic_excel_foreground : reachable=false
-@com.example.xlkeyboard:drawable/ic_launcher_background : reachable=false
-@com.example.xlkeyboard:drawable/ic_launcher_foreground : reachable=false
-@com.example.xlkeyboard:id/btn0 : reachable=true
-@com.example.xlkeyboard:id/btn1 : reachable=true
-@com.example.xlkeyboard:id/btn123 : reachable=true
-@com.example.xlkeyboard:id/btn2 : reachable=true
-@com.example.xlkeyboard:id/btn3 : reachable=true
-@com.example.xlkeyboard:id/btn4 : reachable=true
-@com.example.xlkeyboard:id/btn5 : reachable=true
-@com.example.xlkeyboard:id/btn6 : reachable=true
-@com.example.xlkeyboard:id/btn7 : reachable=true
-@com.example.xlkeyboard:id/btn8 : reachable=true
-@com.example.xlkeyboard:id/btn9 : reachable=true
-@com.example.xlkeyboard:id/btnA : reachable=true
-@com.example.xlkeyboard:id/btnABC : reachable=true
-@com.example.xlkeyboard:id/btnABC_Sym : reachable=true
-@com.example.xlkeyboard:id/btnB : reachable=true
-@com.example.xlkeyboard:id/btnBack : reachable=true
-@com.example.xlkeyboard:id/btnBackQwerty : reachable=true
-@com.example.xlkeyboard:id/btnBackSym : reachable=true
-@com.example.xlkeyboard:id/btnC : reachable=true
-@com.example.xlkeyboard:id/btnCommaQwerty : reachable=true
-@com.example.xlkeyboard:id/btnCommaSym : reachable=true
-@com.example.xlkeyboard:id/btnD : reachable=true
-@com.example.xlkeyboard:id/btnDot : reachable=true
-@com.example.xlkeyboard:id/btnDotQwerty : reachable=true
-@com.example.xlkeyboard:id/btnE : reachable=true
-@com.example.xlkeyboard:id/btnEnable : reachable=true
-@com.example.xlkeyboard:id/btnEnter : reachable=true
-@com.example.xlkeyboard:id/btnEnterQwerty : reachable=true
-@com.example.xlkeyboard:id/btnEnterSym : reachable=true
-@com.example.xlkeyboard:id/btnF : reachable=true
-@com.example.xlkeyboard:id/btnG : reachable=true
-@com.example.xlkeyboard:id/btnH : reachable=true
-@com.example.xlkeyboard:id/btnI : reachable=true
-@com.example.xlkeyboard:id/btnJ : reachable=true
-@com.example.xlkeyboard:id/btnK : reachable=true
-@com.example.xlkeyboard:id/btnL : reachable=true
-@com.example.xlkeyboard:id/btnLeft : reachable=true
-@com.example.xlkeyboard:id/btnM : reachable=true
-@com.example.xlkeyboard:id/btnN : reachable=true
-@com.example.xlkeyboard:id/btnO : reachable=true
-@com.example.xlkeyboard:id/btnP : reachable=true
-@com.example.xlkeyboard:id/btnQ : reachable=true
-@com.example.xlkeyboard:id/btnR : reachable=true
-@com.example.xlkeyboard:id/btnRight : reachable=true
-@com.example.xlkeyboard:id/btnS : reachable=true
-@com.example.xlkeyboard:id/btnSelect : reachable=true
-@com.example.xlkeyboard:id/btnShift : reachable=true
-@com.example.xlkeyboard:id/btnSpaceQwerty : reachable=true
-@com.example.xlkeyboard:id/btnSpaceSym : reachable=true
-@com.example.xlkeyboard:id/btnSym0 : reachable=true
-@com.example.xlkeyboard:id/btnSym1 : reachable=true
-@com.example.xlkeyboard:id/btnSym2 : reachable=true
-@com.example.xlkeyboard:id/btnSym3 : reachable=true
-@com.example.xlkeyboard:id/btnSym4 : reachable=true
-@com.example.xlkeyboard:id/btnSym5 : reachable=true
-@com.example.xlkeyboard:id/btnSym6 : reachable=true
-@com.example.xlkeyboard:id/btnSym7 : reachable=true
-@com.example.xlkeyboard:id/btnSym8 : reachable=true
-@com.example.xlkeyboard:id/btnSym9 : reachable=true
-@com.example.xlkeyboard:id/btnSymAmpersand : reachable=true
-@com.example.xlkeyboard:id/btnSymAsterisk : reachable=true
-@com.example.xlkeyboard:id/btnSymAt : reachable=true
-@com.example.xlkeyboard:id/btnSymColon : reachable=true
-@com.example.xlkeyboard:id/btnSymDollar : reachable=true
-@com.example.xlkeyboard:id/btnSymEquals : reachable=true
-@com.example.xlkeyboard:id/btnSymExclamation : reachable=true
-@com.example.xlkeyboard:id/btnSymHash : reachable=true
-@com.example.xlkeyboard:id/btnSymMinus : reachable=true
-@com.example.xlkeyboard:id/btnSymParenLeft : reachable=true
-@com.example.xlkeyboard:id/btnSymParenRight : reachable=true
-@com.example.xlkeyboard:id/btnSymPercent : reachable=true
-@com.example.xlkeyboard:id/btnSymPlus : reachable=true
-@com.example.xlkeyboard:id/btnSymQuestion : reachable=true
-@com.example.xlkeyboard:id/btnSymQuoteDouble : reachable=true
-@com.example.xlkeyboard:id/btnSymQuoteSingle : reachable=true
-@com.example.xlkeyboard:id/btnSymSemicolon : reachable=true
-@com.example.xlkeyboard:id/btnSymSlash : reachable=true
-@com.example.xlkeyboard:id/btnT : reachable=true
-@com.example.xlkeyboard:id/btnToggleMode : reachable=true
-@com.example.xlkeyboard:id/btnToggleModeQwerty : reachable=true
-@com.example.xlkeyboard:id/btnU : reachable=true
-@com.example.xlkeyboard:id/btnUp : reachable=true
-@com.example.xlkeyboard:id/btnV : reachable=true
-@com.example.xlkeyboard:id/btnW : reachable=true
-@com.example.xlkeyboard:id/btnX : reachable=true
-@com.example.xlkeyboard:id/btnY : reachable=true
-@com.example.xlkeyboard:id/btnZ : reachable=true
-@com.example.xlkeyboard:id/btnsym : reachable=true
-@com.example.xlkeyboard:layout/activity_main : reachable=true
-    @com.example.xlkeyboard:string/xl_keyboard_setup
-    @com.example.xlkeyboard:string/_1_enable_keyboard
-    @com.example.xlkeyboard:string/_2_select_keyboard
-    @com.example.xlkeyboard:string/created_by_kotru143_gmail_com
-@com.example.xlkeyboard:layout/keyboard_view : reachable=true
-    @com.example.xlkeyboard:color/toggle_inactive
-    @com.example.xlkeyboard:string/key_toggle_arrow
-    @com.example.xlkeyboard:string/key_sym
-    @com.example.xlkeyboard:string/key_abc
-    @com.example.xlkeyboard:string/key_1
-    @com.example.xlkeyboard:string/key_2
-    @com.example.xlkeyboard:string/key_3
-    @com.example.xlkeyboard:string/key_right
-    @com.example.xlkeyboard:string/key_4
-    @com.example.xlkeyboard:string/key_5
-    @com.example.xlkeyboard:string/key_6
-    @com.example.xlkeyboard:string/key_left
-    @com.example.xlkeyboard:string/key_7
-    @com.example.xlkeyboard:string/key_8
-    @com.example.xlkeyboard:string/key_9
-    @com.example.xlkeyboard:string/key_backspace
-    @com.example.xlkeyboard:string/key_dot
-    @com.example.xlkeyboard:string/key_0
-    @com.example.xlkeyboard:string/key_up
-    @com.example.xlkeyboard:string/key_enter
-@com.example.xlkeyboard:layout/qwerty_keyboard_view : reachable=true
-    @com.example.xlkeyboard:color/toggle_inactive
-    @com.example.xlkeyboard:string/key_toggle_arrow
-    @com.example.xlkeyboard:string/key_sym
-    @com.example.xlkeyboard:string/key_123
-    @com.example.xlkeyboard:string/key_backspace
-    @com.example.xlkeyboard:string/key_dot
-    @com.example.xlkeyboard:string/key_space
-    @com.example.xlkeyboard:string/key_comma
-    @com.example.xlkeyboard:string/key_enter
-@com.example.xlkeyboard:layout/symbol_keyboard_view : reachable=true
-    @com.example.xlkeyboard:string/key_backspace
-    @com.example.xlkeyboard:string/key_abc
-    @com.example.xlkeyboard:string/key_space
-    @com.example.xlkeyboard:string/key_comma
-    @com.example.xlkeyboard:string/key_enter
-@com.example.xlkeyboard:mipmap/ic_launcher : reachable=true
-    @com.example.xlkeyboard:drawable/ic_launcher_background
-    @com.example.xlkeyboard:drawable/ic_excel_foreground
-@com.example.xlkeyboard:mipmap/ic_launcher_round : reachable=true
-    @com.example.xlkeyboard:drawable/ic_launcher_background
-    @com.example.xlkeyboard:drawable/ic_excel_foreground
-@com.example.xlkeyboard:string/_1_enable_keyboard : reachable=false
-@com.example.xlkeyboard:string/_2_select_keyboard : reachable=false
-@com.example.xlkeyboard:string/app_name : reachable=true
-@com.example.xlkeyboard:string/created_by_kotru143_gmail_com : reachable=false
-@com.example.xlkeyboard:string/down : reachable=false
-@com.example.xlkeyboard:string/eight : reachable=false
-@com.example.xlkeyboard:string/five : reachable=false
-@com.example.xlkeyboard:string/four : reachable=false
-@com.example.xlkeyboard:string/key_0 : reachable=false
-@com.example.xlkeyboard:string/key_1 : reachable=false
-@com.example.xlkeyboard:string/key_123 : reachable=false
-@com.example.xlkeyboard:string/key_2 : reachable=false
-@com.example.xlkeyboard:string/key_3 : reachable=false
-@com.example.xlkeyboard:string/key_4 : reachable=false
-@com.example.xlkeyboard:string/key_5 : reachable=false
-@com.example.xlkeyboard:string/key_6 : reachable=false
-@com.example.xlkeyboard:string/key_7 : reachable=false
-@com.example.xlkeyboard:string/key_8 : reachable=false
-@com.example.xlkeyboard:string/key_9 : reachable=false
-@com.example.xlkeyboard:string/key_abc : reachable=false
-@com.example.xlkeyboard:string/key_backspace : reachable=false
-@com.example.xlkeyboard:string/key_comma : reachable=false
-@com.example.xlkeyboard:string/key_dot : reachable=false
-@com.example.xlkeyboard:string/key_down : reachable=false
-@com.example.xlkeyboard:string/key_enter : reachable=false
-@com.example.xlkeyboard:string/key_left : reachable=false
-@com.example.xlkeyboard:string/key_right : reachable=false
-@com.example.xlkeyboard:string/key_space : reachable=false
-@com.example.xlkeyboard:string/key_sym : reachable=false
-@com.example.xlkeyboard:string/key_toggle_arrow : reachable=true
-@com.example.xlkeyboard:string/key_toggle_tab : reachable=true
-@com.example.xlkeyboard:string/key_up : reachable=false
-@com.example.xlkeyboard:string/left : reachable=false
-@com.example.xlkeyboard:string/nine : reachable=false
-@com.example.xlkeyboard:string/one : reachable=false
-@com.example.xlkeyboard:string/right : reachable=false
-@com.example.xlkeyboard:string/seven : reachable=false
-@com.example.xlkeyboard:string/six : reachable=false
-@com.example.xlkeyboard:string/three : reachable=false
-@com.example.xlkeyboard:string/two : reachable=false
-@com.example.xlkeyboard:string/up : reachable=false
-@com.example.xlkeyboard:string/xl_keyboard_setup : reachable=false
-@com.example.xlkeyboard:string/zero : reachable=false
-@com.example.xlkeyboard:style/Theme_NumberPadApp : reachable=true
-@com.example.xlkeyboard:xml/backup_rules : reachable=true
-@com.example.xlkeyboard:xml/data_extraction_rules : reachable=true
-@com.example.xlkeyboard:xml/method : reachable=true
-    @com.example.xlkeyboard:string/app_name
+Marking layout:activity_main:2130968576 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btnEnable:2130903065 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking id:btnSelect:2130903085 reachable: referenced from in_memory_r8_base_classes0.dex
+@com.xlkeyboard:color/black : reachable=false
+@com.xlkeyboard:color/button_background_dark : reachable=false
+@com.xlkeyboard:color/dark_button_background : reachable=false
+@com.xlkeyboard:color/purple_200 : reachable=false
+@com.xlkeyboard:color/purple_500 : reachable=false
+@com.xlkeyboard:color/purple_700 : reachable=false
+@com.xlkeyboard:color/real_white : reachable=false
+@com.xlkeyboard:color/teal_200 : reachable=false
+@com.xlkeyboard:color/teal_700 : reachable=false
+@com.xlkeyboard:color/toggle_active : reachable=true
+@com.xlkeyboard:color/toggle_inactive : reachable=true
+@com.xlkeyboard:color/white : reachable=false
+@com.xlkeyboard:drawable/ic_excel_foreground : reachable=false
+@com.xlkeyboard:drawable/ic_launcher_background : reachable=false
+@com.xlkeyboard:drawable/ic_launcher_foreground : reachable=false
+@com.xlkeyboard:id/btn0 : reachable=true
+@com.xlkeyboard:id/btn1 : reachable=true
+@com.xlkeyboard:id/btn123 : reachable=true
+@com.xlkeyboard:id/btn2 : reachable=true
+@com.xlkeyboard:id/btn3 : reachable=true
+@com.xlkeyboard:id/btn4 : reachable=true
+@com.xlkeyboard:id/btn5 : reachable=true
+@com.xlkeyboard:id/btn6 : reachable=true
+@com.xlkeyboard:id/btn7 : reachable=true
+@com.xlkeyboard:id/btn8 : reachable=true
+@com.xlkeyboard:id/btn9 : reachable=true
+@com.xlkeyboard:id/btnA : reachable=true
+@com.xlkeyboard:id/btnABC : reachable=true
+@com.xlkeyboard:id/btnABC_Sym : reachable=true
+@com.xlkeyboard:id/btnB : reachable=true
+@com.xlkeyboard:id/btnBack : reachable=true
+@com.xlkeyboard:id/btnBackQwerty : reachable=true
+@com.xlkeyboard:id/btnBackSym : reachable=true
+@com.xlkeyboard:id/btnC : reachable=true
+@com.xlkeyboard:id/btnCommaQwerty : reachable=true
+@com.xlkeyboard:id/btnCommaSym : reachable=true
+@com.xlkeyboard:id/btnD : reachable=true
+@com.xlkeyboard:id/btnDot : reachable=true
+@com.xlkeyboard:id/btnDotQwerty : reachable=true
+@com.xlkeyboard:id/btnE : reachable=true
+@com.xlkeyboard:id/btnEnable : reachable=true
+@com.xlkeyboard:id/btnEnter : reachable=true
+@com.xlkeyboard:id/btnEnterQwerty : reachable=true
+@com.xlkeyboard:id/btnEnterSym : reachable=true
+@com.xlkeyboard:id/btnF : reachable=true
+@com.xlkeyboard:id/btnG : reachable=true
+@com.xlkeyboard:id/btnH : reachable=true
+@com.xlkeyboard:id/btnI : reachable=true
+@com.xlkeyboard:id/btnJ : reachable=true
+@com.xlkeyboard:id/btnK : reachable=true
+@com.xlkeyboard:id/btnL : reachable=true
+@com.xlkeyboard:id/btnLeft : reachable=true
+@com.xlkeyboard:id/btnM : reachable=true
+@com.xlkeyboard:id/btnN : reachable=true
+@com.xlkeyboard:id/btnO : reachable=true
+@com.xlkeyboard:id/btnP : reachable=true
+@com.xlkeyboard:id/btnQ : reachable=true
+@com.xlkeyboard:id/btnR : reachable=true
+@com.xlkeyboard:id/btnRight : reachable=true
+@com.xlkeyboard:id/btnS : reachable=true
+@com.xlkeyboard:id/btnSelect : reachable=true
+@com.xlkeyboard:id/btnShift : reachable=true
+@com.xlkeyboard:id/btnSpaceQwerty : reachable=true
+@com.xlkeyboard:id/btnSpaceSym : reachable=true
+@com.xlkeyboard:id/btnSym0 : reachable=true
+@com.xlkeyboard:id/btnSym1 : reachable=true
+@com.xlkeyboard:id/btnSym2 : reachable=true
+@com.xlkeyboard:id/btnSym3 : reachable=true
+@com.xlkeyboard:id/btnSym4 : reachable=true
+@com.xlkeyboard:id/btnSym5 : reachable=true
+@com.xlkeyboard:id/btnSym6 : reachable=true
+@com.xlkeyboard:id/btnSym7 : reachable=true
+@com.xlkeyboard:id/btnSym8 : reachable=true
+@com.xlkeyboard:id/btnSym9 : reachable=true
+@com.xlkeyboard:id/btnSymAmpersand : reachable=true
+@com.xlkeyboard:id/btnSymAsterisk : reachable=true
+@com.xlkeyboard:id/btnSymAt : reachable=true
+@com.xlkeyboard:id/btnSymColon : reachable=true
+@com.xlkeyboard:id/btnSymDollar : reachable=true
+@com.xlkeyboard:id/btnSymEquals : reachable=true
+@com.xlkeyboard:id/btnSymExclamation : reachable=true
+@com.xlkeyboard:id/btnSymHash : reachable=true
+@com.xlkeyboard:id/btnSymMinus : reachable=true
+@com.xlkeyboard:id/btnSymParenLeft : reachable=true
+@com.xlkeyboard:id/btnSymParenRight : reachable=true
+@com.xlkeyboard:id/btnSymPercent : reachable=true
+@com.xlkeyboard:id/btnSymPlus : reachable=true
+@com.xlkeyboard:id/btnSymQuestion : reachable=true
+@com.xlkeyboard:id/btnSymQuoteDouble : reachable=true
+@com.xlkeyboard:id/btnSymQuoteSingle : reachable=true
+@com.xlkeyboard:id/btnSymSemicolon : reachable=true
+@com.xlkeyboard:id/btnSymSlash : reachable=true
+@com.xlkeyboard:id/btnT : reachable=true
+@com.xlkeyboard:id/btnToggleMode : reachable=true
+@com.xlkeyboard:id/btnToggleModeQwerty : reachable=true
+@com.xlkeyboard:id/btnU : reachable=true
+@com.xlkeyboard:id/btnUp : reachable=true
+@com.xlkeyboard:id/btnV : reachable=true
+@com.xlkeyboard:id/btnW : reachable=true
+@com.xlkeyboard:id/btnX : reachable=true
+@com.xlkeyboard:id/btnY : reachable=true
+@com.xlkeyboard:id/btnZ : reachable=true
+@com.xlkeyboard:id/btnsym : reachable=true
+@com.xlkeyboard:layout/activity_main : reachable=true
+    @com.xlkeyboard:color/button_background_dark
+    @com.xlkeyboard:string/xl_keyboard_setup
+    @com.xlkeyboard:string/_1_enable_keyboard
+    @com.xlkeyboard:string/_2_select_keyboard
+    @com.xlkeyboard:string/created_by_kotru143_gmail_com
+@com.xlkeyboard:layout/keyboard_view : reachable=true
+    @com.xlkeyboard:color/black
+    @com.xlkeyboard:color/toggle_inactive
+    @com.xlkeyboard:style/KeyboardButton
+    @com.xlkeyboard:string/key_toggle_arrow
+    @com.xlkeyboard:string/key_sym
+    @com.xlkeyboard:string/key_abc
+    @com.xlkeyboard:string/key_1
+    @com.xlkeyboard:string/key_2
+    @com.xlkeyboard:string/key_3
+    @com.xlkeyboard:string/key_right
+    @com.xlkeyboard:string/key_4
+    @com.xlkeyboard:string/key_5
+    @com.xlkeyboard:string/key_6
+    @com.xlkeyboard:string/key_left
+    @com.xlkeyboard:string/key_7
+    @com.xlkeyboard:string/key_8
+    @com.xlkeyboard:string/key_9
+    @com.xlkeyboard:string/key_backspace
+    @com.xlkeyboard:string/key_dot
+    @com.xlkeyboard:string/key_0
+    @com.xlkeyboard:string/key_up
+    @com.xlkeyboard:string/key_enter
+@com.xlkeyboard:layout/qwerty_keyboard_view : reachable=true
+    @com.xlkeyboard:color/black
+    @com.xlkeyboard:color/toggle_inactive
+    @com.xlkeyboard:style/KeyboardButton
+    @com.xlkeyboard:string/key_toggle_arrow
+    @com.xlkeyboard:string/key_sym
+    @com.xlkeyboard:string/key_123
+    @com.xlkeyboard:string/key_backspace
+    @com.xlkeyboard:string/key_dot
+    @com.xlkeyboard:string/key_space
+    @com.xlkeyboard:string/key_comma
+    @com.xlkeyboard:string/key_enter
+@com.xlkeyboard:layout/symbol_keyboard_view : reachable=true
+    @com.xlkeyboard:color/black
+    @com.xlkeyboard:style/KeyboardButton
+    @com.xlkeyboard:string/key_backspace
+    @com.xlkeyboard:string/key_abc
+    @com.xlkeyboard:string/key_space
+    @com.xlkeyboard:string/key_comma
+    @com.xlkeyboard:string/key_enter
+@com.xlkeyboard:mipmap/ic_launcher : reachable=true
+    @com.xlkeyboard:drawable/ic_launcher_background
+    @com.xlkeyboard:drawable/ic_excel_foreground
+@com.xlkeyboard:mipmap/ic_launcher_round : reachable=true
+    @com.xlkeyboard:drawable/ic_launcher_background
+    @com.xlkeyboard:drawable/ic_excel_foreground
+@com.xlkeyboard:string/_1_enable_keyboard : reachable=false
+@com.xlkeyboard:string/_2_select_keyboard : reachable=false
+@com.xlkeyboard:string/app_name : reachable=true
+@com.xlkeyboard:string/created_by_kotru143_gmail_com : reachable=false
+@com.xlkeyboard:string/down : reachable=false
+@com.xlkeyboard:string/eight : reachable=false
+@com.xlkeyboard:string/five : reachable=false
+@com.xlkeyboard:string/four : reachable=false
+@com.xlkeyboard:string/key_0 : reachable=false
+@com.xlkeyboard:string/key_1 : reachable=false
+@com.xlkeyboard:string/key_123 : reachable=false
+@com.xlkeyboard:string/key_2 : reachable=false
+@com.xlkeyboard:string/key_3 : reachable=false
+@com.xlkeyboard:string/key_4 : reachable=false
+@com.xlkeyboard:string/key_5 : reachable=false
+@com.xlkeyboard:string/key_6 : reachable=false
+@com.xlkeyboard:string/key_7 : reachable=false
+@com.xlkeyboard:string/key_8 : reachable=false
+@com.xlkeyboard:string/key_9 : reachable=false
+@com.xlkeyboard:string/key_abc : reachable=false
+@com.xlkeyboard:string/key_backspace : reachable=false
+@com.xlkeyboard:string/key_comma : reachable=false
+@com.xlkeyboard:string/key_dot : reachable=false
+@com.xlkeyboard:string/key_down : reachable=false
+@com.xlkeyboard:string/key_enter : reachable=false
+@com.xlkeyboard:string/key_left : reachable=false
+@com.xlkeyboard:string/key_right : reachable=false
+@com.xlkeyboard:string/key_space : reachable=false
+@com.xlkeyboard:string/key_sym : reachable=false
+@com.xlkeyboard:string/key_toggle_arrow : reachable=true
+@com.xlkeyboard:string/key_toggle_tab : reachable=true
+@com.xlkeyboard:string/key_up : reachable=false
+@com.xlkeyboard:string/left : reachable=false
+@com.xlkeyboard:string/nine : reachable=false
+@com.xlkeyboard:string/one : reachable=false
+@com.xlkeyboard:string/right : reachable=false
+@com.xlkeyboard:string/seven : reachable=false
+@com.xlkeyboard:string/six : reachable=false
+@com.xlkeyboard:string/three : reachable=false
+@com.xlkeyboard:string/two : reachable=false
+@com.xlkeyboard:string/up : reachable=false
+@com.xlkeyboard:string/xl_keyboard_setup : reachable=false
+@com.xlkeyboard:string/zero : reachable=false
+@com.xlkeyboard:style/KeyboardButton : reachable=false
+    @com.xlkeyboard:color/real_white
+    @com.xlkeyboard:color/button_background_dark
+@com.xlkeyboard:style/Theme_XlKeyboard : reachable=true
+@com.xlkeyboard:xml/backup_rules : reachable=true
+@com.xlkeyboard:xml/data_extraction_rules : reachable=true
+@com.xlkeyboard:xml/method : reachable=true
+    @com.xlkeyboard:string/app_name
 
 The root reachable resources are:
- color:toggle_active:2130771974
- color:toggle_inactive:2130771975
+ color:toggle_active:2130771977
+ color:toggle_inactive:2130771978
  id:btn0:2130903040
  id:btn1:2130903041
  id:btn123:2130903042
@@ -391,18 +404,18 @@ The root reachable resources are:
  string:app_name:2131099650
  string:key_toggle_arrow:2131099677
  string:key_toggle_tab:2131099678
- style:Theme_NumberPadApp:2131165184
+ style:Theme_XlKeyboard:2131165185
  xml:backup_rules:2131230720
  xml:data_extraction_rules:2131230721
  xml:method:2131230722
 Unused resources are: 
- color:black:2130771968
- color:purple_200:2130771969
- color:purple_500:2130771970
- color:purple_700:2130771971
- color:teal_200:2130771972
- color:teal_700:2130771973
- color:white:2130771976
+ color:dark_button_background:2130771970
+ color:purple_200:2130771971
+ color:purple_500:2130771972
+ color:purple_700:2130771973
+ color:teal_200:2130771975
+ color:teal_700:2130771976
+ color:white:2130771979
  drawable:ic_launcher_foreground:2130837506
  string:down:2131099652
  string:eight:2131099653
