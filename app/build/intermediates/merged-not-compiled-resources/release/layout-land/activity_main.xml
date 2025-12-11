@@ -12,16 +12,23 @@
         android:layout_weight="1"
         android:orientation="vertical"
         android:gravity="center">
+        <View
+            android:layout_width="111dp"
+            android:layout_height="144dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:gravity="top"
             android:text="@string/xl_keyboard_setup"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginBottom="16dp" />
+
+        <View
+            android:layout_width="111dp"
+            android:layout_height="144dp" />
 
         <TextView
             android:layout_width="wrap_content"

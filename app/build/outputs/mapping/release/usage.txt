@@ -1,7 +1,7 @@
 com.xlkeyboard.R$color:
     public static int black
     public static int button_background_dark
-    public static int dark_button_background
+    public static int dark_green
     public static int purple_200
     public static int purple_500
     public static int purple_700
@@ -21,10 +21,6 @@ com.xlkeyboard.R$string:
     public static int _2_select_keyboard
     public static int app_name
     public static int created_by_kotru143_gmail_com
-    public static int down
-    public static int eight
-    public static int five
-    public static int four
     public static int key_0
     public static int key_1
     public static int key_123
@@ -40,24 +36,13 @@ com.xlkeyboard.R$string:
     public static int key_backspace
     public static int key_comma
     public static int key_dot
-    public static int key_down
     public static int key_enter
     public static int key_left
     public static int key_right
     public static int key_space
     public static int key_sym
     public static int key_up
-    public static int left
-    public static int nine
-    public static int one
-    public static int right
-    public static int seven
-    public static int six
-    public static int three
-    public static int two
-    public static int up
     public static int xl_keyboard_setup
-    public static int zero
     private void <init>()
 com.xlkeyboard.R$style
 com.xlkeyboard.R$xml
@@ -67,7 +52,6 @@ com.xlkeyboard.XlKeyboardService:
     private static final java.lang.String KEY_TAB_MODE
     private static final java.lang.String PREFS_NAME
     private static final long REPEAT_DELAY
-    private void updateToggleButton()
 com.xlkeyboard.R$color
 com.xlkeyboard.R$id
 com.xlkeyboard.R$layout

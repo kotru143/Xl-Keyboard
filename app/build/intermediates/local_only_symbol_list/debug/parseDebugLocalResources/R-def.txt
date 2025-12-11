@@ -2,7 +2,7 @@ R_DEF: Internal format may change without notice
 local
 color black
 color button_background_dark
-color dark_button_background
+color dark_green
 color purple_200
 color purple_500
 color purple_700
@@ -113,10 +113,6 @@ string _1_enable_keyboard
 string _2_select_keyboard
 string app_name
 string created_by_kotru143_gmail_com
-string down
-string eight
-string five
-string four
 string key_0
 string key_1
 string key_123
@@ -132,7 +128,6 @@ string key_abc
 string key_backspace
 string key_comma
 string key_dot
-string key_down
 string key_enter
 string key_left
 string key_right
@@ -141,19 +136,8 @@ string key_sym
 string key_toggle_arrow
 string key_toggle_tab
 string key_up
-string left
-string nine
-string one
-string right
-string seven
-string six
-string three
-string two
-string up
 string xl_keyboard_setup
-string zero
 style KeyboardButton
+style KeyboardSpecialBtn
 style Theme.XlKeyboard
-xml backup_rules
-xml data_extraction_rules
 xml method

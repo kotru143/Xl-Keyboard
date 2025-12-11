@@ -2,9 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
     android:orientation="vertical"
     android:background="@color/black"
-    android:paddingBottom="5dp">
+    android:paddingBottom="0dp">
 
     <!-- Row 1: 1 2 3 4 5 6 7 8 9 0 -->
     <LinearLayout
@@ -59,7 +60,7 @@
         <Button style="@style/KeyboardButton" android:id="@+id/btnSymSemicolon" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text=";" android:textSize="18sp" />
         <Button style="@style/KeyboardButton" android:id="@+id/btnSymExclamation" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="!" android:textSize="18sp" />
         <Button style="@style/KeyboardButton" android:id="@+id/btnSymQuestion" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="?" android:textSize="18sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnBackSym" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_backspace" android:textSize="18sp" />
+        <Button style="@style/KeyboardSpecialBtn" android:id="@+id/btnBackSym" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_backspace" android:textSize="18sp" />
     </LinearLayout>
 
     <!-- Row 4: ABC Space Comma Enter -->
@@ -69,10 +70,10 @@
         android:orientation="horizontal"
         android:weightSum="6">
 
-        <Button style="@style/KeyboardButton" android:id="@+id/btnABC_Sym" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_abc" android:textSize="16sp" android:minHeight="40dp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSpaceSym" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3" android:text="@string/key_space" android:textSize="18sp" android:minHeight="40dp" />
+        <Button style="@style/KeyboardSpecialBtn" android:id="@+id/btnABC_Sym" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_abc" android:textSize="16sp" android:minHeight="40dp" />
+        <Button style="@style/KeyboardSpecialBtn" android:id="@+id/btnSpaceSym" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3" android:text="@string/key_space" android:textSize="18sp" android:minHeight="40dp" />
         <Button style="@style/KeyboardButton" android:id="@+id/btnCommaSym" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/key_comma" android:textSize="18sp" android:minHeight="40dp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnEnterSym" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/key_enter" android:textSize="18sp" android:minHeight="40dp" />
+        <Button style="@style/KeyboardSpecialBtn" android:id="@+id/btnEnterSym" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/key_enter" android:textSize="18sp" android:minHeight="40dp" />
     </LinearLayout>
 
 </LinearLayout>

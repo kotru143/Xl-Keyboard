@@ -1,19 +1,5 @@
 <resources>
     <string name="app_name">Xl Keyboard</string>
-    <string name="zero">0</string>
-    <string name="one">1</string>
-    <string name="two">2</string>
-    <string name="three">3</string>
-    <string name="four">4</string>
-    <string name="five">5</string>
-    <string name="six">6</string>
-    <string name="seven">7</string>
-    <string name="eight">8</string>
-    <string name="nine">9</string>
-    <string name="up">Up</string>
-    <string name="down">Down</string>
-    <string name="left">Left</string>
-    <string name="right">Right</string>
     <string name="key_0">0</string>
     <string name="key_1">1</string>
     <string name="key_2">2</string>
@@ -25,7 +11,6 @@
     <string name="key_8">8</string>
     <string name="key_9">9</string>
     <string name="key_up">▲</string>
-    <string name="key_down">▼</string>
     <string name="key_left">◄</string>
     <string name="key_right">►</string>
     <string name="key_backspace">⌫</string>
@@ -43,3 +28,4 @@
     <string name="_1_enable_keyboard">1. Enable Keyboard</string>
     <string name="xl_keyboard_setup">Xl Keyboard Setup</string>
 </resources>
+

@@ -32,6 +32,15 @@ android {
             minifyEnabled = true
             shrinkResources = true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            
+            // Additional optimizations
+            debuggable = false
+            jniDebuggable = false
+            renderscriptDebuggable = false
+            zipAlignEnabled = true
+            
+            // Disable PNG crunching (we use vector drawables)
+            crunchPngs = false
         }
     }
     compileOptions {

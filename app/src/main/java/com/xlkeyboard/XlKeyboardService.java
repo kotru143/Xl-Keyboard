@@ -11,13 +11,11 @@ import android.widget.Button;
 
 public class XlKeyboardService extends InputMethodService {
 
-    // ==================== Constants ====================
     private static final String PREFS_NAME = "NumberPadPrefs";
     private static final String KEY_TAB_MODE = "tab_mode_enabled";
-    private static final long REPEAT_DELAY = 50; // milliseconds between deletions
-    private static final long DOUBLE_TAP_DELAY = 300; // milliseconds
+    private static final long REPEAT_DELAY = 50;
+    private static final long DOUBLE_TAP_DELAY = 300;
 
-    // ==================== State Variables ====================
     private SharedPreferences prefs;
     private boolean isTabModeEnabled = false;
     private boolean isQwertyMode = false;
@@ -26,12 +24,10 @@ public class XlKeyboardService extends InputMethodService {
     private long lastShiftPressTime = 0;
     private boolean autoCapitalizeNext = false;
 
-    // ==================== UI References ====================
     private Button toggleButton;
     private Button shiftButton;
     private Button[] letterButtons;
 
-    // ==================== Data Arrays ====================
     private static final String[] LETTERS = {
             "q", "w", "e", "r", "t", "y", "u", "i", "o", "p",
             "a", "s", "d", "f", "g", "h", "j", "k", "l",
@@ -59,7 +55,6 @@ public class XlKeyboardService extends InputMethodService {
             KeyEvent.KEYCODE_9
     };
 
-    // Symbol keyboard button mappings (ID -> Symbol text)
     private static final int[] SYMBOL_ROW1_IDS = {
             R.id.btnSym1, R.id.btnSym2, R.id.btnSym3, R.id.btnSym4, R.id.btnSym5,
             R.id.btnSym6, R.id.btnSym7, R.id.btnSym8, R.id.btnSym9, R.id.btnSym0
@@ -240,14 +235,6 @@ public class XlKeyboardService extends InputMethodService {
         }
     }
 
-    // ==================== State Update Methods ====================
-
-    private void updateToggleButton() {
-        if (toggleButton != null) {
-            updateToggleButtonState(toggleButton);
-        }
-    }
-
     private void updateToggleButtonState(Button btn) {
         if (btn == null)
             return;
@@ -372,10 +359,6 @@ public class XlKeyboardService extends InputMethodService {
 
     /**
      * Input goes to the display.
-     * 
-     * @param parent
-     * @param id
-     * @param text
      */
     private void setupTextButton(View parent, int id, String text) {
         Button button = parent.findViewById(id);

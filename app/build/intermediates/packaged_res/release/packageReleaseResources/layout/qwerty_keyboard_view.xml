@@ -2,58 +2,46 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
     android:orientation="vertical"
-    android:background="@color/black"
-    android:paddingBottom="10dp">
+    android:background="@color/black">
 
     <!-- Toggle + 123 Button Row -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="45dp"
         android:orientation="horizontal"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
         android:weightSum="4">
 
-        <Button style="@style/KeyboardButton"
+        <Button style="@style/KeyboardSpecialBtn"
             android:id="@+id/btnToggleModeQwerty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:backgroundTint="@color/toggle_inactive"
             android:text="@string/key_toggle_arrow"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <View
-            android:layout_width="145dp"
+            android:layout_width="235dp"
             android:layout_height="match_parent"
             android:layout_weight="0"
             android:backgroundTint="@color/toggle_inactive" />
 
-        <Button style="@style/KeyboardButton"
-            android:id="@+id/btnsym"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:backgroundTint="@color/toggle_inactive"
-            android:text="@string/key_sym"
-            android:textSize="18sp" />
-
-        <Button style="@style/KeyboardButton"
+        <Button style="@style/KeyboardSpecialBtn"
             android:id="@+id/btn123"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="@color/toggle_inactive"
             android:text="@string/key_123"
-
-            android:textSize="18sp" />
+            android:textSize="15sp" />
     </LinearLayout>
 
     <!-- Row 1: Q W E R T Y U I O P -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="45dp"
         android:orientation="horizontal"
         android:weightSum="10">
 
@@ -153,7 +141,13 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"
-        android:weightSum="9">
+
+        android:weightSum="10">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5" />
 
         <Button style="@style/KeyboardButton"
             android:id="@+id/btnA"
@@ -233,8 +227,13 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="l"
-            android:textSize="20sp"
- />
+            android:textSize="20sp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5" />
+
+        />
     </LinearLayout>
 
     <!-- Row 3: Shift Z X C V B N M Backspace -->
@@ -244,7 +243,7 @@
         android:orientation="horizontal"
         android:weightSum="10">
 
-        <Button style="@style/KeyboardButton"
+        <Button style="@style/KeyboardSpecialBtn"
             android:id="@+id/btnShift"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -316,13 +315,13 @@
             android:textSize="20sp"
  />
 
-        <Button style="@style/KeyboardButton"
+        <Button style="@style/KeyboardSpecialBtn"
             android:id="@+id/btnBackQwerty"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1.5"
             android:text="@string/key_backspace"
-            android:textSize="20sp"
+            android:textSize="15sp"
  />
     </LinearLayout>
 
@@ -333,7 +332,15 @@
         android:orientation="horizontal"
         android:weightSum="6">
 
-        <Button style="@style/KeyboardButton"
+        <Button style="@style/KeyboardSpecialBtn"
+            android:id="@+id/btnsym"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="@string/key_sym"
+            android:textSize="13sp" />
+
+        <Button style="@style/KeyboardSpecialBtn"
             android:id="@+id/btnDotQwerty"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -348,10 +355,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:text="@string/key_space"
-            android:textSize="20sp"
+            android:textSize="10sp"
             android:minHeight="60dp" />
 
-        <Button style="@style/KeyboardButton"
+        <Button style="@style/KeyboardSpecialBtn"
             android:id="@+id/btnCommaQwerty"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -360,13 +367,13 @@
             android:textSize="20sp"
             android:minHeight="60dp" />
 
-        <Button style="@style/KeyboardButton"
+        <Button style="@style/KeyboardSpecialBtn"
             android:id="@+id/btnEnterQwerty"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/key_enter"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:minHeight="60dp" />
     </LinearLayout>
 

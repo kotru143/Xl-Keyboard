@@ -80,8 +80,8 @@ Marking id:btnCommaSym:2130903060 reachable: referenced from in_memory_r8_base_c
 Marking id:btnEnterSym:2130903068 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking color:toggle_active:2130771977 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking color:toggle_inactive:2130771978 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking string:key_toggle_tab:2131099678 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking string:key_toggle_arrow:2131099677 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking string:key_toggle_tab:2131099673 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking string:key_toggle_arrow:2131099672 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking layout:keyboard_view:2130968577 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnToggleMode:2130903118 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnABC:2130903052 reachable: referenced from in_memory_r8_base_classes0.dex
@@ -96,7 +96,7 @@ Marking id:btnEnable:2130903065 reachable: referenced from in_memory_r8_base_cla
 Marking id:btnSelect:2130903085 reachable: referenced from in_memory_r8_base_classes0.dex
 @com.xlkeyboard:color/black : reachable=false
 @com.xlkeyboard:color/button_background_dark : reachable=false
-@com.xlkeyboard:color/dark_button_background : reachable=false
+@com.xlkeyboard:color/dark_green : reachable=false
 @com.xlkeyboard:color/purple_200 : reachable=false
 @com.xlkeyboard:color/purple_500 : reachable=false
 @com.xlkeyboard:color/purple_700 : reachable=false
@@ -226,14 +226,16 @@ Marking id:btnSelect:2130903085 reachable: referenced from in_memory_r8_base_cla
     @com.xlkeyboard:string/key_0
     @com.xlkeyboard:string/key_up
     @com.xlkeyboard:string/key_enter
+    @com.xlkeyboard:style/KeyboardSpecialBtn
 @com.xlkeyboard:layout/qwerty_keyboard_view : reachable=true
     @com.xlkeyboard:color/black
-    @com.xlkeyboard:color/toggle_inactive
-    @com.xlkeyboard:style/KeyboardButton
+    @com.xlkeyboard:style/KeyboardSpecialBtn
     @com.xlkeyboard:string/key_toggle_arrow
-    @com.xlkeyboard:string/key_sym
+    @com.xlkeyboard:color/toggle_inactive
     @com.xlkeyboard:string/key_123
+    @com.xlkeyboard:style/KeyboardButton
     @com.xlkeyboard:string/key_backspace
+    @com.xlkeyboard:string/key_sym
     @com.xlkeyboard:string/key_dot
     @com.xlkeyboard:string/key_space
     @com.xlkeyboard:string/key_comma
@@ -241,8 +243,10 @@ Marking id:btnSelect:2130903085 reachable: referenced from in_memory_r8_base_cla
 @com.xlkeyboard:layout/symbol_keyboard_view : reachable=true
     @com.xlkeyboard:color/black
     @com.xlkeyboard:style/KeyboardButton
+    @com.xlkeyboard:style/KeyboardSpecialBtn
     @com.xlkeyboard:string/key_backspace
     @com.xlkeyboard:string/key_abc
+    @com.xlkeyboard:string/key_dot
     @com.xlkeyboard:string/key_space
     @com.xlkeyboard:string/key_comma
     @com.xlkeyboard:string/key_enter
@@ -256,10 +260,6 @@ Marking id:btnSelect:2130903085 reachable: referenced from in_memory_r8_base_cla
 @com.xlkeyboard:string/_2_select_keyboard : reachable=false
 @com.xlkeyboard:string/app_name : reachable=true
 @com.xlkeyboard:string/created_by_kotru143_gmail_com : reachable=false
-@com.xlkeyboard:string/down : reachable=false
-@com.xlkeyboard:string/eight : reachable=false
-@com.xlkeyboard:string/five : reachable=false
-@com.xlkeyboard:string/four : reachable=false
 @com.xlkeyboard:string/key_0 : reachable=false
 @com.xlkeyboard:string/key_1 : reachable=false
 @com.xlkeyboard:string/key_123 : reachable=false
@@ -275,7 +275,6 @@ Marking id:btnSelect:2130903085 reachable: referenced from in_memory_r8_base_cla
 @com.xlkeyboard:string/key_backspace : reachable=false
 @com.xlkeyboard:string/key_comma : reachable=false
 @com.xlkeyboard:string/key_dot : reachable=false
-@com.xlkeyboard:string/key_down : reachable=false
 @com.xlkeyboard:string/key_enter : reachable=false
 @com.xlkeyboard:string/key_left : reachable=false
 @com.xlkeyboard:string/key_right : reachable=false
@@ -284,23 +283,14 @@ Marking id:btnSelect:2130903085 reachable: referenced from in_memory_r8_base_cla
 @com.xlkeyboard:string/key_toggle_arrow : reachable=true
 @com.xlkeyboard:string/key_toggle_tab : reachable=true
 @com.xlkeyboard:string/key_up : reachable=false
-@com.xlkeyboard:string/left : reachable=false
-@com.xlkeyboard:string/nine : reachable=false
-@com.xlkeyboard:string/one : reachable=false
-@com.xlkeyboard:string/right : reachable=false
-@com.xlkeyboard:string/seven : reachable=false
-@com.xlkeyboard:string/six : reachable=false
-@com.xlkeyboard:string/three : reachable=false
-@com.xlkeyboard:string/two : reachable=false
-@com.xlkeyboard:string/up : reachable=false
 @com.xlkeyboard:string/xl_keyboard_setup : reachable=false
-@com.xlkeyboard:string/zero : reachable=false
 @com.xlkeyboard:style/KeyboardButton : reachable=false
+    @com.xlkeyboard:color/real_white
+    @com.xlkeyboard:color/toggle_inactive
+@com.xlkeyboard:style/KeyboardSpecialBtn : reachable=false
     @com.xlkeyboard:color/real_white
     @com.xlkeyboard:color/button_background_dark
 @com.xlkeyboard:style/Theme_XlKeyboard : reachable=true
-@com.xlkeyboard:xml/backup_rules : reachable=true
-@com.xlkeyboard:xml/data_extraction_rules : reachable=true
 @com.xlkeyboard:xml/method : reachable=true
     @com.xlkeyboard:string/app_name
 
@@ -402,14 +392,12 @@ The root reachable resources are:
  mipmap:ic_launcher:2131034112
  mipmap:ic_launcher_round:2131034113
  string:app_name:2131099650
- string:key_toggle_arrow:2131099677
- string:key_toggle_tab:2131099678
- style:Theme_XlKeyboard:2131165185
- xml:backup_rules:2131230720
- xml:data_extraction_rules:2131230721
- xml:method:2131230722
+ string:key_toggle_arrow:2131099672
+ string:key_toggle_tab:2131099673
+ style:Theme_XlKeyboard:2131165186
+ xml:method:2131230720
 Unused resources are: 
- color:dark_button_background:2130771970
+ color:dark_green:2130771970
  color:purple_200:2130771971
  color:purple_500:2130771972
  color:purple_700:2130771973
@@ -417,18 +405,3 @@ Unused resources are:
  color:teal_700:2130771976
  color:white:2130771979
  drawable:ic_launcher_foreground:2130837506
- string:down:2131099652
- string:eight:2131099653
- string:five:2131099654
- string:four:2131099655
- string:key_down:2131099671
- string:left:2131099680
- string:nine:2131099681
- string:one:2131099682
- string:right:2131099683
- string:seven:2131099684
- string:six:2131099685
- string:three:2131099686
- string:two:2131099687
- string:up:2131099688
- string:zero:2131099690

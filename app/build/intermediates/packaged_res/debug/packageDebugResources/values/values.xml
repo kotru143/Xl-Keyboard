@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="button_background_dark">#FF333333</color>
-    <color name="dark_button_background">#470aefff</color>
+    <color name="button_background_dark">#141414</color>
+    <color name="dark_green">#011F0500</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -10,16 +10,12 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="toggle_active">#FF4CAF50</color>
-    <color name="toggle_inactive">#FF333333</color>
-    <color name="white">#FF018786</color>
+    <color name="toggle_inactive">#1C1C1C</color>
+    <color name="white">#EEEEEEEE</color>
     <string name="_1_enable_keyboard">1. Enable Keyboard</string>
     <string name="_2_select_keyboard">2. Select Keyboard</string>
     <string name="app_name">Xl Keyboard</string>
     <string name="created_by_kotru143_gmail_com">Created by kotru143@gmail.com</string>
-    <string name="down">Down</string>
-    <string name="eight">8</string>
-    <string name="five">5</string>
-    <string name="four">4</string>
     <string name="key_0">0</string>
     <string name="key_1">1</string>
     <string name="key_123">123</string>
@@ -35,7 +31,6 @@
     <string name="key_backspace">⌫</string>
     <string name="key_comma">,</string>
     <string name="key_dot">.</string>
-    <string name="key_down">▼</string>
     <string name="key_enter">↵</string>
     <string name="key_left">◄</string>
     <string name="key_right">►</string>
@@ -44,18 +39,12 @@
     <string name="key_toggle_arrow">⇄</string>
     <string name="key_toggle_tab">⇥ Tab</string>
     <string name="key_up">▲</string>
-    <string name="left">Left</string>
-    <string name="nine">9</string>
-    <string name="one">1</string>
-    <string name="right">Right</string>
-    <string name="seven">7</string>
-    <string name="six">6</string>
-    <string name="three">3</string>
-    <string name="two">2</string>
-    <string name="up">Up</string>
     <string name="xl_keyboard_setup">Xl Keyboard Setup</string>
-    <string name="zero">0</string>
     <style name="KeyboardButton" parent="android:Widget.Button">
+        <item name="android:backgroundTint">@color/toggle_inactive</item>
+        <item name="android:textColor">@color/real_white</item>
+    </style>
+    <style name="KeyboardSpecialBtn" parent="android:Widget.Button">
         <item name="android:backgroundTint">@color/button_background_dark</item>
         <item name="android:textColor">@color/real_white</item>
     </style>

@@ -6,7 +6,12 @@
     </style>
 
     <style name="KeyboardButton" parent="android:Widget.Button">
+        <item name="android:backgroundTint">@color/toggle_inactive</item>
+        <item name="android:textColor">@color/real_white</item>
+    </style>
+    <style name="KeyboardSpecialBtn" parent="android:Widget.Button">
         <item name="android:backgroundTint">@color/button_background_dark</item>
         <item name="android:textColor">@color/real_white</item>
     </style>
+
 </resources>
