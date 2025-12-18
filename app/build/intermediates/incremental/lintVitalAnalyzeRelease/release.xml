@@ -6,6 +6,7 @@
     shrinking="true"
     mergedManifest="build\intermediates\merged_manifest\release\processReleaseMainManifest\AndroidManifest.xml"
     proguardFiles="build\intermediates\default_proguard_files\global\proguard-android-optimize.txt-8.13.1;proguard-rules.pro"
+    resourceConfigurations="en"
     partialResultsDir="build\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
     desugaredMethodsFiles="C:\Users\kotru\.gradle\caches\9.0-milestone-1\transforms\bfdc648fbe668315be7987a14990669d\transformed\D8BackportedDesugaredMethods.txt">
   <buildFeatures

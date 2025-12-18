@@ -402,7 +402,6 @@ Marking id:btnSelect:2130903088 reachable: referenced from in_memory_r8_base_cla
     @com.xlkeyboard:color/button_background_dark
 @com.xlkeyboard:style/Theme_XlKeyboard : reachable=true
 @com.xlkeyboard:xml/method : reachable=true
-    @com.xlkeyboard:string/app_name
 
 The root reachable resources are:
  color:toggle_active:2130771971

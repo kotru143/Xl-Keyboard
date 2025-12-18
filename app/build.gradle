@@ -12,6 +12,9 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
+        
+        // Optimize: Remove unused alternative resources (like languages)
+        resConfigs "en"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

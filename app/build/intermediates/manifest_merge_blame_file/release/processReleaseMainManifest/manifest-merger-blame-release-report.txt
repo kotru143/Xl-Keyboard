@@ -9,7 +9,7 @@
 9        android:targetSdkVersion="34" />
 10
 11    <application
-11-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:4:5-31:19
+11-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:4:5-32:19
 12        android:extractNativeLibs="false"
 13        android:icon="@mipmap/ic_launcher"
 13-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:5:9-43
