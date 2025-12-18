@@ -1,13 +1,7 @@
 com.xlkeyboard.R$color:
     public static int black
     public static int button_background_dark
-    public static int dark_green
-    public static int purple_200
-    public static int purple_500
-    public static int purple_700
     public static int real_white
-    public static int teal_200
-    public static int teal_700
     public static int white
     private void <init>()
 com.xlkeyboard.R$drawable
@@ -32,16 +26,64 @@ com.xlkeyboard.R$string:
     public static int key_7
     public static int key_8
     public static int key_9
+    public static int key_a
     public static int key_abc
+    public static int key_amp
+    public static int key_asterisk
+    public static int key_at
+    public static int key_b
     public static int key_backspace
+    public static int key_c
+    public static int key_colon
     public static int key_comma
+    public static int key_d
     public static int key_dot
+    public static int key_down
+    public static int key_e
     public static int key_enter
+    public static int key_equals
+    public static int key_exclamation
+    public static int key_f
+    public static int key_g
+    public static int key_greatThan
+    public static int key_h
+    public static int key_hash
+    public static int key_i
+    public static int key_j
+    public static int key_k
+    public static int key_l
     public static int key_left
+    public static int key_leftPar
+    public static int key_lessThan
+    public static int key_m
+    public static int key_minus
+    public static int key_n
+    public static int key_o
+    public static int key_p
+    public static int key_percentage
+    public static int key_plus
+    public static int key_q
+    public static int key_question
+    public static int key_quote
+    public static int key_quoteSingle
+    public static int key_r
     public static int key_right
+    public static int key_rightPar
+    public static int key_rupee
+    public static int key_s
+    public static int key_semicolon
+    public static int key_shift
+    public static int key_slash
     public static int key_space
     public static int key_sym
+    public static int key_t
+    public static int key_u
     public static int key_up
+    public static int key_v
+    public static int key_w
+    public static int key_x
+    public static int key_y
+    public static int key_z
     public static int xl_keyboard_setup
     private void <init>()
 com.xlkeyboard.R$style
@@ -58,6 +100,4 @@ com.xlkeyboard.R$layout
 com.xlkeyboard.R$string
 com.xlkeyboard.XlKeyboardService:
     public static void sendKeyEvent()
-    public final void setupArrowButton(android.view.View,int,boolean)
     public final void setupBackspaceButton(android.view.View,int)
-    public final void setupToggleButton(android.view.View,int)

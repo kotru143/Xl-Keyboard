@@ -55,6 +55,7 @@ public class XlKeyboardService extends InputMethodService {
             KeyEvent.KEYCODE_9
     };
 
+    // For Row 1 .
     private static final int[] SYMBOL_ROW1_IDS = {
             R.id.btnSym1, R.id.btnSym2, R.id.btnSym3, R.id.btnSym4, R.id.btnSym5,
             R.id.btnSym6, R.id.btnSym7, R.id.btnSym8, R.id.btnSym9, R.id.btnSym0
@@ -63,6 +64,7 @@ public class XlKeyboardService extends InputMethodService {
             "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"
     };
 
+    // For Row 2 ...
     private static final int[] SYMBOL_ROW2_IDS = {
             R.id.btnSymAt, R.id.btnSymHash, R.id.btnSymDollar, R.id.btnSymPercent,
             R.id.btnSymAmpersand, R.id.btnSymMinus, R.id.btnSymPlus,
@@ -72,13 +74,14 @@ public class XlKeyboardService extends InputMethodService {
             "@", "#", "₹", "%", "&", "-", "+", "(", ")", "/"
     };
 
+    // For Row 3 ...
     private static final int[] SYMBOL_ROW3_IDS = {
             R.id.btnSymEquals, R.id.btnSymAsterisk, R.id.btnSymQuoteDouble,
             R.id.btnSymQuoteSingle, R.id.btnSymColon, R.id.btnSymSemicolon,
-            R.id.btnSymExclamation, R.id.btnSymQuestion
+            R.id.btnSymExclamation, R.id.btnSymQuestion, R.id.btnLessThan, R.id.btnGreatThan
     };
     private static final String[] SYMBOL_ROW3_CHARS = {
-            "=", "*", "\"", "'", ":", ";", "!", "?"
+            "=", "*", "\"", "'", ":", ";", "!", "?", "<", ">"
     };
 
     private final Handler deleteHandler = new Handler();
@@ -112,10 +115,8 @@ public class XlKeyboardService extends InputMethodService {
         isTabModeEnabled = prefs.getBoolean(KEY_TAB_MODE, false);
 
         // Setup SYM button
-        Button btnSym = view.findViewById(R.id.btnsym);
-        btnSym.setOnClickListener(v -> {
-            setInputView(createSymbolView());
-        });
+        Button btnSym = view.findViewById(R.id.btnSym);
+        btnSym.setOnClickListener(v -> setInputView(createSymbolView()));
 
         // Setup toggle button
         setupToggleButton(view, R.id.btnToggleMode);
@@ -125,9 +126,12 @@ public class XlKeyboardService extends InputMethodService {
         abcButton.setOnClickListener(v -> {
             isQwertyMode = true;
             setInputView(onCreateInputView());
+            // Safe to reset shift state when switching modes
+            isShiftEnabled = false;
+            isCapsLock = false;
         });
 
-        // Set click listeners for all number buttons
+        // Setup number buttons
         for (int i = 0; i < NUMBER_BUTTON_IDS.length; i++) {
             setupButton(view, NUMBER_BUTTON_IDS[i], NUMBER_KEY_CODES[i]);
         }
@@ -149,10 +153,8 @@ public class XlKeyboardService extends InputMethodService {
         View view = getLayoutInflater().inflate(R.layout.qwerty_keyboard_view, null);
 
         // Setup SYM button for QWERTY view
-        Button btnSym = view.findViewById(R.id.btnsym);
-        btnSym.setOnClickListener(v -> {
-            setInputView(createSymbolView());
-        });
+        Button btnSym = view.findViewById(R.id.btnSym);
+        btnSym.setOnClickListener(v -> setInputView(createSymbolView()));
 
         // Setup toggle button for Tab mode
         setupToggleButton(view, R.id.btnToggleModeQwerty);
@@ -167,10 +169,7 @@ public class XlKeyboardService extends InputMethodService {
             setInputView(onCreateInputView());
         });
 
-        // Get all letter button references for dynamic case switching
-
         // Setup shift button with dynamic letter case switching
-        // Double-tap enables Caps Lock, single tap toggles shift
         shiftButton = view.findViewById(R.id.btnShift);
         updateShiftButton();
         shiftButton.setOnClickListener(v -> {
@@ -182,23 +181,21 @@ public class XlKeyboardService extends InputMethodService {
             } else {
                 // Single tap
                 if (isCapsLock) {
-                    // Turn off Caps Lock
                     isCapsLock = false;
                     isShiftEnabled = false;
                 } else {
-                    // Toggle Shift
                     isShiftEnabled = !isShiftEnabled;
                 }
             }
             lastShiftPressTime = currentTime;
-
             updateShiftButton();
             updateLetterButtonsCase();
         });
 
         // Setup all letter buttons using loop
         for (int i = 0; i < LETTER_BUTTON_IDS.length && i < LETTERS.length; i++) {
-            setupLetterButton(view, LETTER_BUTTON_IDS[i], LETTERS[i]);
+            // Optimization: Pass index 'i' directly to avoid lookup
+            setupLetterButton(view, LETTER_BUTTON_IDS[i], LETTERS[i], i);
         }
 
         // Setup special buttons
@@ -221,12 +218,8 @@ public class XlKeyboardService extends InputMethodService {
             prefs.edit().putBoolean(KEY_TAB_MODE, isTabModeEnabled).apply();
             updateToggleButtonState(btn);
 
-            // Sync the main toggle button reference if we are in NumberPad mode
             if (id == R.id.btnToggleMode) {
-                updateToggleButtonState(toggleButton);
-                // Actually this listener is attached to the view's button, which IS
-                // toggleButton in this case.
-                // So the above line is redundant but harmless.
+                updateToggleButtonState(toggleButton); // Sync main reference
             }
         });
 
@@ -238,31 +231,16 @@ public class XlKeyboardService extends InputMethodService {
     private void updateToggleButtonState(Button btn) {
         if (btn == null)
             return;
-        if (isTabModeEnabled) {
-            btn.setText(R.string.key_toggle_tab);
-            btn.setBackgroundTintList(
-                    getResources().getColorStateList(R.color.toggle_active, null));
-        } else {
-            btn.setText(R.string.key_toggle_arrow);
-            btn.setBackgroundTintList(
-                    getResources().getColorStateList(R.color.toggle_inactive, null));
-        }
+        boolean active = isTabModeEnabled;
+        btn.setText(active ? R.string.key_toggle_tab : R.string.key_toggle_arrow);
+        btn.setBackgroundTintList(getResources().getColorStateList(
+                active ? R.color.toggle_active : R.color.toggle_inactive, null));
     }
 
     private void updateShiftButton() {
         if (shiftButton != null) {
-            if (isShiftEnabled) {
-                shiftButton.setBackgroundTintList(
-                        getResources().getColorStateList(R.color.toggle_active, null));
-                // Optional: Change icon or distinct color for Caps Lock
-                if (isCapsLock) {
-                    // Keep active color or maybe add a visual indicator if possible,
-                    // for now relying on the active tint.
-                }
-            } else {
-                shiftButton.setBackgroundTintList(
-                        getResources().getColorStateList(R.color.toggle_inactive, null));
-            }
+            shiftButton.setBackgroundTintList(getResources().getColorStateList(
+                    isShiftEnabled ? R.color.toggle_active : R.color.toggle_inactive, null));
         }
     }
 
@@ -271,17 +249,15 @@ public class XlKeyboardService extends InputMethodService {
         button.setOnTouchListener((v, event) -> {
             switch (event.getAction()) {
                 case MotionEvent.ACTION_DOWN:
-                    // Single delete on press
                     InputConnection ic = getCurrentInputConnection();
                     if (ic != null) {
                         ic.deleteSurroundingText(1, 0);
                     }
-                    // Start repeating after initial delay
                     deleteHandler.postDelayed(deleteRunnable, 500);
                     return true;
                 case MotionEvent.ACTION_UP:
+                    v.performClick(); // Accessibility support
                 case MotionEvent.ACTION_CANCEL:
-                    // Stop repeating
                     deleteHandler.removeCallbacks(deleteRunnable);
                     return true;
             }
@@ -289,27 +265,15 @@ public class XlKeyboardService extends InputMethodService {
         });
     }
 
-    /**
-     * Helper method to send key events to the input connection.
-     * 
-     * @param keyCode   The key code to send
-     * @param metaState The meta state (e.g., KeyEvent.META_SHIFT_ON)
-     */
     private void sendKeyEvent(int keyCode, int metaState) {
         InputConnection ic = getCurrentInputConnection();
         if (ic == null)
             return;
-
         long now = System.currentTimeMillis();
         ic.sendKeyEvent(new KeyEvent(now, now, KeyEvent.ACTION_DOWN, keyCode, 0, metaState));
         ic.sendKeyEvent(new KeyEvent(now, now, KeyEvent.ACTION_UP, keyCode, 0, metaState));
     }
 
-    /**
-     * Helper method to send key events without meta state.
-     * 
-     * @param keyCode The key code to send
-     */
     private void sendKeyEvent(int keyCode) {
         sendKeyEvent(keyCode, 0);
     }
@@ -319,18 +283,11 @@ public class XlKeyboardService extends InputMethodService {
         button.setOnClickListener(v -> sendKeyEvent(keyCode));
     }
 
-    private void setupLetterButton(View parent, int id, String letter) {
+    // Optimized: Now takes index directly
+    private void setupLetterButton(View parent, int id, String letter, int index) {
         Button button = parent.findViewById(id);
 
-        // Populate letterButtons array dynamically
-        int index = -1;
-        for (int i = 0; i < LETTERS.length; i++) {
-            if (LETTERS[i].equalsIgnoreCase(letter)) {
-                index = i;
-                break;
-            }
-        }
-        if (index != -1 && letterButtons != null) {
+        if (letterButtons != null && index >= 0 && index < letterButtons.length) {
             letterButtons[index] = button;
         }
 
@@ -339,12 +296,10 @@ public class XlKeyboardService extends InputMethodService {
             if (ic == null)
                 return;
 
-            // Check if we should auto-capitalize
             boolean shouldCapitalize = isShiftEnabled || autoCapitalizeNext;
             String text = shouldCapitalize ? letter.toUpperCase() : letter;
             ic.commitText(text, 1);
 
-            // Auto-disable shift and auto-capitalize after typing one character
             if (isShiftEnabled && !isCapsLock) {
                 isShiftEnabled = false;
                 updateShiftButton();
@@ -357,9 +312,6 @@ public class XlKeyboardService extends InputMethodService {
         });
     }
 
-    /**
-     * Input goes to the display.
-     */
     private void setupTextButton(View parent, int id, String text) {
         Button button = parent.findViewById(id);
         button.setOnClickListener(v -> {
@@ -368,46 +320,38 @@ public class XlKeyboardService extends InputMethodService {
                 return;
             ic.commitText(text, 1);
 
-            // Enable auto-capitalization after period
             if (text.equals(".")) {
                 autoCapitalizeNext = true;
-
             } else if (!text.equals(" ")) {
-                // Disable auto-capitalization for other non-space characters
                 autoCapitalizeNext = false;
-
             }
             updateLetterButtonsCase();
         });
     }
 
+    // Helper to setup multiple text buttons at once
+    private void setupBatchTextButtons(View parent, int[] ids, String[] chars) {
+        for (int i = 0; i < ids.length && i < chars.length; i++) {
+            setupTextButton(parent, ids[i], chars[i]);
+        }
+    }
+
     private void setupArrowButton(View parent, int id, boolean isLeft) {
         Button button = parent.findViewById(id);
         button.setOnClickListener(v -> {
-            InputConnection ic = getCurrentInputConnection();
-            if (ic == null)
-                return;
-
             if (isTabModeEnabled) {
-                // Tab mode: left = Shift+Tab, right = Tab
                 int metaState = isLeft ? KeyEvent.META_SHIFT_ON : 0;
                 sendKeyEvent(KeyEvent.KEYCODE_TAB, metaState);
             } else {
-                // Arrow mode: normal arrow keys
                 int keyCode = isLeft ? KeyEvent.KEYCODE_DPAD_LEFT : KeyEvent.KEYCODE_DPAD_RIGHT;
                 sendKeyEvent(keyCode);
             }
         });
     }
 
-    /**
-     * Updates the case of letter buttons based on shift state and auto-capitalize
-     * state.
-     */
     private void updateLetterButtonsCase() {
-        if (letterButtons == null || !isQwertyMode) {
+        if (letterButtons == null || !isQwertyMode)
             return;
-        }
 
         boolean shouldShowUppercase = isShiftEnabled || autoCapitalizeNext;
         for (int i = 0; i < letterButtons.length && i < LETTERS.length; i++) {
@@ -420,18 +364,18 @@ public class XlKeyboardService extends InputMethodService {
     private View createSymbolView() {
         View view = getLayoutInflater().inflate(R.layout.symbol_keyboard_view, null);
 
-        // Setup symbol buttons using loops
-        for (int i = 0; i < SYMBOL_ROW1_IDS.length && i < SYMBOL_ROW1_CHARS.length; i++) {
-            setupTextButton(view, SYMBOL_ROW1_IDS[i], SYMBOL_ROW1_CHARS[i]);
-        }
-        for (int i = 0; i < SYMBOL_ROW2_IDS.length && i < SYMBOL_ROW2_CHARS.length; i++) {
-            setupTextButton(view, SYMBOL_ROW2_IDS[i], SYMBOL_ROW2_CHARS[i]);
-        }
-        for (int i = 0; i < SYMBOL_ROW3_IDS.length && i < SYMBOL_ROW3_CHARS.length; i++) {
-            setupTextButton(view, SYMBOL_ROW3_IDS[i], SYMBOL_ROW3_CHARS[i]);
-        }
+        setupToggleButton(view, R.id.btnToggleMode);
+        setupButton(view, R.id.btnUp, KeyEvent.KEYCODE_DPAD_UP);
+        setupButton(view, R.id.btnDown, KeyEvent.KEYCODE_ENTER);
 
-        // Setup special buttons
+        setupArrowButton(view, R.id.btnLeft, true);
+        setupArrowButton(view, R.id.btnRight, false);
+
+        // Optimized batch setup
+        setupBatchTextButtons(view, SYMBOL_ROW1_IDS, SYMBOL_ROW1_CHARS);
+        setupBatchTextButtons(view, SYMBOL_ROW2_IDS, SYMBOL_ROW2_CHARS);
+        setupBatchTextButtons(view, SYMBOL_ROW3_IDS, SYMBOL_ROW3_CHARS);
+
         setupBackspaceButton(view, R.id.btnBackSym);
 
         Button btnABC = view.findViewById(R.id.btnABC_Sym);
@@ -440,6 +384,7 @@ public class XlKeyboardService extends InputMethodService {
             setInputView(createQwertyView());
         });
 
+        setupTextButton(view, R.id.btnDot, ".");
         setupTextButton(view, R.id.btnSpaceSym, " ");
         setupTextButton(view, R.id.btnCommaSym, ",");
         setupButton(view, R.id.btnEnterSym, KeyEvent.KEYCODE_ENTER);

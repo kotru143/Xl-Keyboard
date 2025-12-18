@@ -3,11 +3,11 @@
 # min_api: 24
 # common_typos_disable
 # {"id":"com.android.tools.r8.mapping","version":"2.2"}
-# pg_map_id: a35fd2a73b4341c83554ecf6b5f746cc9cd30f6781b019eb931aadaf8fbe353c
-# pg_map_hash: SHA-256 a35fd2a73b4341c83554ecf6b5f746cc9cd30f6781b019eb931aadaf8fbe353c
+# pg_map_id: 8b78bd09d48d29cbd905241d0732bb46e248a964b6f8f122fac1892f9a6d2cb5
+# pg_map_hash: SHA-256 8b78bd09d48d29cbd905241d0732bb46e248a964b6f8f122fac1892f9a6d2cb5
 com.xlkeyboard.MainActivity -> com.xlkeyboard.MainActivity:
 # {"id":"sourceFile","fileName":"MainActivity.java"}
-    1:1:void <init>():13:13 -> <init>
+    1:4:void <init>():13:13 -> <init>
     1:5:void onCreate(android.os.Bundle):17:17 -> onCreate
     6:9:void onCreate(android.os.Bundle):18:18 -> onCreate
     10:15:void onCreate(android.os.Bundle):19:19 -> onCreate
@@ -54,94 +54,92 @@ com.xlkeyboard.XlKeyboardService -> com.xlkeyboard.XlKeyboardService:
     2:2:void <clinit>():37:37 -> <clinit>
     3:3:void <clinit>():46:46 -> <clinit>
     4:4:void <clinit>():51:51 -> <clinit>
-    5:5:void <clinit>():58:58 -> <clinit>
-    6:6:void <clinit>():62:62 -> <clinit>
-    7:7:void <clinit>():66:66 -> <clinit>
-    8:8:void <clinit>():71:71 -> <clinit>
-    9:9:void <clinit>():75:75 -> <clinit>
-    10:10:void <clinit>():80:80 -> <clinit>
-    1:1:void <init>():12:12 -> <init>
-    2:7:void <init>():20:25 -> <init>
-    8:9:void <init>():84:85 -> <init>
-    1:1:android.view.View createQwertyView():149:149 -> a
-    2:3:android.view.View createQwertyView():152:153 -> a
-    4:6:void setupToggleButton(android.view.View,int):217:219 -> a
-    4:6:android.view.View createQwertyView():158 -> a
-    7:7:android.view.View createQwertyView():161:161 -> a
-    8:9:android.view.View createQwertyView():164:165 -> a
-    10:12:android.view.View createQwertyView():174:176 -> a
-    13:13:android.view.View createQwertyView():201:201 -> a
-    14:14:void setupLetterButton(android.view.View,int,java.lang.String):323:323 -> a
-    14:14:android.view.View createQwertyView():201 -> a
-    15:15:void setupLetterButton(android.view.View,int,java.lang.String):328:328 -> a
-    15:15:android.view.View createQwertyView():201 -> a
-    16:17:void setupLetterButton(android.view.View,int,java.lang.String):333:334 -> a
-    16:17:android.view.View createQwertyView():201 -> a
-    18:18:void setupLetterButton(android.view.View,int,java.lang.String):337:337 -> a
-    18:18:android.view.View createQwertyView():201 -> a
-    19:20:void setupBackspaceButton(android.view.View,int):270:271 -> a
-    19:20:android.view.View createQwertyView():205 -> a
-    21:24:android.view.View createQwertyView():206:209 -> a
-    1:1:android.view.View createSymbolView():421:421 -> b
-    2:2:android.view.View createSymbolView():425:425 -> b
-    3:3:android.view.View createSymbolView():428:428 -> b
-    4:4:android.view.View createSymbolView():431:431 -> b
-    5:6:void setupBackspaceButton(android.view.View,int):270:271 -> b
-    5:6:android.view.View createSymbolView():435 -> b
-    7:8:android.view.View createSymbolView():437:438 -> b
-    9:11:android.view.View createSymbolView():443:445 -> b
-    1:7:void sendKeyEvent(int,int):299:299 -> c
-    8:11:void sendKeyEvent(int,int):303:303 -> c
-    12:24:void sendKeyEvent(int,int):304:304 -> c
-    25:34:void sendKeyEvent(int,int):305:305 -> c
-    1:6:void setupButton(android.view.View,int,int):318:318 -> d
-    7:15:void setupButton(android.view.View,int,int):319:319 -> d
-    1:6:void setupTextButton(android.view.View,int,java.lang.String):364:364 -> e
-    7:16:void setupTextButton(android.view.View,int,java.lang.String):365:365 -> e
-    1:1:void updateLetterButtonsCase():408:408 -> f
-    2:5:void updateLetterButtonsCase():412:415 -> f
-    1:2:void updateShiftButton():253:254 -> g
-    3:3:void updateShiftButton():256:256 -> g
-    4:4:void updateShiftButton():255:255 -> g
-    5:5:void updateShiftButton():264:264 -> g
-    6:6:void updateShiftButton():263:263 -> g
-    4:11:void updateToggleButtonState(android.widget.Button):241:241 -> h
-    12:14:void updateToggleButtonState(android.widget.Button):242:242 -> h
-    15:25:void updateToggleButtonState(android.widget.Button):244:244 -> h
-    26:32:void updateToggleButtonState(android.widget.Button):243:243 -> h
-    33:35:void updateToggleButtonState(android.widget.Button):246:246 -> h
-    36:46:void updateToggleButtonState(android.widget.Button):248:248 -> h
-    47:50:void updateToggleButtonState(android.widget.Button):247:247 -> h
-    1:2:android.view.View onCreateInputView():100:101 -> onCreateInputView
-    3:3:android.view.View createNumberPadView():108:108 -> onCreateInputView
-    3:3:android.view.View onCreateInputView():103 -> onCreateInputView
-    4:5:android.view.View createNumberPadView():111:112 -> onCreateInputView
-    4:5:android.view.View onCreateInputView():103 -> onCreateInputView
-    6:7:android.view.View createNumberPadView():115:116 -> onCreateInputView
-    6:7:android.view.View onCreateInputView():103 -> onCreateInputView
-    8:10:void setupToggleButton(android.view.View,int):217:219 -> onCreateInputView
-    8:10:android.view.View createNumberPadView():121 -> onCreateInputView
-    8:10:android.view.View onCreateInputView():103 -> onCreateInputView
-    11:11:void setupToggleButton(android.view.View,int):234:234 -> onCreateInputView
-    11:11:android.view.View createNumberPadView():121 -> onCreateInputView
-    11:11:android.view.View onCreateInputView():103 -> onCreateInputView
-    12:13:android.view.View createNumberPadView():124:125 -> onCreateInputView
-    12:13:android.view.View onCreateInputView():103 -> onCreateInputView
-    14:14:android.view.View createNumberPadView():132:132 -> onCreateInputView
-    14:14:android.view.View onCreateInputView():103 -> onCreateInputView
-    15:16:android.view.View createNumberPadView():135:136 -> onCreateInputView
-    15:16:android.view.View onCreateInputView():103 -> onCreateInputView
-    17:18:void setupArrowButton(android.view.View,int,boolean):385:386 -> onCreateInputView
-    17:18:android.view.View createNumberPadView():139 -> onCreateInputView
-    17:18:android.view.View onCreateInputView():103 -> onCreateInputView
-    19:20:void setupArrowButton(android.view.View,int,boolean):385:386 -> onCreateInputView
-    19:20:android.view.View createNumberPadView():140 -> onCreateInputView
-    19:20:android.view.View onCreateInputView():103 -> onCreateInputView
-    21:22:void setupBackspaceButton(android.view.View,int):270:271 -> onCreateInputView
-    21:22:android.view.View createNumberPadView():142 -> onCreateInputView
-    21:22:android.view.View onCreateInputView():103 -> onCreateInputView
-    23:23:android.view.View createNumberPadView():143:143 -> onCreateInputView
-    23:23:android.view.View onCreateInputView():103 -> onCreateInputView
+    5:5:void <clinit>():59:59 -> <clinit>
+    6:6:void <clinit>():63:63 -> <clinit>
+    7:7:void <clinit>():68:68 -> <clinit>
+    8:8:void <clinit>():73:73 -> <clinit>
+    9:9:void <clinit>():78:78 -> <clinit>
+    10:10:void <clinit>():83:83 -> <clinit>
+    1:4:void <init>():12:12 -> <init>
+    5:6:void <init>():20:20 -> <init>
+    7:8:void <init>():21:21 -> <init>
+    9:10:void <init>():22:22 -> <init>
+    11:14:void <init>():23:23 -> <init>
+    15:16:void <init>():24:24 -> <init>
+    17:18:void <init>():25:25 -> <init>
+    19:25:void <init>():87:87 -> <init>
+    26:33:void <init>():88:88 -> <init>
+    1:1:android.view.View createQwertyView():153:153 -> a
+    2:3:android.view.View createQwertyView():156:157 -> a
+    4:4:android.view.View createQwertyView():160:160 -> a
+    5:5:android.view.View createQwertyView():163:163 -> a
+    6:7:android.view.View createQwertyView():166:167 -> a
+    8:10:android.view.View createQwertyView():173:175 -> a
+    11:11:android.view.View createQwertyView():198:198 -> a
+    12:12:void setupLetterButton(android.view.View,int,java.lang.String,int):288:288 -> a
+    12:12:android.view.View createQwertyView():198 -> a
+    13:14:void setupLetterButton(android.view.View,int,java.lang.String,int):290:291 -> a
+    13:14:android.view.View createQwertyView():198 -> a
+    15:15:void setupLetterButton(android.view.View,int,java.lang.String,int):294:294 -> a
+    15:15:android.view.View createQwertyView():198 -> a
+    16:17:void setupBackspaceButton(android.view.View,int):248:249 -> a
+    16:17:android.view.View createQwertyView():202 -> a
+    18:21:android.view.View createQwertyView():203:206 -> a
+    1:1:android.view.View createSymbolView():365:365 -> b
+    2:4:android.view.View createSymbolView():367:369 -> b
+    5:6:android.view.View createSymbolView():371:372 -> b
+    7:9:android.view.View createSymbolView():375:377 -> b
+    10:11:void setupBackspaceButton(android.view.View,int):248:249 -> b
+    10:11:android.view.View createSymbolView():379 -> b
+    12:13:android.view.View createSymbolView():381:382 -> b
+    14:17:android.view.View createSymbolView():387:390 -> b
+    1:7:void sendKeyEvent(int,int):269:269 -> c
+    8:11:void sendKeyEvent(int,int):272:272 -> c
+    12:24:void sendKeyEvent(int,int):273:273 -> c
+    25:34:void sendKeyEvent(int,int):274:274 -> c
+    1:6:void setupArrowButton(android.view.View,int,boolean):340:340 -> d
+    7:15:void setupArrowButton(android.view.View,int,boolean):341:341 -> d
+    2:7:void setupBatchTextButtons(android.view.View,int[],java.lang.String[]):334:334 -> e
+    8:18:void setupBatchTextButtons(android.view.View,int[],java.lang.String[]):335:335 -> e
+    1:6:void setupButton(android.view.View,int,int):282:282 -> f
+    7:15:void setupButton(android.view.View,int,int):283:283 -> f
+    1:6:void setupTextButton(android.view.View,int,java.lang.String):316:316 -> g
+    7:16:void setupTextButton(android.view.View,int,java.lang.String):317:317 -> g
+    1:6:void setupToggleButton(android.view.View,int):214:214 -> h
+    7:9:void setupToggleButton(android.view.View,int):215:215 -> h
+    10:22:void setupToggleButton(android.view.View,int):216:216 -> h
+    23:25:void setupToggleButton(android.view.View,int):227:227 -> h
+    1:1:void updateLetterButtonsCase():353:353 -> i
+    2:5:void updateLetterButtonsCase():356:359 -> i
+    1:4:void updateShiftButton():241:241 -> j
+    5:8:void updateShiftButton():242:242 -> j
+    9:20:void updateShiftButton():243:243 -> j
+    21:28:void updateShiftButton():242:242 -> j
+    4:14:void updateToggleButtonState(android.widget.Button):234:234 -> k
+    15:17:void updateToggleButtonState(android.widget.Button):235:235 -> k
+    18:39:void updateToggleButtonState(android.widget.Button):236:236 -> k
+    1:2:android.view.View onCreateInputView():103:104 -> onCreateInputView
+    3:3:android.view.View createNumberPadView():111:111 -> onCreateInputView
+    3:3:android.view.View onCreateInputView():106 -> onCreateInputView
+    4:5:android.view.View createNumberPadView():114:115 -> onCreateInputView
+    4:5:android.view.View onCreateInputView():106 -> onCreateInputView
+    6:7:android.view.View createNumberPadView():118:119 -> onCreateInputView
+    6:7:android.view.View onCreateInputView():106 -> onCreateInputView
+    8:8:android.view.View createNumberPadView():122:122 -> onCreateInputView
+    8:8:android.view.View onCreateInputView():106 -> onCreateInputView
+    9:10:android.view.View createNumberPadView():125:126 -> onCreateInputView
+    9:10:android.view.View onCreateInputView():106 -> onCreateInputView
+    11:11:android.view.View createNumberPadView():136:136 -> onCreateInputView
+    11:11:android.view.View onCreateInputView():106 -> onCreateInputView
+    12:13:android.view.View createNumberPadView():139:140 -> onCreateInputView
+    12:13:android.view.View onCreateInputView():106 -> onCreateInputView
+    14:15:android.view.View createNumberPadView():143:144 -> onCreateInputView
+    14:15:android.view.View onCreateInputView():106 -> onCreateInputView
+    16:17:void setupBackspaceButton(android.view.View,int):248:249 -> onCreateInputView
+    16:17:android.view.View createNumberPadView():146 -> onCreateInputView
+    16:17:android.view.View onCreateInputView():106 -> onCreateInputView
+    18:18:android.view.View createNumberPadView():147:147 -> onCreateInputView
+    18:18:android.view.View onCreateInputView():106 -> onCreateInputView
 com.xlkeyboard.XlKeyboardService$$ExternalSyntheticLambda0 -> b:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
@@ -151,97 +149,101 @@ com.xlkeyboard.XlKeyboardService$$ExternalSyntheticLambda0 -> b:
       # {"id":"com.android.tools.r8.synthesized"}
     1:8:void XlKeyboardService$$ExternalSyntheticLambda0.<init>(com.xlkeyboard.XlKeyboardService,int):0:0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    10:11:void com.xlkeyboard.XlKeyboardService.lambda$createSymbolView$11(android.view.View):439:439 -> onClick
+    10:11:void com.xlkeyboard.XlKeyboardService.lambda$createNumberPadView$1(android.view.View):127:127 -> onClick
     10:11:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
       # {"id":"com.android.tools.r8.synthesized"}
-    12:19:void com.xlkeyboard.XlKeyboardService.lambda$createSymbolView$11(android.view.View):440:440 -> onClick
-    12:19:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    20:21:void com.xlkeyboard.XlKeyboardService.lambda$createNumberPadView$1(android.view.View):126:126 -> onClick
-    20:21:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    22:29:void com.xlkeyboard.XlKeyboardService.lambda$createNumberPadView$1(android.view.View):127:127 -> onClick
-    22:29:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    30:31:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0:0 -> onClick
-    32:39:void com.xlkeyboard.XlKeyboardService.lambda$createNumberPadView$0(android.view.View):117:117 -> onClick
-    32:39:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    40:41:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0:0 -> onClick
-    42:45:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):177:177 -> onClick
-    42:45:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    46:55:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):178:178 -> onClick
-    46:55:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    56:57:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):180:180 -> onClick
-    56:57:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    58:60:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):181:181 -> onClick
-    58:60:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    61:64:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):184:184 -> onClick
-    61:64:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    65:66:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):186:186 -> onClick
-    65:66:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    67:69:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):187:187 -> onClick
-    67:69:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    70:74:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):190:190 -> onClick
-    70:74:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    75:76:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):193:193 -> onClick
-    75:76:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    77:79:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):195:195 -> onClick
-    77:79:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    80:83:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):196:196 -> onClick
-    80:83:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    84:85:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$3(android.view.View):166:166 -> onClick
-    84:85:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    86:93:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$3(android.view.View):167:167 -> onClick
-    86:93:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-    94:95:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0:0 -> onClick
-    96:104:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$2(android.view.View):154:154 -> onClick
-    96:104:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
-com.xlkeyboard.XlKeyboardService$$ExternalSyntheticLambda10 -> c:
+    12:18:void com.xlkeyboard.XlKeyboardService.lambda$createNumberPadView$1(android.view.View):128:128 -> onClick
+    12:18:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    19:20:void com.xlkeyboard.XlKeyboardService.lambda$createNumberPadView$1(android.view.View):130:130 -> onClick
+    19:20:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    21:23:void com.xlkeyboard.XlKeyboardService.lambda$createNumberPadView$1(android.view.View):131:131 -> onClick
+    21:23:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    24:25:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0:0 -> onClick
+    26:33:void com.xlkeyboard.XlKeyboardService.lambda$createNumberPadView$0(android.view.View):119:119 -> onClick
+    26:33:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    34:35:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0:0 -> onClick
+    36:39:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):176:176 -> onClick
+    36:39:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    40:49:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):177:177 -> onClick
+    40:49:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    50:51:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):179:179 -> onClick
+    50:51:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    52:54:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):180:180 -> onClick
+    52:54:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    55:58:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):183:183 -> onClick
+    55:58:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    59:60:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):184:184 -> onClick
+    59:60:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    61:63:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):185:185 -> onClick
+    61:63:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    64:68:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):187:187 -> onClick
+    64:68:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    69:70:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):190:190 -> onClick
+    69:70:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    71:73:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):191:191 -> onClick
+    71:73:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    74:77:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$4(android.view.View):192:192 -> onClick
+    74:77:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    78:79:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$3(android.view.View):168:168 -> onClick
+    78:79:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    80:87:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$3(android.view.View):169:169 -> onClick
+    80:87:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    88:89:void com.xlkeyboard.XlKeyboardService.lambda$createSymbolView$11(android.view.View):383:383 -> onClick
+    88:89:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    90:97:void com.xlkeyboard.XlKeyboardService.lambda$createSymbolView$11(android.view.View):384:384 -> onClick
+    90:97:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+    98:99:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0:0 -> onClick
+    100:108:void com.xlkeyboard.XlKeyboardService.lambda$createQwertyView$2(android.view.View):157:157 -> onClick
+    100:108:void XlKeyboardService$$ExternalSyntheticLambda0.onClick(android.view.View):0 -> onClick
+com.xlkeyboard.XlKeyboardService$$ExternalSyntheticLambda11 -> c:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
-    int XlKeyboardService$$ExternalSyntheticLambda10.$r8$classId -> a
+    int XlKeyboardService$$ExternalSyntheticLambda11.$r8$classId -> a
       # {"id":"com.android.tools.r8.synthesized"}
-    com.xlkeyboard.XlKeyboardService com.xlkeyboard.XlKeyboardService$$InternalSyntheticLambda$2$b42233a23a96c85b2f3a3dfabfa84a627e68ddd4db7f40dc4026265f09c10f9d$0.f$0 -> b
+    com.xlkeyboard.XlKeyboardService com.xlkeyboard.XlKeyboardService$$InternalSyntheticLambda$2$d1985782a6a946aa5357a7db0cd88baec282545ac4390bc7c872c77ad490bddf$0.f$0 -> b
       # {"id":"com.android.tools.r8.synthesized"}
-    java.lang.String com.xlkeyboard.XlKeyboardService$$InternalSyntheticLambda$2$b42233a23a96c85b2f3a3dfabfa84a627e68ddd4db7f40dc4026265f09c10f9d$0.f$1 -> c
+    java.lang.String com.xlkeyboard.XlKeyboardService$$InternalSyntheticLambda$2$d1985782a6a946aa5357a7db0cd88baec282545ac4390bc7c872c77ad490bddf$0.f$1 -> c
       # {"id":"com.android.tools.r8.synthesized"}
-    1:10:void XlKeyboardService$$ExternalSyntheticLambda10.<init>(com.xlkeyboard.XlKeyboardService,java.lang.String,int):0:0 -> <init>
+    1:10:void XlKeyboardService$$ExternalSyntheticLambda11.<init>(com.xlkeyboard.XlKeyboardService,java.lang.String,int):0:0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    14:20:void com.xlkeyboard.XlKeyboardService.lambda$setupTextButton$9(java.lang.String,android.view.View):366:366 -> onClick
-    14:20:void XlKeyboardService$$ExternalSyntheticLambda10.onClick(android.view.View):0 -> onClick
+    14:20:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):295:295 -> onClick
+    14:20:void XlKeyboardService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
       # {"id":"com.android.tools.r8.synthesized"}
-    21:23:void com.xlkeyboard.XlKeyboardService.lambda$setupTextButton$9(java.lang.String,android.view.View):369:369 -> onClick
-    21:23:void XlKeyboardService$$ExternalSyntheticLambda10.onClick(android.view.View):0 -> onClick
-    24:31:void com.xlkeyboard.XlKeyboardService.lambda$setupTextButton$9(java.lang.String,android.view.View):372:372 -> onClick
-    24:31:void XlKeyboardService$$ExternalSyntheticLambda10.onClick(android.view.View):0 -> onClick
-    32:34:void com.xlkeyboard.XlKeyboardService.lambda$setupTextButton$9(java.lang.String,android.view.View):373:373 -> onClick
-    32:34:void XlKeyboardService$$ExternalSyntheticLambda10.onClick(android.view.View):0 -> onClick
-    35:42:void com.xlkeyboard.XlKeyboardService.lambda$setupTextButton$9(java.lang.String,android.view.View):375:375 -> onClick
-    35:42:void XlKeyboardService$$ExternalSyntheticLambda10.onClick(android.view.View):0 -> onClick
-    43:44:void com.xlkeyboard.XlKeyboardService.lambda$setupTextButton$9(java.lang.String,android.view.View):377:377 -> onClick
-    43:44:void XlKeyboardService$$ExternalSyntheticLambda10.onClick(android.view.View):0 -> onClick
-    45:48:void com.xlkeyboard.XlKeyboardService.lambda$setupTextButton$9(java.lang.String,android.view.View):380:380 -> onClick
-    45:48:void XlKeyboardService$$ExternalSyntheticLambda10.onClick(android.view.View):0 -> onClick
-    49:50:void XlKeyboardService$$ExternalSyntheticLambda10.onClick(android.view.View):0:0 -> onClick
-    51:57:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):338:338 -> onClick
-    51:57:void XlKeyboardService$$ExternalSyntheticLambda10.onClick(android.view.View):0 -> onClick
-    58:65:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):343:343 -> onClick
-    58:65:void XlKeyboardService$$ExternalSyntheticLambda10.onClick(android.view.View):0 -> onClick
-    66:69:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):344:344 -> onClick
-    66:69:void XlKeyboardService$$ExternalSyntheticLambda10.onClick(android.view.View):0 -> onClick
-    70:72:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):345:345 -> onClick
-    70:72:void XlKeyboardService$$ExternalSyntheticLambda10.onClick(android.view.View):0 -> onClick
-    73:80:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):348:348 -> onClick
-    73:80:void XlKeyboardService$$ExternalSyntheticLambda10.onClick(android.view.View):0 -> onClick
-    81:82:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):349:349 -> onClick
-    81:82:void XlKeyboardService$$ExternalSyntheticLambda10.onClick(android.view.View):0 -> onClick
-    83:85:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):350:350 -> onClick
-    83:85:void XlKeyboardService$$ExternalSyntheticLambda10.onClick(android.view.View):0 -> onClick
-    86:88:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):351:351 -> onClick
-    86:88:void XlKeyboardService$$ExternalSyntheticLambda10.onClick(android.view.View):0 -> onClick
-    89:92:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):353:353 -> onClick
-    89:92:void XlKeyboardService$$ExternalSyntheticLambda10.onClick(android.view.View):0 -> onClick
-    93:94:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):354:354 -> onClick
-    93:94:void XlKeyboardService$$ExternalSyntheticLambda10.onClick(android.view.View):0 -> onClick
-    95:98:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):355:355 -> onClick
-    95:98:void XlKeyboardService$$ExternalSyntheticLambda10.onClick(android.view.View):0 -> onClick
+    21:28:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):299:299 -> onClick
+    21:28:void XlKeyboardService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    29:32:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):300:300 -> onClick
+    29:32:void XlKeyboardService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    33:35:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):301:301 -> onClick
+    33:35:void XlKeyboardService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    36:43:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):303:303 -> onClick
+    36:43:void XlKeyboardService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    44:45:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):304:304 -> onClick
+    44:45:void XlKeyboardService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    46:48:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):305:305 -> onClick
+    46:48:void XlKeyboardService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    49:51:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):306:306 -> onClick
+    49:51:void XlKeyboardService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    52:55:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):308:308 -> onClick
+    52:55:void XlKeyboardService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    56:57:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):309:309 -> onClick
+    56:57:void XlKeyboardService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    58:61:void com.xlkeyboard.XlKeyboardService.lambda$setupLetterButton$8(java.lang.String,android.view.View):310:310 -> onClick
+    58:61:void XlKeyboardService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    62:63:void XlKeyboardService$$ExternalSyntheticLambda11.onClick(android.view.View):0:0 -> onClick
+    64:70:void com.xlkeyboard.XlKeyboardService.lambda$setupTextButton$9(java.lang.String,android.view.View):318:318 -> onClick
+    64:70:void XlKeyboardService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    71:73:void com.xlkeyboard.XlKeyboardService.lambda$setupTextButton$9(java.lang.String,android.view.View):321:321 -> onClick
+    71:73:void XlKeyboardService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    74:81:void com.xlkeyboard.XlKeyboardService.lambda$setupTextButton$9(java.lang.String,android.view.View):323:323 -> onClick
+    74:81:void XlKeyboardService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    82:84:void com.xlkeyboard.XlKeyboardService.lambda$setupTextButton$9(java.lang.String,android.view.View):324:324 -> onClick
+    82:84:void XlKeyboardService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    85:92:void com.xlkeyboard.XlKeyboardService.lambda$setupTextButton$9(java.lang.String,android.view.View):325:325 -> onClick
+    85:92:void XlKeyboardService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    93:94:void com.xlkeyboard.XlKeyboardService.lambda$setupTextButton$9(java.lang.String,android.view.View):326:326 -> onClick
+    93:94:void XlKeyboardService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
+    95:98:void com.xlkeyboard.XlKeyboardService.lambda$setupTextButton$9(java.lang.String,android.view.View):328:328 -> onClick
+    95:98:void XlKeyboardService$$ExternalSyntheticLambda11.onClick(android.view.View):0 -> onClick
 com.xlkeyboard.XlKeyboardService$$ExternalSyntheticLambda5 -> d:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
@@ -251,12 +253,11 @@ com.xlkeyboard.XlKeyboardService$$ExternalSyntheticLambda5 -> d:
       # {"id":"com.android.tools.r8.synthesized"}
     1:8:void XlKeyboardService$$ExternalSyntheticLambda5.<init>(com.xlkeyboard.XlKeyboardService,boolean):0:0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    3:11:void com.xlkeyboard.XlKeyboardService.lambda$setupArrowButton$10(boolean,android.view.View):387:387 -> onClick
+    1:10:void com.xlkeyboard.XlKeyboardService.lambda$setupArrowButton$10(boolean,android.view.View):342:342 -> onClick
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/view/View;)V"}
-    12:19:void com.xlkeyboard.XlKeyboardService.lambda$setupArrowButton$10(boolean,android.view.View):391:391 -> onClick
-    20:31:void com.xlkeyboard.XlKeyboardService.lambda$setupArrowButton$10(boolean,android.view.View):394:394 -> onClick
-    32:35:void com.xlkeyboard.XlKeyboardService.sendKeyEvent(int):314:314 -> onClick
-    32:35:void com.xlkeyboard.XlKeyboardService.lambda$setupArrowButton$10(boolean,android.view.View):398 -> onClick
+    11:22:void com.xlkeyboard.XlKeyboardService.lambda$setupArrowButton$10(boolean,android.view.View):344:344 -> onClick
+    23:26:void com.xlkeyboard.XlKeyboardService.sendKeyEvent(int):278:278 -> onClick
+    23:26:void com.xlkeyboard.XlKeyboardService.lambda$setupArrowButton$10(boolean,android.view.View):347 -> onClick
 com.xlkeyboard.XlKeyboardService$$ExternalSyntheticLambda6 -> e:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
@@ -264,11 +265,12 @@ com.xlkeyboard.XlKeyboardService$$ExternalSyntheticLambda6 -> e:
       # {"id":"com.android.tools.r8.synthesized"}
     1:6:void XlKeyboardService$$ExternalSyntheticLambda6.<init>(com.xlkeyboard.XlKeyboardService):0:0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    1:20:boolean com.xlkeyboard.XlKeyboardService.lambda$setupBackspaceButton$6(android.view.View,android.view.MotionEvent):272:272 -> onTouch
-    21:24:boolean com.xlkeyboard.XlKeyboardService.lambda$setupBackspaceButton$6(android.view.View,android.view.MotionEvent):285:285 -> onTouch
-    25:30:boolean com.xlkeyboard.XlKeyboardService.lambda$setupBackspaceButton$6(android.view.View,android.view.MotionEvent):275:275 -> onTouch
-    31:35:boolean com.xlkeyboard.XlKeyboardService.lambda$setupBackspaceButton$6(android.view.View,android.view.MotionEvent):277:277 -> onTouch
-    36:39:boolean com.xlkeyboard.XlKeyboardService.lambda$setupBackspaceButton$6(android.view.View,android.view.MotionEvent):280:280 -> onTouch
+    1:20:boolean com.xlkeyboard.XlKeyboardService.lambda$setupBackspaceButton$6(android.view.View,android.view.MotionEvent):250:250 -> onTouch
+    21:23:boolean com.xlkeyboard.XlKeyboardService.lambda$setupBackspaceButton$6(android.view.View,android.view.MotionEvent):259:259 -> onTouch
+    24:27:boolean com.xlkeyboard.XlKeyboardService.lambda$setupBackspaceButton$6(android.view.View,android.view.MotionEvent):261:261 -> onTouch
+    28:33:boolean com.xlkeyboard.XlKeyboardService.lambda$setupBackspaceButton$6(android.view.View,android.view.MotionEvent):252:252 -> onTouch
+    34:38:boolean com.xlkeyboard.XlKeyboardService.lambda$setupBackspaceButton$6(android.view.View,android.view.MotionEvent):254:254 -> onTouch
+    39:42:boolean com.xlkeyboard.XlKeyboardService.lambda$setupBackspaceButton$6(android.view.View,android.view.MotionEvent):256:256 -> onTouch
 com.xlkeyboard.XlKeyboardService$$ExternalSyntheticLambda7 -> f:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
@@ -278,8 +280,8 @@ com.xlkeyboard.XlKeyboardService$$ExternalSyntheticLambda7 -> f:
       # {"id":"com.android.tools.r8.synthesized"}
     1:8:void XlKeyboardService$$ExternalSyntheticLambda7.<init>(com.xlkeyboard.XlKeyboardService,int):0:0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    4:11:void com.xlkeyboard.XlKeyboardService.sendKeyEvent(int):314:314 -> onClick
-    4:11:void com.xlkeyboard.XlKeyboardService.lambda$setupButton$7(int,android.view.View):319 -> onClick
+    4:11:void com.xlkeyboard.XlKeyboardService.sendKeyEvent(int):278:278 -> onClick
+    4:11:void com.xlkeyboard.XlKeyboardService.lambda$setupButton$7(int,android.view.View):283 -> onClick
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/view/View;)V"}
 com.xlkeyboard.XlKeyboardService$$ExternalSyntheticLambda8 -> g:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
@@ -292,18 +294,18 @@ com.xlkeyboard.XlKeyboardService$$ExternalSyntheticLambda8 -> g:
       # {"id":"com.android.tools.r8.synthesized"}
     1:10:void XlKeyboardService$$ExternalSyntheticLambda8.<init>(com.xlkeyboard.XlKeyboardService,android.widget.Button,int):0:0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    1:8:void com.xlkeyboard.XlKeyboardService.lambda$setupToggleButton$5(android.widget.Button,int,android.view.View):220:220 -> onClick
+    1:8:void com.xlkeyboard.XlKeyboardService.lambda$setupToggleButton$5(android.widget.Button,int,android.view.View):217:217 -> onClick
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/view/View;)V"}
-    9:25:void com.xlkeyboard.XlKeyboardService.lambda$setupToggleButton$5(android.widget.Button,int,android.view.View):221:221 -> onClick
-    26:33:void com.xlkeyboard.XlKeyboardService.lambda$setupToggleButton$5(android.widget.Button,int,android.view.View):222:222 -> onClick
-    34:37:void com.xlkeyboard.XlKeyboardService.lambda$setupToggleButton$5(android.widget.Button,int,android.view.View):225:225 -> onClick
-    38:43:void com.xlkeyboard.XlKeyboardService.lambda$setupToggleButton$5(android.widget.Button,int,android.view.View):226:226 -> onClick
+    9:25:void com.xlkeyboard.XlKeyboardService.lambda$setupToggleButton$5(android.widget.Button,int,android.view.View):218:218 -> onClick
+    26:33:void com.xlkeyboard.XlKeyboardService.lambda$setupToggleButton$5(android.widget.Button,int,android.view.View):219:219 -> onClick
+    34:37:void com.xlkeyboard.XlKeyboardService.lambda$setupToggleButton$5(android.widget.Button,int,android.view.View):221:221 -> onClick
+    38:43:void com.xlkeyboard.XlKeyboardService.lambda$setupToggleButton$5(android.widget.Button,int,android.view.View):222:222 -> onClick
 com.xlkeyboard.XlKeyboardService$1 -> h:
 # {"id":"sourceFile","fileName":"XlKeyboardService.java"}
     com.xlkeyboard.XlKeyboardService this$0 -> a
-    1:6:void <init>(com.xlkeyboard.XlKeyboardService):85:85 -> <init>
-    1:1:void run():88:88 -> run
-    2:2:void run():90:90 -> run
-    3:3:android.os.Handler com.xlkeyboard.XlKeyboardService.access$000(com.xlkeyboard.XlKeyboardService):12:12 -> run
-    3:3:void run():91 -> run
-    4:4:void run():91:91 -> run
+    1:6:void <init>(com.xlkeyboard.XlKeyboardService):88:88 -> <init>
+    1:10:void run():91:91 -> run
+    11:13:void run():93:93 -> run
+    14:17:android.os.Handler com.xlkeyboard.XlKeyboardService.access$000(com.xlkeyboard.XlKeyboardService):12:12 -> run
+    14:17:void run():94 -> run
+    18:21:void run():94:94 -> run
