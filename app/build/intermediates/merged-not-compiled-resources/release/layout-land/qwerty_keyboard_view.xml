@@ -17,9 +17,9 @@
             style="@style/KeyboardSpecialBtn"
             android:layout_width="128dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="1.5"
             android:text="@string/key_toggle_arrow"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <View
             android:layout_width="669dp"
@@ -30,7 +30,7 @@
         <Button style="@style/KeyboardSpecialBtn"
             android:id="@+id/btn123"
             android:layout_width="128dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/key_123"
             android:textSize="18sp" />
@@ -87,7 +87,7 @@
         android:layout_height="40dp"
         android:orientation="horizontal">
 
-        <Button style="@style/KeyboardSpecialBtn" android:id="@+id/btnShift" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.5" android:text="@string/key_shift" android:textSize="18sp" />
+        <Button style="@style/KeyboardSpecialBtn" android:id="@+id/btnShift" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.5" android:text="@string/key_shift" android:textSize="20sp" />
         <Button style="@style/KeyboardButton" android:id="@+id/btnZ" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_z" android:textSize="18sp" />
         <Button style="@style/KeyboardButton" android:id="@+id/btnX" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_x" android:textSize="18sp" />
         <Button style="@style/KeyboardButton" android:id="@+id/btnC" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_c" android:textSize="18sp" />
@@ -104,11 +104,11 @@
         android:layout_height="40dp"
         android:orientation="horizontal">
 
-        <Button style="@style/KeyboardSpecialBtn" android:id="@+id/btnSym" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_sym" android:textSize="18sp" />
+        <Button style="@style/KeyboardSpecialBtn" android:id="@+id/btnSym" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_sym" android:textSize="15sp" />
         <Button style="@style/KeyboardSpecialBtn" android:id="@+id/btnDotQwerty" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_dot" android:textSize="18sp" />
         <Button android:id="@+id/btnSpaceQwerty" style="@style/KeyboardSpecialBtn" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="4" android:text="@string/key_space" android:textSize="18sp" />
         <Button style="@style/KeyboardSpecialBtn" android:id="@+id/btnCommaQwerty" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_comma" android:textSize="18sp"/>
-        <Button style="@style/KeyboardSpecialBtn" android:id="@+id/btnEnterQwerty" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_enter" android:textSize="18sp"/>
+        <Button style="@style/KeyboardSpecialBtn" android:id="@+id/btnEnterQwerty" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_enter" android:textSize="20sp"/>
     </LinearLayout>
 
 </LinearLayout>

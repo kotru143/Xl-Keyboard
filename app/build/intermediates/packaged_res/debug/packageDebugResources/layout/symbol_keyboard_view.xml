@@ -17,7 +17,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/key_toggle_tab" />
+            android:text="@string/key_toggle_arrow"
+            android:textSize="20sp"
+            />
 
         <Button style="@style/KeyboardSpecialBtn"
             android:id="@+id/btnUp"
@@ -151,7 +153,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/key_enter"
-            android:textSize="25sp" />
+            android:textSize="30sp" />
 
     </LinearLayout>
 

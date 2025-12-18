@@ -205,11 +205,11 @@ Marking id:btnSelect:2130903088 reachable: referenced from in_memory_r8_base_cla
     @com.xlkeyboard:string/created_by_kotru143_gmail_com
 @com.xlkeyboard:layout/keyboard_view : reachable=true
     @com.xlkeyboard:color/black
-    @com.xlkeyboard:style/KeyboardButton
+    @com.xlkeyboard:style/KeyboardSpecialBtn
     @com.xlkeyboard:string/key_toggle_arrow
-    @com.xlkeyboard:color/toggle_inactive
     @com.xlkeyboard:string/key_sym
     @com.xlkeyboard:string/key_abc
+    @com.xlkeyboard:style/KeyboardButton
     @com.xlkeyboard:string/key_1
     @com.xlkeyboard:string/key_2
     @com.xlkeyboard:string/key_3
@@ -226,7 +226,7 @@ Marking id:btnSelect:2130903088 reachable: referenced from in_memory_r8_base_cla
     @com.xlkeyboard:string/key_0
     @com.xlkeyboard:string/key_up
     @com.xlkeyboard:string/key_enter
-    @com.xlkeyboard:style/KeyboardSpecialBtn
+    @com.xlkeyboard:color/toggle_inactive
 @com.xlkeyboard:layout/qwerty_keyboard_view : reachable=true
     @com.xlkeyboard:color/black
     @com.xlkeyboard:style/KeyboardSpecialBtn
@@ -270,7 +270,7 @@ Marking id:btnSelect:2130903088 reachable: referenced from in_memory_r8_base_cla
 @com.xlkeyboard:layout/symbol_keyboard_view : reachable=true
     @com.xlkeyboard:color/black
     @com.xlkeyboard:style/KeyboardSpecialBtn
-    @com.xlkeyboard:string/key_toggle_tab
+    @com.xlkeyboard:string/key_toggle_arrow
     @com.xlkeyboard:string/key_up
     @com.xlkeyboard:string/key_left
     @com.xlkeyboard:string/key_right

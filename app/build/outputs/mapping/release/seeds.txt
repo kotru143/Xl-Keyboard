@@ -1,5 +1,6 @@
 com.xlkeyboard.MainActivity
 com.xlkeyboard.XlKeyboardService
 com.xlkeyboard.XlKeyboardService: XlKeyboardService()
-com.xlkeyboard.XlKeyboardService: android.view.View onCreateInputView()
 com.xlkeyboard.MainActivity: MainActivity()
+com.xlkeyboard.XlKeyboardService: void onStartInputView(android.view.inputmethod.EditorInfo,boolean)
+com.xlkeyboard.XlKeyboardService: android.view.View onCreateInputView()

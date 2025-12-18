@@ -17,8 +17,9 @@
             style="@style/KeyboardSpecialBtn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="1.5"
             android:text="@string/key_toggle_arrow"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
 
         <View
             android:layout_width="235dp"
@@ -32,7 +33,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1.5"
-            android:text="@string/key_123" />
+            android:text="@string/key_123"
+            android:textSize="20sp"
+            />
     </LinearLayout>
 
     <!-- Row 1: Q W E R T Y U I O P -->
@@ -304,7 +307,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/key_sym"
-            android:textSize="13sp" />
+            android:textSize="18sp" />
 
         <Button style="@style/KeyboardSpecialBtn"
             android:id="@+id/btnDotQwerty"
@@ -335,7 +338,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/key_enter"
-            android:textSize="25sp" />
+            android:textSize="35sp" />
     </LinearLayout>
 
 </LinearLayout>
