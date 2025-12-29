@@ -2,12 +2,14 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="button_background_dark">#141414</color>
+    <color name="button_background_green">#1D272C</color>
+    <color name="dark_green">#263238</color>
     <color name="real_white">#FFFFFFFF</color>
     <color name="toggle_active">#FF4CAF50</color>
-    <color name="toggle_inactive">#1C1C1C</color>
-    <color name="white">#EEEEEEEE</color>
-    <string name="_1_enable_keyboard">1. Enable Keyboard</string>
-    <string name="_2_select_keyboard">2. Select Keyboard</string>
+    <color name="toggle_inactive">#1D272C</color>
+    <color name="white">#E1E1E1</color>
+    <string name="_1_enable_keyboard">\ \ 1. Enable Keyboard\ \ </string>
+    <string name="_2_select_keyboard">\ \ 2. Select Keyboard\ \ </string>
     <string name="app_name">Xl Keyboard</string>
     <string name="created_by_kotru143_gmail_com">Created by kotru143@gmail.com</string>
     <string name="key_0">0</string>
@@ -35,7 +37,7 @@
     <string name="key_dot">.</string>
     <string name="key_down">▼</string>
     <string name="key_e">e</string>
-    <string name="key_enter">↵</string>
+    <string name="key_enter">⏎</string>
     <string name="key_equals">=</string>
     <string name="key_exclamation">!</string>
     <string name="key_f">f</string>
@@ -83,15 +85,14 @@
     <string name="key_z">z</string>
     <string name="xl_keyboard_setup">Xl Keyboard Setup</string>
     <style name="KeyboardButton" parent="android:Widget.Button">
-        <item name="android:backgroundTint">@color/toggle_inactive</item>
+        <item name="android:backgroundTint">@color/dark_green</item>
         <item name="android:textColor">@color/real_white</item>
     </style>
     <style name="KeyboardSpecialBtn" parent="android:Widget.Button">
-        <item name="android:backgroundTint">@color/button_background_dark</item>
+        <item name="android:backgroundTint">@color/button_background_green</item>
         <item name="android:textColor">@color/real_white</item>
     </style>
     <style name="Theme.XlKeyboard" parent="android:Theme.DeviceDefault">
-        
         <item name="android:statusBarColor">@android:color/black</item>
     </style>
 </resources>

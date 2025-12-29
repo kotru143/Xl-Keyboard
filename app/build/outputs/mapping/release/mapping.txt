@@ -3,8 +3,8 @@
 # min_api: 24
 # common_typos_disable
 # {"id":"com.android.tools.r8.mapping","version":"2.2"}
-# pg_map_id: d26d5c4200c3d8aa32b8f3d6cb2569df04c2a93b1d1ce813affc05f5610f026b
-# pg_map_hash: SHA-256 d26d5c4200c3d8aa32b8f3d6cb2569df04c2a93b1d1ce813affc05f5610f026b
+# pg_map_id: 3090606a165f3aff3f9c2258f2d3b4cad3ea04c010a55409a084bda09aba7b92
+# pg_map_hash: SHA-256 3090606a165f3aff3f9c2258f2d3b4cad3ea04c010a55409a084bda09aba7b92
 com.xlkeyboard.MainActivity -> com.xlkeyboard.MainActivity:
 # {"id":"sourceFile","fileName":"MainActivity.java"}
     1:4:void <init>():13:13 -> <init>
@@ -140,12 +140,6 @@ com.xlkeyboard.XlKeyboardService -> com.xlkeyboard.XlKeyboardService:
     16:17:android.view.View onCreateInputView():129 -> onCreateInputView
     18:18:android.view.View createNumberPadView():170:170 -> onCreateInputView
     18:18:android.view.View onCreateInputView():129 -> onCreateInputView
-    1:3:void onStartInputView(android.view.inputmethod.EditorInfo,boolean):105:105 -> onStartInputView
-    4:20:void onStartInputView(android.view.inputmethod.EditorInfo,boolean):108:108 -> onStartInputView
-    21:22:void onStartInputView(android.view.inputmethod.EditorInfo,boolean):110:110 -> onStartInputView
-    23:29:void onStartInputView(android.view.inputmethod.EditorInfo,boolean):115:115 -> onStartInputView
-    30:31:void onStartInputView(android.view.inputmethod.EditorInfo,boolean):118:118 -> onStartInputView
-    32:34:void onStartInputView(android.view.inputmethod.EditorInfo,boolean):119:119 -> onStartInputView
 com.xlkeyboard.XlKeyboardService$$ExternalSyntheticLambda0 -> b:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}

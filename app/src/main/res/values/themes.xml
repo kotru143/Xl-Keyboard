@@ -1,16 +1,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.XlKeyboard" parent="android:Theme.DeviceDefault">
-        <!-- Customize your theme here. -->
         <item name="android:statusBarColor">@android:color/black</item>
     </style>
 
     <style name="KeyboardButton" parent="android:Widget.Button">
-        <item name="android:backgroundTint">@color/toggle_inactive</item>
+        <item name="android:backgroundTint">@color/dark_green</item>
         <item name="android:textColor">@color/real_white</item>
     </style>
     <style name="KeyboardSpecialBtn" parent="android:Widget.Button">
-        <item name="android:backgroundTint">@color/button_background_dark</item>
+        <item name="android:backgroundTint">@color/button_background_green</item>
         <item name="android:textColor">@color/real_white</item>
     </style>
 

@@ -99,25 +99,25 @@ public class XlKeyboardService extends InputMethodService {
     };
 
     // ==================== Lifecycle Methods ====================
+    // TODO make it option or button in settings or in layout.
+    // @Override
+    // public void onStartInputView(EditorInfo info, boolean restarting) {
+    // super.onStartInputView(info, restarting);
 
-    @Override
-    public void onStartInputView(EditorInfo info, boolean restarting) {
-        super.onStartInputView(info, restarting);
+    // // Check the input type to decide which layout to show
+    // int inputType = info.inputType & InputType.TYPE_MASK_CLASS;
+    // // false for numbers
+    // isQwertyMode = inputType != InputType.TYPE_CLASS_NUMBER &&
+    // inputType != InputType.TYPE_CLASS_PHONE &&
+    // inputType != InputType.TYPE_CLASS_DATETIME;
 
-        // Check the input type to decide which layout to show
-        int inputType = info.inputType & InputType.TYPE_MASK_CLASS;
-        // false for numbers
-        isQwertyMode = inputType != InputType.TYPE_CLASS_NUMBER &&
-                inputType != InputType.TYPE_CLASS_PHONE &&
-                inputType != InputType.TYPE_CLASS_DATETIME;
+    // // Apply the determined view
+    // setInputView(onCreateInputView());
 
-        // Apply the determined view
-        setInputView(onCreateInputView());
-
-        // Reset shift state when view is reset
-        isShiftEnabled = false;
-        isCapsLock = false;
-    }
+    // // Reset shift state when view is reset
+    // isShiftEnabled = false;
+    // isCapsLock = false;
+    // }
 
     // ==================== View Creation ====================
 

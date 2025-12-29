@@ -18,6 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1.5"
+            android:textStyle="bold"
             android:text="@string/key_toggle_arrow"
             android:textSize="25sp" />
 
@@ -291,6 +292,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1.5"
+            android:textStyle="bold"
             android:text="@string/key_backspace"
             android:textSize="15sp" />
     </LinearLayout>
@@ -338,7 +340,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/key_enter"
-            android:textSize="35sp" />
+            android:textSize="30sp" />
     </LinearLayout>
 
 </LinearLayout>

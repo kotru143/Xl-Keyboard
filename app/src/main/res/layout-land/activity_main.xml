@@ -6,7 +6,7 @@
     android:orientation="horizontal"
     android:padding="15dp"
     android:baselineAligned="false"
-    android:background="@color/button_background_dark">
+    android:background="@color/button_background_green">
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -24,7 +24,7 @@
             android:gravity="top"
             android:text="@string/xl_keyboard_setup"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <View
@@ -58,6 +58,7 @@
             android:layout_marginBottom="16dp"
             android:backgroundTint="@android:color/white"
             android:text="@string/_1_enable_keyboard"
+            android:background="@drawable/rounded_button"
             android:textColor="@android:color/black" />
 
         <Button
@@ -67,6 +68,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/white"
             android:text="@string/_2_select_keyboard"
+            android:background="@drawable/rounded_button"
             android:textColor="@android:color/black" />
     </LinearLayout>
 </LinearLayout>

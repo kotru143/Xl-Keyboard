@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Xl Keyboard</string>
     <string name="xl_keyboard_setup">Xl Keyboard Setup</string>
-    <string name="_1_enable_keyboard">1. Enable Keyboard</string>
-    <string name="_2_select_keyboard">2. Select Keyboard</string>
+    <string name="_1_enable_keyboard">\ \ 1. Enable Keyboard\ \ </string>
+    <string name="_2_select_keyboard">\ \ 2. Select Keyboard\ \ </string>
     <string name="created_by_kotru143_gmail_com">Created by kotru143@gmail.com</string>
 
     <string name="key_0">0</string>
@@ -44,7 +44,7 @@
     <string name="key_down">▼</string>
     <string name="key_backspace">⌫</string>
     <string name="key_question">\?</string>
-    <string name="key_enter">↵</string>
+    <string name="key_enter">⏎</string>
     <string name="key_toggle_arrow">⇄</string>
     <string name="key_toggle_tab">TAB</string>
     <string name="key_dot">.</string>

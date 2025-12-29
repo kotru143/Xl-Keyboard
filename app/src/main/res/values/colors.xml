@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="white">#EEEEEEEE</color>
+    <color name="white">#E1E1E1</color>
     <color name="toggle_active">#FF4CAF50</color>
-    <color name="toggle_inactive">#1C1C1C</color>
+    <color name="toggle_inactive">#1D272C</color>
     <color name="real_white">#FFFFFFFF</color>
+    <color name="dark_green">#263238</color>
     <color name="button_background_dark">#141414</color>
+    <color name="button_background_green">#1D272C</color>
+"
 </resources>

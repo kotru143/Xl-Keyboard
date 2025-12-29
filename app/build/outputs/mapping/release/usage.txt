@@ -1,6 +1,8 @@
 com.xlkeyboard.R$color:
     public static int black
     public static int button_background_dark
+    public static int button_background_green
+    public static int dark_green
     public static int real_white
     public static int white
     private void <init>()

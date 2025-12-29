@@ -86,8 +86,8 @@ Marking id:btnDot:2130903062 reachable: referenced from in_memory_r8_base_classe
 Marking id:btnSpaceSym:2130903091 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnCommaSym:2130903060 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:btnEnterSym:2130903069 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking color:toggle_active:2130771971 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking color:toggle_inactive:2130771972 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking color:toggle_active:2130771973 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking color:toggle_inactive:2130771974 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking string:key_toggle_tab:2131099715 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking string:key_toggle_arrow:2131099714 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking layout:keyboard_view:2130968577 reachable: referenced from in_memory_r8_base_classes0.dex
@@ -99,6 +99,8 @@ Marking id:btnEnable:2130903066 reachable: referenced from in_memory_r8_base_cla
 Marking id:btnSelect:2130903088 reachable: referenced from in_memory_r8_base_classes0.dex
 @com.xlkeyboard:color/black : reachable=false
 @com.xlkeyboard:color/button_background_dark : reachable=false
+@com.xlkeyboard:color/button_background_green : reachable=false
+@com.xlkeyboard:color/dark_green : reachable=false
 @com.xlkeyboard:color/real_white : reachable=false
 @com.xlkeyboard:color/toggle_active : reachable=true
 @com.xlkeyboard:color/toggle_inactive : reachable=true
@@ -106,6 +108,8 @@ Marking id:btnSelect:2130903088 reachable: referenced from in_memory_r8_base_cla
 @com.xlkeyboard:drawable/ic_excel_foreground : reachable=false
 @com.xlkeyboard:drawable/ic_launcher_background : reachable=false
 @com.xlkeyboard:drawable/ic_launcher_foreground : reachable=false
+@com.xlkeyboard:drawable/rounded_button : reachable=false
+    @com.xlkeyboard:color/button_background_dark
 @com.xlkeyboard:id/btn0 : reachable=true
 @com.xlkeyboard:id/btn1 : reachable=true
 @com.xlkeyboard:id/btn123 : reachable=true
@@ -198,13 +202,15 @@ Marking id:btnSelect:2130903088 reachable: referenced from in_memory_r8_base_cla
 @com.xlkeyboard:id/btnY : reachable=true
 @com.xlkeyboard:id/btnZ : reachable=true
 @com.xlkeyboard:layout/activity_main : reachable=true
-    @com.xlkeyboard:color/button_background_dark
+    @com.xlkeyboard:color/button_background_green
     @com.xlkeyboard:string/xl_keyboard_setup
+    @com.xlkeyboard:drawable/rounded_button
     @com.xlkeyboard:string/_1_enable_keyboard
     @com.xlkeyboard:string/_2_select_keyboard
     @com.xlkeyboard:string/created_by_kotru143_gmail_com
 @com.xlkeyboard:layout/keyboard_view : reachable=true
     @com.xlkeyboard:color/black
+    @com.xlkeyboard:drawable/rounded_button
     @com.xlkeyboard:style/KeyboardSpecialBtn
     @com.xlkeyboard:string/key_toggle_arrow
     @com.xlkeyboard:string/key_sym
@@ -396,16 +402,16 @@ Marking id:btnSelect:2130903088 reachable: referenced from in_memory_r8_base_cla
 @com.xlkeyboard:string/xl_keyboard_setup : reachable=false
 @com.xlkeyboard:style/KeyboardButton : reachable=false
     @com.xlkeyboard:color/real_white
-    @com.xlkeyboard:color/toggle_inactive
+    @com.xlkeyboard:color/dark_green
 @com.xlkeyboard:style/KeyboardSpecialBtn : reachable=false
     @com.xlkeyboard:color/real_white
-    @com.xlkeyboard:color/button_background_dark
+    @com.xlkeyboard:color/button_background_green
 @com.xlkeyboard:style/Theme_XlKeyboard : reachable=true
 @com.xlkeyboard:xml/method : reachable=true
 
 The root reachable resources are:
- color:toggle_active:2130771971
- color:toggle_inactive:2130771972
+ color:toggle_active:2130771973
+ color:toggle_inactive:2130771974
  id:btn0:2130903040
  id:btn1:2130903041
  id:btn123:2130903042
@@ -509,5 +515,5 @@ The root reachable resources are:
  style:Theme_XlKeyboard:2131165186
  xml:method:2131230720
 Unused resources are: 
- color:white:2130771973
+ color:white:2130771975
  drawable:ic_launcher_foreground:2130837506

@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/key_toggle_arrow"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
 
@@ -51,7 +52,8 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal"
-        android:weightSum="4">
+        android:weightSum="4"
+        >
 
         <Button style="@style/KeyboardButton"
             android:id="@+id/btn1"
@@ -155,6 +157,7 @@
             android:layout_weight="1"
             android:text="@string/key_8"
             android:textSize="20sp"
+            android:gravity="center"
             android:tag="8" />
 
         <Button style="@style/KeyboardButton"
@@ -180,7 +183,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal"
-        android:weightSum="4">
+        >
 
         <Button style="@style/KeyboardSpecialBtn"
             android:id="@+id/btnDot"
@@ -189,6 +192,7 @@
             android:layout_weight="1"
             android:text="@string/key_dot"
             android:textSize="20sp"
+            android:textStyle="bold"
             android:tag="56" /> <!-- KEYCODE_PERIOD -->
 
         <Button style="@style/KeyboardButton"
@@ -196,6 +200,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp"
             android:text="@string/key_0"
             android:textSize="20sp"
             android:tag="0" />
@@ -205,6 +211,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp"
             android:tag="19"
             android:text="@string/key_up"
             android:textSize="20sp" /> <!-- KEYCODE_DPAD_UP -->
@@ -219,6 +227,7 @@
             android:tag="66"
             android:text="@string/key_enter"
             android:textSize="20sp"
+            android:textStyle="bold"
             />
 
     </LinearLayout>

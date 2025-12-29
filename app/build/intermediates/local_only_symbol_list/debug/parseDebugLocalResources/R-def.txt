@@ -2,6 +2,8 @@ R_DEF: Internal format may change without notice
 local
 color black
 color button_background_dark
+color button_background_green
+color dark_green
 color real_white
 color toggle_active
 color toggle_inactive
@@ -9,6 +11,7 @@ color white
 drawable ic_excel_foreground
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable rounded_button
 id btn0
 id btn1
 id btn123
