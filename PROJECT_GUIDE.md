@@ -92,7 +92,7 @@ public class MainActivity extends Activity
 - Shows numbers 0-9
 - Arrow keys (←, →, ↑)
 - Enter and Backspace
-- A dot (.) button
+- A dot (.) button.
 - An "ABC" button to switch to letters
 
 ##### 🔤 **QWERTY Mode** (Letter Keyboard)
