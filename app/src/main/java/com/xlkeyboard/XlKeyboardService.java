@@ -99,7 +99,7 @@ public class XlKeyboardService extends InputMethodService {
     };
 
     // ==================== Lifecycle Methods ====================
-    // TODO make it option or button in settings or in layout.
+    // TODO make it option or button in settings or in layout
     // @Override
     // public void onStartInputView(EditorInfo info, boolean restarting) {
     // super.onStartInputView(info, restarting);
