@@ -1,0 +1,19 @@
+# Ignore build folders
+/dist
+/bin
+/obj
+
+# Ignore logs
+*.log
+
+# Ignore large media files
+*.mp4
+*.zip
+*.tar.gz
+
+# Ignore IDE settings
+.vscode/
+.idea/
+
+#build
+build/
