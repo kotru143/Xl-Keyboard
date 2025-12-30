@@ -1,2 +1,0 @@
--keep class com.xlkeyboard.MainActivity { <init>(); }
--keep class com.xlkeyboard.XlKeyboardService { <init>(); }
