@@ -17,13 +17,26 @@
             style="@style/KeyboardSpecialBtn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="1.5"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
+            android:layout_weight="1"
             android:textStyle="bold"
             android:text="@string/key_toggle_arrow"
             android:textSize="25sp" />
 
+        <Button
+            android:id="@+id/btnAutoQwerty"
+            style="@style/KeyboardSpecialBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/key_auto"
+            android:background="@drawable/rounded_button"
+            android:layout_margin="4dp"
+            android:textSize="20sp" />
+
         <View
-            android:layout_width="235dp"
+            android:layout_width="202dp"
             android:layout_height="match_parent"
             android:layout_weight="0"
             android:backgroundTint="@color/toggle_inactive" />
@@ -33,7 +46,9 @@
             style="@style/KeyboardSpecialBtn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="1.5"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
+            android:layout_weight="1"
             android:text="@string/key_123"
             android:textSize="20sp"
             />
@@ -50,7 +65,10 @@
             android:id="@+id/btnQ"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_q"
             android:textSize="20sp" />
 
@@ -58,7 +76,10 @@
             android:id="@+id/btnW"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_w"
             android:textSize="20sp" />
 
@@ -66,6 +87,8 @@
             android:id="@+id/btnE"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
             android:text="@string/key_e"
             android:textSize="20sp" />
@@ -74,7 +97,10 @@
             android:id="@+id/btnR"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_r"
             android:textSize="20sp" />
 
@@ -82,7 +108,10 @@
             android:id="@+id/btnT"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_t"
             android:textSize="20sp" />
 
@@ -90,7 +119,10 @@
             android:id="@+id/btnY"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_y"
             android:textSize="20sp" />
 
@@ -98,7 +130,10 @@
             android:id="@+id/btnU"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_u"
             android:textSize="20sp" />
 
@@ -106,7 +141,10 @@
             android:id="@+id/btnI"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_i"
             android:textSize="20sp" />
 
@@ -114,7 +152,10 @@
             android:id="@+id/btnO"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_o"
             android:textSize="20sp" />
 
@@ -122,7 +163,10 @@
             android:id="@+id/btnP"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_p"
             android:textSize="20sp" />
     </LinearLayout>
@@ -142,7 +186,10 @@
             android:id="@+id/btnA"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_a"
             android:textSize="20sp" />
 
@@ -150,7 +197,10 @@
             android:id="@+id/btnS"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_s"
             android:textSize="20sp" />
 
@@ -158,7 +208,10 @@
             android:id="@+id/btnD"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_d"
             android:textSize="20sp" />
 
@@ -166,7 +219,10 @@
             android:id="@+id/btnF"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_f"
             android:textSize="20sp" />
 
@@ -174,7 +230,10 @@
             android:id="@+id/btnG"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_g"
             android:textSize="20sp" />
 
@@ -182,7 +241,10 @@
             android:id="@+id/btnH"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_h"
             android:textSize="20sp" />
 
@@ -190,7 +252,10 @@
             android:id="@+id/btnJ"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_j"
             android:textSize="20sp" />
 
@@ -198,7 +263,10 @@
             android:id="@+id/btnK"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_k"
             android:textSize="20sp" />
 
@@ -206,7 +274,10 @@
             android:id="@+id/btnL"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_l"
             android:textSize="20sp"/>
 
@@ -227,15 +298,21 @@
             android:id="@+id/btnShift"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1.5"
+            android:textStyle="bold"
             android:text="@string/key_shift"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
 
         <Button style="@style/KeyboardButton"
             android:id="@+id/btnZ"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_z"
             android:textSize="20sp" />
 
@@ -243,7 +320,10 @@
             android:id="@+id/btnX"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_x"
             android:textSize="20sp" />
 
@@ -251,7 +331,10 @@
             android:id="@+id/btnC"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_c"
             android:textSize="20sp" />
 
@@ -259,7 +342,10 @@
             android:id="@+id/btnV"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_v"
             android:textSize="20sp" />
 
@@ -267,7 +353,10 @@
             android:id="@+id/btnB"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_b"
             android:textSize="20sp" />
 
@@ -275,7 +364,10 @@
             android:id="@+id/btnN"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_n"
             android:textSize="20sp" />
 
@@ -283,7 +375,10 @@
             android:id="@+id/btnM"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_m"
             android:textSize="20sp" />
 
@@ -291,10 +386,11 @@
             android:id="@+id/btnBackQwerty"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1.5"
-            android:textStyle="bold"
             android:text="@string/key_backspace"
-            android:textSize="15sp" />
+            android:textSize="25sp" />
     </LinearLayout>
 
     <!-- Row 4: Dot Space Comma Enter -->
@@ -307,6 +403,8 @@
             android:id="@+id/btnSym"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
             android:text="@string/key_sym"
             android:textSize="18sp" />
@@ -315,7 +413,10 @@
             android:id="@+id/btnDotQwerty"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_dot"
             android:textSize="20sp" />
 
@@ -324,13 +425,18 @@
             style="@style/KeyboardButton"
             android:layout_width="167dp"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:text="@string/key_space" />
 
         <Button style="@style/KeyboardSpecialBtn"
             android:id="@+id/btnCommaQwerty"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_comma"
             android:textSize="20sp" />
 
@@ -338,7 +444,10 @@
             android:id="@+id/btnEnterQwerty"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/key_enter"
             android:textSize="30sp" />
     </LinearLayout>

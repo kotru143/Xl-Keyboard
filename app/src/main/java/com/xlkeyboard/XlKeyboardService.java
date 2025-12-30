@@ -6,9 +6,7 @@ import android.os.Handler;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
-import android.text.InputType;
 import android.widget.Button;
 
 public class XlKeyboardService extends InputMethodService {
@@ -99,25 +97,33 @@ public class XlKeyboardService extends InputMethodService {
     };
 
     // ==================== Lifecycle Methods ====================
-    // TODO make it option or button in settings or in layout
-    // @Override
-    // public void onStartInputView(EditorInfo info, boolean restarting) {
-    // super.onStartInputView(info, restarting);
-
-    // // Check the input type to decide which layout to show
-    // int inputType = info.inputType & InputType.TYPE_MASK_CLASS;
-    // // false for numbers
-    // isQwertyMode = inputType != InputType.TYPE_CLASS_NUMBER &&
-    // inputType != InputType.TYPE_CLASS_PHONE &&
-    // inputType != InputType.TYPE_CLASS_DATETIME;
-
-    // // Apply the determined view
-    // setInputView(onCreateInputView());
-
-    // // Reset shift state when view is reset
-    // isShiftEnabled = false;
-    // isCapsLock = false;
-    // }
+//    // TODO make it option or button in settings or in layout
+//     @Override
+//     public void onStartInputView(EditorInfo info, boolean restarting) {
+//         super.onStartInputView(info, restarting);
+//
+//         // Check the input type to decide which layout to show
+//         int inputType = info.inputType & InputType.TYPE_MASK_CLASS;
+//         // false for numbers
+//         isQwertyMode = inputType != InputType.TYPE_CLASS_NUMBER &&
+//         inputType != InputType.TYPE_CLASS_PHONE &&
+//         inputType != InputType.TYPE_CLASS_DATETIME;
+//
+//         View view = getLayoutInflater().inflate(R.layout.keyboard_view, null);
+//         Button btnAuto = view.findViewById(R.id.btnAuto);
+//
+//         // if btnAuto enabled change the layout
+//
+//         if (btnAuto != null) {
+//             // Apply the determined view
+//
+//             setInputView(onCreateInputView());
+//
+//             // Reset shift state when view is reset
+//             isShiftEnabled = false;
+//             isCapsLock = false;
+//         }
+//     }
 
     // ==================== View Creation ====================
 
@@ -216,7 +222,7 @@ public class XlKeyboardService extends InputMethodService {
         });
 
         // Setup all letter buttons using loop
-        for (int i = 0; i < LETTER_BUTTON_IDS.length && i < LETTERS.length; i++) {
+        for (int i = 0; i < LETTER_BUTTON_IDS.length; i++) {
             // Optimization: Pass index 'i' directly to avoid lookup
             setupLetterButton(view, LETTER_BUTTON_IDS[i], LETTERS[i], i);
         }

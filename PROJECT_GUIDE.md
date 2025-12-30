@@ -27,7 +27,7 @@ XlKeyboard/
 │   │   ├── ☕ java/                 (The brain of the app - written in Java)
 │   │   │   └── com/xlkeyboard/
 │   │   │       ├── MainActivity.java           (The welcome screen)
-│   │   │       └── NumberPadService.java       (The keyboard itself)
+│   │   │       └── XlKeyboardService.java       (The keyboard itself)
 │   │   │
 │   │   ├── 🎨 res/                  (Resources - colors, layouts, images)
 │   │   │   ├── layout/              (How things look on screen)
@@ -35,7 +35,14 @@ XlKeyboard/
 │   │   │   │   ├── keyboard_view.xml          (Number pad layout)
 │   │   │   │   └── qwerty_keyboard_view.xml   (Letter keyboard layout)
 │   │   │   │
+│   │   │   ├── layout-land/           (Landscape layout)
+│   │   │   │   ├── keyboard_view.xml          (Number pad layout)
+│   │   │   │   └── qwerty_keyboard_view.xml   (Letter keyboard layout)
+│   │   │   │
 │   │   │   ├── drawable/            (Pictures and icons)
+│   │   │   │   ├── rounded_button.xml       (Rounded button background)
+│   │   │   │   ├── ic_excel_foreground.xml  (app icon foreground)
+│   │   │   │   ├── ic_excel_background.xml  (app icon background)
 │   │   │   ├── mipmap/              (App icon in different sizes)
 │   │   │   └── values/              (Text, colors, and settings)
 │   │   │

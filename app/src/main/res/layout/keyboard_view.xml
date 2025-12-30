@@ -16,18 +16,30 @@
         <Button
             android:id="@+id/btnToggleMode"
             style="@style/KeyboardSpecialBtn"
-            android:layout_width="103dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:text="@string/key_toggle_arrow"
             android:textStyle="bold"
             android:background="@drawable/rounded_button"
             android:layout_margin="4dp"
             android:textSize="20sp" />
 
-        <View
-            android:layout_width="88dp"
+
+<!--        <View-->
+<!--            android:layout_width="88dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:textSize="20sp" />-->
+        <Button
+            android:id="@+id/btnAuto"
+            style="@style/KeyboardSpecialBtn"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:text="@string/key_auto"
+            android:background="@drawable/rounded_button"
+            android:layout_margin="4dp"
             android:textSize="20sp" />
 
         <Button style="@style/KeyboardSpecialBtn"
