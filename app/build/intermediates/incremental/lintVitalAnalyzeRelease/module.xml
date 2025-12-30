@@ -1,6 +1,6 @@
 <lint-module
     format="1"
-    dir="C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app"
+    dir="C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app"
     name=":app"
     type="APP"
     maven="XlKeyboard:app:unspecified"

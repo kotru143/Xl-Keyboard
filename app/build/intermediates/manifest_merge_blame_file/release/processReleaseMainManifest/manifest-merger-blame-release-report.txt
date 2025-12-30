@@ -9,57 +9,57 @@
 9        android:targetSdkVersion="34" />
 10
 11    <application
-11-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:4:5-32:19
+11-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:4:5-32:19
 12        android:extractNativeLibs="false"
 13        android:icon="@mipmap/ic_launcher"
-13-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:5:9-43
+13-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:5:9-43
 14        android:label="@string/app_name"
-14-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:6:9-41
+14-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:6:9-41
 15        android:roundIcon="@mipmap/ic_launcher_round"
-15-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:7:9-54
+15-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:7:9-54
 16        android:theme="@style/Theme.XlKeyboard" >
-16-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:8:9-48
+16-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:8:9-48
 17        <activity
-17-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:9:9-17:20
+17-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:9:9-17:20
 18            android:name="com.xlkeyboard.MainActivity"
-18-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:10:13-41
+18-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:10:13-41
 19            android:exported="true" >
-19-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:11:13-36
+19-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:11:13-36
 20            <intent-filter>
-20-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:12:13-16:29
+20-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:12:13-16:29
 21                <action android:name="android.intent.action.MAIN" />
-21-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:13:17-69
-21-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:13:25-66
+21-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:13:17-69
+21-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:13:25-66
 22
 23                <category android:name="android.intent.category.LAUNCHER" />
-23-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:15:17-77
-23-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:15:27-74
+23-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:15:17-77
+23-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:15:27-74
 24            </intent-filter>
 25        </activity>
 26
 27        <service
-27-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:19:9-30:19
+27-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:19:9-30:19
 28            android:name="com.xlkeyboard.XlKeyboardService"
-28-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:20:13-46
+28-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:20:13-46
 29            android:exported="true"
-29-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:23:13-36
+29-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:23:13-36
 30            android:label="@string/app_name"
-30-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:21:13-45
+30-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:21:13-45
 31            android:permission="android.permission.BIND_INPUT_METHOD" >
-31-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:22:13-70
+31-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:22:13-70
 32            <intent-filter>
-32-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:24:13-26:29
+32-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:24:13-26:29
 33                <action android:name="android.view.InputMethod" />
-33-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:25:17-67
-33-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:25:25-64
+33-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:25:17-67
+33-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:25:25-64
 34            </intent-filter>
 35
 36            <meta-data
-36-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:27:13-29:50
+36-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:27:13-29:50
 37                android:name="android.view.im"
-37-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:28:17-47
+37-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:28:17-47
 38                android:resource="@xml/method" />
-38-->C:\Users\kotru\OneDrive\Desktop\Research\AndroidNumberPad\app\src\main\AndroidManifest.xml:29:17-47
+38-->C:\Users\kotru\OneDrive\Desktop\Research\XlKeyboard\app\src\main\AndroidManifest.xml:29:17-47
 39        </service>
 40    </application>
 41
