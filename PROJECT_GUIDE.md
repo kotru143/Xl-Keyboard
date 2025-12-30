@@ -21,11 +21,11 @@ Think of this project like a LEGO set. Each file is a different piece that does 
 ### 🏗️ Main Building Blocks
 
 ```
-AndroidNumberPad/
+XlKeyboard/
 ├── 📱 app/                          (The main app folder - like the toy box!)
 │   ├── 🎨 src/main/                 (Where all the magic happens!)
 │   │   ├── ☕ java/                 (The brain of the app - written in Java)
-│   │   │   └── com/example/xlkeyboard/
+│   │   │   └── com/xlkeyboard/
 │   │   │       ├── MainActivity.java           (The welcome screen)
 │   │   │       └── NumberPadService.java       (The keyboard itself)
 │   │   │
@@ -54,7 +54,7 @@ AndroidNumberPad/
 
 ### 1️⃣ **MainActivity.java** - The Welcome Helper! 👋
 
-**Location:** `app/src/main/java/com/example/xlkeyboard/MainActivity.java`
+**Location:** `app/src/main/java/com/xlkeyboard/MainActivity.java`
 
 **What it does:** This is like a friendly guide that helps you set up the keyboard!
 
@@ -82,7 +82,7 @@ public class MainActivity extends Activity
 
 ### 2️⃣ **NumberPadService.java** - The Keyboard Brain! 🧠
 
-**Location:** `app/src/main/java/com/example/xlkeyboard/NumberPadService.java`
+**Location:** `app/src/main/java/com/xlkeyboard/NumberPadService.java`
 
 **What it does:** This is the actual keyboard! It handles everything you type!
 
