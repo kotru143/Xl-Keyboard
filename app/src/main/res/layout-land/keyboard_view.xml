@@ -25,12 +25,22 @@
             android:textStyle="bold"
             android:textSize="20sp" />
 
-
-        <View
+        <Button
+            android:id="@+id/btnAutoNumber"
+            style="@style/KeyboardSpecialBtn"
             android:layout_width="230dp"
             android:layout_height="match_parent"
-            android:layout_weight="0"
-            android:backgroundTint="@color/toggle_inactive" />
+            android:layout_weight="1"
+            android:text="@string/key_auto"
+            android:background="@drawable/rounded_button"
+            android:layout_margin="4dp"
+            android:textSize="20sp" />
+
+<!--        <View-->
+<!--            android:layout_width="230dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="0"-->
+<!--            android:backgroundTint="@color/toggle_inactive" />-->
 
         <Button
             android:id="@+id/btnSym"
@@ -53,6 +63,7 @@
             android:layout_margin="4dp"
             android:text="@string/key_abc"
             android:textSize="16sp" />
+
 
     </LinearLayout>
 

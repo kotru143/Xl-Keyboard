@@ -4,6 +4,8 @@ import android.content.SharedPreferences;
 import android.inputmethodservice.InputMethodService;
 import android.os.Handler;
 import android.view.KeyEvent;
+import android.view.inputmethod.EditorInfo;
+import android.text.InputType;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputConnection;
@@ -13,11 +15,13 @@ public class XlKeyboardService extends InputMethodService {
 
     private static final String PREFS_NAME = "NumberPadPrefs";
     private static final String KEY_TAB_MODE = "tab_mode_enabled";
+    private static final String KEY_AUTO_MODE = "auto_mode_enabled";
     private static final long REPEAT_DELAY = 50;
     private static final long DOUBLE_TAP_DELAY = 300;
 
     private SharedPreferences prefs;
     private boolean isTabModeEnabled = false;
+    private boolean isAutoModeEnabled = false;
     private boolean isQwertyMode = false;
     private boolean isShiftEnabled = false;
     private boolean isCapsLock = false;
@@ -25,6 +29,7 @@ public class XlKeyboardService extends InputMethodService {
     private boolean autoCapitalizeNext = false;
 
     private Button toggleButton;
+    private Button autoButton;
     private Button shiftButton;
     private Button[] letterButtons;
 
@@ -97,33 +102,28 @@ public class XlKeyboardService extends InputMethodService {
     };
 
     // ==================== Lifecycle Methods ====================
-//    // TODO make it option or button in settings or in layout
-//     @Override
-//     public void onStartInputView(EditorInfo info, boolean restarting) {
-//         super.onStartInputView(info, restarting);
-//
-//         // Check the input type to decide which layout to show
-//         int inputType = info.inputType & InputType.TYPE_MASK_CLASS;
-//         // false for numbers
-//         isQwertyMode = inputType != InputType.TYPE_CLASS_NUMBER &&
-//         inputType != InputType.TYPE_CLASS_PHONE &&
-//         inputType != InputType.TYPE_CLASS_DATETIME;
-//
-//         View view = getLayoutInflater().inflate(R.layout.keyboard_view, null);
-//         Button btnAuto = view.findViewById(R.id.btnAuto);
-//
-//         // if btnAuto enabled change the layout
-//
-//         if (btnAuto != null) {
-//             // Apply the determined view
-//
-//             setInputView(onCreateInputView());
-//
-//             // Reset shift state when view is reset
-//             isShiftEnabled = false;
-//             isCapsLock = false;
-//         }
-//     }
+    // // TODO make it option or button in settings or in layout
+    @Override
+    public void onStartInputView(EditorInfo info, boolean restarting) {
+        super.onStartInputView(info, restarting);
+
+        // Check the input type to decide which layout to show
+        int inputType = info.inputType & InputType.TYPE_MASK_CLASS;
+        // false for numbers
+        isQwertyMode = inputType != InputType.TYPE_CLASS_NUMBER &&
+                inputType != InputType.TYPE_CLASS_PHONE &&
+                inputType != InputType.TYPE_CLASS_DATETIME;
+
+        if (isAutoModeEnabled) {
+            // Apply the determined view
+
+            setInputView(onCreateInputView());
+
+            // Reset shift state when view is reset
+            isShiftEnabled = false;
+            isCapsLock = false;
+        }
+    }
 
     // ==================== View Creation ====================
 
@@ -142,6 +142,9 @@ public class XlKeyboardService extends InputMethodService {
         // Load saved preference
         prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         isTabModeEnabled = prefs.getBoolean(KEY_TAB_MODE, false);
+
+        // Toggle auto button
+        setupAutoButton(view, R.id.btnAutoNumber);
 
         // Setup SYM button
         Button btnSym = view.findViewById(R.id.btnSym);
@@ -184,6 +187,9 @@ public class XlKeyboardService extends InputMethodService {
         // Setup SYM button for QWERTY view
         Button btnSym = view.findViewById(R.id.btnSym);
         btnSym.setOnClickListener(v -> setInputView(createSymbolView()));
+
+        // Toggle auto button
+        setupAutoButton(view, R.id.btnAutoQwerty);
 
         // Setup toggle button for Tab mode
         setupToggleButton(view, R.id.btnToggleModeQwerty);
@@ -257,6 +263,24 @@ public class XlKeyboardService extends InputMethodService {
         }
     }
 
+    private void setupAutoButton(View parent, int id) {
+        Button btn = parent.findViewById(id);
+        updateAutoButtonState(btn);
+        btn.setOnClickListener(v -> {
+            isAutoModeEnabled = !isAutoModeEnabled;
+            prefs.edit().putBoolean(KEY_AUTO_MODE, isAutoModeEnabled).apply();
+            updateAutoButtonState(btn);
+
+            if (id == R.id.btnAutoNumber) {
+                updateAutoButtonState(autoButton); // Sync main reference
+            }
+        });
+
+        if (id == R.id.btnAutoNumber) {
+            this.autoButton = btn;
+        }
+    }
+
     private void updateToggleButtonState(Button btn) {
         if (btn == null)
             return;
@@ -264,6 +288,13 @@ public class XlKeyboardService extends InputMethodService {
         btn.setText(active ? R.string.key_toggle_tab : R.string.key_toggle_arrow);
         btn.setBackgroundTintList(getResources().getColorStateList(
                 active ? R.color.toggle_active : R.color.toggle_inactive, null));
+    }
+
+    private void updateAutoButtonState(Button btn) {
+        if (btn == null)
+            return;
+        btn.setBackgroundTintList(getResources().getColorStateList(
+                isAutoModeEnabled ? R.color.toggle_active : R.color.toggle_inactive, null));
     }
 
     private void updateShiftButton() {
