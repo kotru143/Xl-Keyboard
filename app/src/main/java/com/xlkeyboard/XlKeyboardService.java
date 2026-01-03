@@ -1,5 +1,6 @@
 package com.xlkeyboard;
 
+import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.inputmethodservice.InputMethodService;
 import android.os.Handler;
@@ -10,6 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputConnection;
 import android.widget.Button;
+import android.text.TextUtils;
 
 public class XlKeyboardService extends InputMethodService {
 
@@ -101,8 +103,6 @@ public class XlKeyboardService extends InputMethodService {
         }
     };
 
-    // ==================== Lifecycle Methods ====================
-    // // TODO make it option or button in settings or in layout
     @Override
     public void onStartInputView(EditorInfo info, boolean restarting) {
         super.onStartInputView(info, restarting);
@@ -124,8 +124,6 @@ public class XlKeyboardService extends InputMethodService {
             isCapsLock = false;
         }
     }
-
-    // ==================== View Creation ====================
 
     @Override
     public View onCreateInputView() {
@@ -304,6 +302,7 @@ public class XlKeyboardService extends InputMethodService {
         }
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private void setupBackspaceButton(View parent, int id) {
         Button button = parent.findViewById(id);
         button.setOnTouchListener((v, event) -> {
@@ -311,7 +310,12 @@ public class XlKeyboardService extends InputMethodService {
                 case MotionEvent.ACTION_DOWN:
                     InputConnection ic = getCurrentInputConnection();
                     if (ic != null) {
-                        ic.deleteSurroundingText(1, 0);
+                        CharSequence selectedText = ic.getSelectedText(0);
+                        if (TextUtils.isEmpty(selectedText)) {
+                            ic.deleteSurroundingText(1, 0);
+                        } else {
+                            ic.commitText("", 1);
+                        }
                     }
                     deleteHandler.postDelayed(deleteRunnable, 500);
                     return true;
@@ -380,9 +384,11 @@ public class XlKeyboardService extends InputMethodService {
                 return;
             ic.commitText(text, 1);
 
-            if (text.equals(".")) {
-                autoCapitalizeNext = true;
-            } else if (!text.equals(" ")) {
+            if (text.equals(" ")) {
+                CharSequence textBefore = ic.getTextBeforeCursor(2, 0);
+                autoCapitalizeNext = textBefore != null && textBefore.length() >= 2
+                        && textBefore.charAt(textBefore.length() - 2) == '.';
+            } else {
                 autoCapitalizeNext = false;
             }
             updateLetterButtonsCase();
