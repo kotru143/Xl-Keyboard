@@ -9,14 +9,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:weightSum="5">
+        android:orientation="horizontal">
 
         <Button style="@style/KeyboardSpecialBtn"
             android:id="@+id/btnToggleMode"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:layout_margin="2dp"
             android:text="@string/key_toggle_arrow"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -27,6 +28,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:layout_margin="2dp"
             android:textStyle="bold"
             android:text="@string/key_up" />
 
@@ -35,6 +38,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:layout_margin="2dp"
             android:textStyle="bold"
             android:text="@string/key_left" />
 
@@ -43,6 +48,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:layout_margin="2dp"
             android:textStyle="bold"
             android:text="@string/key_right" />
 
@@ -51,6 +58,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:layout_margin="2dp"
             android:textStyle="bold"
             android:text="@string/key_down" />
     </LinearLayout>
@@ -63,16 +72,26 @@
         android:orientation="horizontal"
         android:weightSum="10">
 
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSym1" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_1" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSym2" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_2" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSym3" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_3" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSym4" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_4" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSym5" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_5" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSym6" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_6" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSym7" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_7" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSym8" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_8" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSym9" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_9" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSym0" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_0" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSym1" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button"
+            android:layout_margin="2dp" android:text="@string/key_1" android:textStyle="bold" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSym2" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button"
+            android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_2" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSym3" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button"
+            android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_3" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSym4" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button"
+            android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_4" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSym5" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button"
+            android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_5" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSym6" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button"
+            android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_6" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSym7" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button"
+            android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_7" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSym8" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button"
+            android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_8" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSym9" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button"
+            android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_9" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSym0" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button"
+            android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_0" android:textSize="20sp" />
     </LinearLayout>
 
     <!-- Row 2: @ # $ % & - + ( ) / -->
@@ -81,18 +100,18 @@
         android:layout_height="60dp"
         android:orientation="horizontal">
 
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSymAt" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_at" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSymHash" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_hash" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSymDollar" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_rupee" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymAt" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_at" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymHash" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_hash" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymDollar" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_rupee" android:textSize="20sp" />
 
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSymAmpersand" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_amp" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSymColon" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_colon" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSymSemicolon" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_semicolon" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSymParenLeft" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_leftPar" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSymParenRight" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_rightPar" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSymQuoteDouble" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text='@string/key_quote' android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSymQuoteSingle" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_quoteSingle" android:textSize="20sp" />
-        <Button style="@style/KeyboardSpecialBtn" android:id="@+id/btnSymQuestion" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_question" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymAmpersand" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_amp" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymColon" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_colon" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymSemicolon" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_semicolon" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymParenLeft" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_leftPar" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymParenRight" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_rightPar" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymQuoteDouble" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" android:text='@string/key_quote' android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymQuoteSingle" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_quoteSingle" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymQuestion" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_question" android:textSize="20sp" />
     </LinearLayout>
 
     <!-- Row 3: = * " ' : ; ! ? Backspace -->
@@ -100,18 +119,19 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal">
+        <!--        TODO Add one more symbol button switch other symbols layout -->
 
-        <Button style="@style/KeyboardSpecialBtn" android:id="@+id/btnSymEquals" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_equals" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSymPlus" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_plus" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSymMinus" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_minus" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSymAsterisk" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_asterisk" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymEquals" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_equals" android:textSize="20sp" android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymPlus" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_plus" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymMinus" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_minus" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymAsterisk" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_asterisk" android:textSize="20sp" />
 
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSymSlash" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_slash" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSymPercent" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_percentage" android:textSize="20sp" />
-        <Button style="@style/KeyboardButton" android:id="@+id/btnSymExclamation" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_exclamation" android:textSize="20sp" />
-        <Button style="@style/KeyboardSpecialBtn" android:id="@+id/btnLessThan" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_lessThan" android:textSize="20sp" />
-        <Button style="@style/KeyboardSpecialBtn" android:id="@+id/btnGreatThan" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_greatThan" android:textSize="20sp" />
-        <Button style="@style/KeyboardSpecialBtn" android:id="@+id/btnBackSym" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/key_backspace" android:textSize="18sp" android:textStyle="bold"/>
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymSlash" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_slash" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymPercent" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_percentage" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnSymExclamation" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_exclamation" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnLessThan" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_lessThan" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnGreatThan" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_greatThan" android:textSize="20sp" />
+        <Button style="@style/KeyboardButton" android:id="@+id/btnBackSym" android:layout_width="wrap_content" android:layout_height="match_parent"  android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold" android:text="@string/key_backspace" android:textSize="18sp" />
     </LinearLayout>
 
     <!-- Row 4: ABC Space Comma Enter -->
@@ -126,7 +146,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textStyle="bold"
+            android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold"
             android:text="@string/key_abc" />
 
         <Button
@@ -135,9 +155,9 @@
             android:layout_width="47dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold"
             android:text="@string/key_dot"
             android:textSize="20sp"
-            android:textStyle="bold"
             />
 
         <Button
@@ -145,13 +165,17 @@
             style="@style/KeyboardSpecialBtn"
             android:layout_width="147dp"
             android:layout_height="match_parent"
-            android:text="@string/key_space" />
+            android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold"
+            android:text="@string/key_space"
+            android:textSize="20sp"
+            />
 
         <Button
             android:id="@+id/btnCommaSym"
             style="@style/KeyboardSpecialBtn"
             android:layout_width="47dp"
             android:layout_height="match_parent"
+            android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold"
             android:text="@string/key_comma"
             android:textSize="20sp" />
 
@@ -160,8 +184,8 @@
             style="@style/KeyboardSpecialBtn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:background="@drawable/rounded_button" android:layout_margin="2dp" android:textStyle="bold"
             android:text="@string/key_enter"
-            android:textStyle="bold"
             android:textSize="30sp" />
 
     </LinearLayout>
