@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.inputmethod.InputConnection;
 import android.widget.Button;
 import android.text.TextUtils;
+import android.util.Log;
 
 public class XlKeyboardService extends InputMethodService {
 
@@ -34,6 +35,7 @@ public class XlKeyboardService extends InputMethodService {
     private Button autoButton;
     private Button shiftButton;
     private Button[] letterButtons;
+    private static final String FILE = "XlKeyboardService";
 
     private static final String[] LETTERS = {
             "q", "w", "e", "r", "t", "y", "u", "i", "o", "p",
@@ -91,6 +93,11 @@ public class XlKeyboardService extends InputMethodService {
             "=", "*", "\"", "'", ":", ";", "!", "?", "<", ">"
     };
 
+    private String getLocation() {
+        StackTraceElement ste = Thread.currentThread().getStackTrace()[3];
+        return String.format("[%s:%d]", ste.getMethodName(), ste.getLineNumber());
+    }
+
     private final Handler deleteHandler = new Handler();
     private final Runnable deleteRunnable = new Runnable() {
         @Override
@@ -127,6 +134,7 @@ public class XlKeyboardService extends InputMethodService {
 
     @Override
     public View onCreateInputView() {
+        Log.d(FILE, getLocation() + "isQwertyMode:" + isQwertyMode);
         if (isQwertyMode) {
             return createQwertyView();
         } else {
@@ -135,6 +143,7 @@ public class XlKeyboardService extends InputMethodService {
     }
 
     private View createNumberPadView() {
+        Log.d(FILE, getLocation() + "isQwertyMode:" + isQwertyMode);
         View view = getLayoutInflater().inflate(R.layout.keyboard_view, null);
 
         // Load saved preference
@@ -155,10 +164,12 @@ public class XlKeyboardService extends InputMethodService {
         Button abcButton = view.findViewById(R.id.btnABC);
         abcButton.setOnClickListener(v -> {
             isQwertyMode = true;
-            setInputView(onCreateInputView());
             // Safe to reset shift state when switching modes
             isShiftEnabled = false;
             isCapsLock = false;
+            Log.w(FILE, getLocation() + "abcButton listener, isQwertyMode:" + isQwertyMode);
+            setInputView(onCreateInputView());
+
         });
 
         // Setup number buttons
@@ -181,6 +192,7 @@ public class XlKeyboardService extends InputMethodService {
 
     private View createQwertyView() {
         View view = getLayoutInflater().inflate(R.layout.qwerty_keyboard_view, null);
+        Log.d(FILE, getLocation() + "started");
 
         // Setup SYM button for QWERTY view
         Button btnSym = view.findViewById(R.id.btnSym);
@@ -188,9 +200,11 @@ public class XlKeyboardService extends InputMethodService {
 
         // Toggle auto button
         setupAutoButton(view, R.id.btnAutoQwerty);
+        Log.d(FILE, getLocation() + "Auto Button set");
 
         // Setup toggle button for Tab mode
         setupToggleButton(view, R.id.btnToggleModeQwerty);
+        Log.d(FILE, getLocation() + "Toggle Button set");
 
         // Initialize letter buttons array
         letterButtons = new Button[26];
@@ -204,8 +218,13 @@ public class XlKeyboardService extends InputMethodService {
 
         // Setup shift button with dynamic letter case switching
         shiftButton = view.findViewById(R.id.btnShift);
+        Log.d(FILE, getLocation() + "Shift Button State Accessed");
+
         updateShiftButton();
+
         shiftButton.setOnClickListener(v -> {
+            Log.d(FILE, getLocation() + "Shift Button listener, isCapsLock:" + isCapsLock + ", isShiftEnabled:"
+                    + isShiftEnabled);
             long currentTime = System.currentTimeMillis();
             if (currentTime - lastShiftPressTime < DOUBLE_TAP_DELAY) {
                 // Double tap detected - Enable Caps Lock
@@ -220,6 +239,9 @@ public class XlKeyboardService extends InputMethodService {
                     isShiftEnabled = !isShiftEnabled;
                 }
             }
+
+            Log.d(FILE, getLocation() + "Shift Button listener, isCapsLock:" + isCapsLock + ", isShiftEnabled:"
+                    + isShiftEnabled);
             lastShiftPressTime = currentTime;
             updateShiftButton();
             updateLetterButtonsCase();
@@ -230,6 +252,7 @@ public class XlKeyboardService extends InputMethodService {
             // Optimization: Pass index 'i' directly to avoid lookup
             setupLetterButton(view, LETTER_BUTTON_IDS[i], LETTERS[i], i);
         }
+        Log.d(FILE, getLocation() + "setup letter buttons done");
 
         // Setup special buttons
         setupBackspaceButton(view, R.id.btnBackQwerty);
@@ -237,7 +260,7 @@ public class XlKeyboardService extends InputMethodService {
         setupTextButton(view, R.id.btnSpaceQwerty, " ");
         setupTextButton(view, R.id.btnCommaQwerty, ",");
         setupButton(view, R.id.btnEnterQwerty, KeyEvent.KEYCODE_ENTER);
-
+        Log.d(FILE, getLocation() + "setup QWERTY layout done");
         return view;
     }
 
@@ -300,6 +323,7 @@ public class XlKeyboardService extends InputMethodService {
             shiftButton.setBackgroundTintList(getResources().getColorStateList(
                     isShiftEnabled ? R.color.toggle_active : R.color.toggle_inactive, null));
         }
+        Log.w(FILE, getLocation() + " isShiftEnabled:" + isShiftEnabled);
     }
 
     @SuppressLint("ClickableViewAccessibility")
@@ -418,16 +442,20 @@ public class XlKeyboardService extends InputMethodService {
     private void updateLetterButtonsCase() {
         if (letterButtons == null || !isQwertyMode)
             return;
-
         boolean shouldShowUppercase = isShiftEnabled || autoCapitalizeNext;
+
         for (int i = 0; i < letterButtons.length && i < LETTERS.length; i++) {
             if (letterButtons[i] != null) {
                 letterButtons[i].setText(shouldShowUppercase ? LETTERS[i].toUpperCase() : LETTERS[i]);
             }
         }
+
+        Log.d(FILE, getLocation() + " isShiftEnabled:" + isShiftEnabled + " autoCapitalizeNext:" + autoCapitalizeNext
+                + " shouldShowUppercase:" + shouldShowUppercase);
     }
 
     private View createSymbolView() {
+        Log.d(FILE, getLocation());
         View view = getLayoutInflater().inflate(R.layout.symbol_keyboard_view, null);
 
         setupToggleButton(view, R.id.btnToggleMode);
